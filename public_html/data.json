@@ -37,19 +37,40 @@
 
     },
 
-    "header_bottom": {
-      "catalog": "Каталог продукции",
-      "href": "#"
+    "banners": {
+      "title": "PALE - ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+      "items": [{
+          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+          "image": "img/exhibition.jpg",
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+        },
+        {
+          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+          "image": "img/exhibition.jpg",
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+        },
+        {
+          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+          "image": "img/exhibition.jpg",
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+        },
+        {
+          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+          "image": "img/exhibition.jpg",
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+        },
+        {
+          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
+          "image": "img/exhibition.jpg",
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+        }
+      ]
     },
     "footer": {
       "menu": [{
         "name": "name",
         "link": "#link"
       }]
-    },
-    "banners": {
-      "title": "title",
-      "text": "text"
     }
   },
   "paths": {

@@ -1,59 +1,82 @@
 <template>
-  <div v-if="data" class="banners">
-    <section
-      class="banners__wrapper"
-    >
-      <div class="container">
-        <div class="banners__inner">
-          <div class="banners__promo">
-            <h1 v-html="data.title"></h1>
-            <p v-html="data.text"></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </div>
+  <section class="banners" v-if="data">
+    <div class="container">
+      <h1 class="banners__page-title visually-hidden" v-html="data.title"></h1>
+      <div class="banners__inner">
+        <swiper
+          class="swiper banners__swiper"
+          ref="swiper"
+          :options="SliderOptions"
+        >
+          <swiper-slide
+            v-for="(banner, b) in data.items"
+            :key="b"
+            class="banners__item"
+          >
+            <div class="banners__wrapper">
+              <div class="banners__content">
+                <h2 v-html="banner.title"></h2>
+                <p class="banners__text" v-html="banner.subtitle"></p>
+              </div>
+              <div class="banners__image">
+                <img loading="lazy" :src="banner.image" :alt="banner.title" />
+              </div>
+            </div>
+          </swiper-slide>
 
+          <div class="swiper-pagination" slot="pagination"></div>
+          <button class="button swiper-button-next" slot="button-next">
+            <svg class="icon" width="21" height="12" aria-hidden="true">
+              <use xlink:href="#swiper-arrow"></use>
+            </svg>
+          </button>
+          <button class="button swiper-button-prev" slot="button-prev">
+            <svg class="icon" width="21" height="12" aria-hidden="true">
+              <use xlink:href="#swiper-arrow"></use>
+            </svg>
+          </button>
+        </swiper>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/css/swiper.css";
+
 export default {
+  name: "Banners",
+  components: {
+    Swiper,
+    SwiperSlide
+  },
   data() {
     return {
-      mobileBreakpoint: 768,
-      windowWidth: window.innerWidth,
-      isMobile: false,
+      SliderOptions: {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        centeredSlides: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev"
+        }
+      }
     };
   },
   computed: {
     data() {
       return this.$store.state.blocks.banners;
-    },
+    }
   },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-  },
-  methods: {
-    toggleMobile() {
-      if (window.innerWidth <= this.mobileBreakpoint) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    },
-    handleResize() {
-      this.toggleMobile();
-    },
-  },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-  components: {
-  },
+  mounted() {},
+  methods: {},
+  mounted() {},
+  beforeDestroy() {}
 };
 </script>

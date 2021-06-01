@@ -14,10 +14,10 @@
             >
           </li>
         </ul>
-        <a :href="data.cartLink" class="header__cart">
+        <a href="#" class="">
           <svg
-            class="icon"
-            width="20"
+            class="icon icon--pink"
+            width="16"
             height="20"
             aria-hidden="true"
           >
