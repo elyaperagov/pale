@@ -78,7 +78,7 @@
       ]
     },
     "product_simple": {
-      "title":"Бушуев ",
+      "title":"",
       "breadcrumbs": [
         {
           "text": "Главная",
@@ -101,9 +101,20 @@
         "img/product/bust.jpg",
         "img/product/bust.jpg",
         "img/product/bust.jpg",
+        "img/product/bust.jpg",
+        "img/product/bust.jpg",
         "img/product/bust.jpg"
       ],
-      "author": "Бушуев Павел"
+      "author": "Бушуев Павел",
+      "name": "Деформация. Бюст #1 - бронза",
+      "options": "Бронза  /  44 см / 2020",
+      "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+      "price": "$1200",
+      "button": "Добавить в корзину",
+      "author_link": {
+        "text": "О художнике",
+        "link": "/artist.html"
+      }
     },
     "footer": {
       "menu": [{

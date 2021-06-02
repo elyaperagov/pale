@@ -21,16 +21,6 @@
                     <img :src="image" />
                   </div>
                 </swiper-slide>
-                <div class="swiper-button-next" slot="button-next">
-                  <svg class="icon" width="11" height="20" aria-hidden="true">
-                    <use xlink:href="#swiper-arrow"></use>
-                  </svg>
-                </div>
-                <div class="swiper-button-prev" slot="button-prev">
-                  <svg class="icon" width="11" height="20" aria-hidden="true">
-                    <use xlink:href="#swiper-arrow"></use>
-                  </svg>
-                </div>
               </swiper>
             </div>
             <swiper
@@ -48,13 +38,25 @@
                 </div>
               </swiper-slide>
             </swiper>
+                <div class="swiper-button-next" slot="button-next">
+                  <svg class="icon" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#swiper-arrow"></use>
+                  </svg>
+                </div>
+                <div class="swiper-button-prev" slot="button-prev">
+                  <svg class="icon" width="20" height="20" aria-hidden="true">
+                    <use xlink:href="#swiper-arrow"></use>
+                  </svg>
+                </div>
           </div>
           <div class="product__info">
             <h2 v-html="data.author"></h2>
-            <div class="product__top">
-              <p class="product__article" v-html="data.article"></p>
-
-            </div>
+            <h4 class="product__name" v-html="data.name"></h4>
+            <p class="product__description" v-html="data.options"></p>
+            <p class="product__description" v-html="data.description"></p>
+            <p class="product__price" v-html="data.price"></p>
+            <button class="button button--black" v-html="data.button"></button>
+            <a class="product__author-link" :href="data.author_link.link" v-html="data.author_link.text"></a>
           </div>
         </div>
         </div>
@@ -84,7 +86,8 @@ export default {
       swiperOptionTop: {
         breakpoints: {
           768: {
-            loop: false,
+            loop: true,
+            loopedSlides: 3,
             slidesPerView: "auto",
             draggable: false,
             spaceBetween: 0
@@ -101,9 +104,10 @@ export default {
         }
       },
       swiperOptionThumbs: {
+        loop: true,
+        loopedSlides: 3,
+        slidesPerView: "auto",
         spaceBetween: 30,
-        centeredSlides: true,
-        slidesPerView: 3,
         touchRatio: 0.2,
         slideToClickedSlide: true
       }

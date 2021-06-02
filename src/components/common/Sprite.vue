@@ -1,7 +1,7 @@
 <template>
   <div style="height: 0; width: 0; position: absolute; visibility: hidden">
     <svg xmlns="http://www.w3.org/2000/svg">
-      <svg
+      <symbol
         id="search"
         viewBox="0 0 20 20"
         fill="none"
@@ -18,7 +18,7 @@
             <rect width="20" height="20" fill="white" />
           </clipPath>
         </defs>
-      </svg>
+      </symbol>
 
       <symbol id="loop" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
         <g>
@@ -118,6 +118,20 @@
           fill="white"
         />
       </symbol>
+
+      <symbol
+        id="swiper-arrow"
+        width="20"
+        height="20"
+        viewBox="0 0 20 20"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M14.5148 4.51477L13.6239 5.40567L17.5882 9.37004H0V10.63H17.5882L13.6239 14.5943L14.5148 15.4852L20 9.99996L14.5148 4.51477Z"
+          fill="#72717B"
+        />
+      </symbol>
     </svg>
   </div>
 </template>
@@ -127,6 +141,6 @@ export default {
   data() {
     return {};
   },
-  computed: {}
+  computed: {},
 };
 </script>
