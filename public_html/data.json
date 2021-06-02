@@ -77,6 +77,34 @@
         }
       ]
     },
+    "product_simple": {
+      "title":"",
+      "breadcrumbs": [
+        {
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Каталог",
+          "link": "/catalog.html"
+        },
+        {
+          "text": "Скульптуры",
+          "link": "/catalog.html"
+        },
+        {
+          "text": "Деформация",
+          "link": ""
+        }
+      ],
+      "gallery": [
+        "img/product/bust.jpg",
+        "img/product/bust.jpg",
+        "img/product/bust.jpg",
+        "img/product/bust.jpg"
+      ],
+      "author": "Бушуев Павел"
+    },
     "footer": {
       "menu": [{
           "name": "Галерея",
