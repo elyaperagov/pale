@@ -17,24 +17,15 @@
               <div class="banners__content">
                 <h2 v-html="banner.title"></h2>
                 <p class="banners__text" v-html="banner.subtitle"></p>
+                <button class="button button--brown button--banner" v-html="banner.button_text"></button>
               </div>
+
               <div class="banners__image">
                 <img loading="lazy" :src="banner.image" :alt="banner.title" />
               </div>
             </div>
           </swiper-slide>
-
-          <div class="swiper-pagination" slot="pagination"></div>
-          <button class="button swiper-button-next" slot="button-next">
-            <svg class="icon" width="21" height="12" aria-hidden="true">
-              <use xlink:href="#swiper-arrow"></use>
-            </svg>
-          </button>
-          <button class="button swiper-button-prev" slot="button-prev">
-            <svg class="icon" width="21" height="12" aria-hidden="true">
-              <use xlink:href="#swiper-arrow"></use>
-            </svg>
-          </button>
+           <div class="swiper-pagination" slot="pagination"></div>
         </swiper>
       </div>
     </div>
@@ -62,10 +53,6 @@ export default {
           el: ".swiper-pagination",
           clickable: true
         },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }
       }
     };
   },

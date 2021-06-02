@@ -40,17 +40,21 @@ button {
 h1,
 h2 {
   font-family: "Circe", sans-serif;
-  margin-top: 0;
-  margin-bottom: 30px;
   font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 100%;
+  font-weight: bold;
+  font-size: 56px;
+  line-height: 64px;
+  margin: 0;
+  letter-spacing: 0.05em;
+
+  @media (max-width: $tablets-max) {
+    font-size: 48px;
+    line-height: 62px;
+  }
 
   @media (max-width: $mobiles-max) {
-    margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 120%;
+    font-size: 24px;
+    line-height: 31px;
   }
 }
 
@@ -193,7 +197,7 @@ table {
   }
 
   @media (max-width: $tablets-max) {
-    max-width: 100%;
+    max-width: 638px;
   }
 
   @media (max-width: $mobiles-max) {
@@ -233,3 +237,5 @@ main {
   height: 1px;
   margin: -1px;
 }
+
+
