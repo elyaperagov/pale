@@ -61,12 +61,6 @@ h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 120%;
-
-  @media (max-width: $mobiles-max) {
-    margin-bottom: 20px;
-    font-size: 22px;
-    line-height: 120%;
-  }
 }
 
 h3 {
@@ -100,6 +94,29 @@ ul {
 
 p {
   margin: 0 0 20px 0;
+}
+
+.wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  // @media (max-width: $mobiles-max) {
+  //   overflow-x: hidden;
+  // }
+
+  .header,
+  .footer {
+    flex-shrink: 0;
+  }
+
+  main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 .hidden {
@@ -208,7 +225,7 @@ table {
   }
 
   @media (max-width: $tablets-max) {
-    max-width: 100%;
+    max-width: 638px;
   }
 
   @media (max-width: $mobiles-max) {
@@ -233,9 +250,6 @@ table {
   border: 2px solid $color-red !important;
 }
 
-main {
-  flex-grow: 1
-}
 
 .grecaptcha-badge {
   display: none;

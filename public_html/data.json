@@ -31,6 +31,18 @@
           "link": "#news"
         }
       ],
+      "languages": [{
+          "text": "EN",
+          "link": "#en",
+          "active": false
+        },
+        {
+          "text": "RU",
+          "link": "#ru",
+          "active": true
+        }
+      ],
+
       "profileLink": "#",
       "cartLink": "#",
       "total": 0
@@ -42,27 +54,26 @@
       "items": [{
           "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
           "image": "img/exhibition.jpg",
-          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021",
+          "button_text": "Узнать больше"
         },
         {
           "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
           "image": "img/exhibition.jpg",
-          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021",
+          "button_text": "Узнать больше"
         },
         {
           "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
           "image": "img/exhibition.jpg",
-          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021",
+          "button_text": "Узнать больше"
         },
         {
           "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
           "image": "img/exhibition.jpg",
-          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
-        },
-        {
-          "title": "ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
-          "image": "img/exhibition.jpg",
-          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021"
+          "subtitle": "Москва . Гостиный двор . с 1 по 4 июня 2021",
+          "button_text": "Узнать больше"
         }
       ]
     },
@@ -96,9 +107,43 @@
     },
     "footer": {
       "menu": [{
-        "name": "name",
-        "link": "#link"
-      }]
+          "name": "Галерея",
+          "link": "#gallery"
+        },
+        {
+          "name": "Художники",
+          "link": "#painters"
+        },
+        {
+          "name": "Корзина",
+          "link": "#cart"
+        },
+        {
+          "name": "О нас",
+          "link": "#about"
+        },
+        {
+          "name": "Контакты",
+          "link": "#contacts"
+        },
+        {
+          "name": "Поиск",
+          "link": "#search"
+        },
+        {
+          "name": "Доставка и оплата",
+          "link": "#delivery"
+        },
+        {
+          "name": "Условия работы",
+          "link": "#conditions"
+        },
+        {
+          "name": "Политика конфиденциальности",
+          "link": "#confidentiality"
+        }
+      ],
+      "text": "Галерея Pa-Le.Все права защищены. 2021 год."
     }
   },
   "paths": {

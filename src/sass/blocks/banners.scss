@@ -1,0 +1,50 @@
+.banners {
+  margin-top: 20px;
+
+  .swiper-container {
+    overflow-x: clip;
+    overflow-y: visible;
+  }
+
+  .swiper-pagination-bullets {
+    bottom: -52px!important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 14px;
+    height: 14px;
+    border: 1px solid $color-black;
+    background-color: $color-default-white;
+    opacity: 1!important;
+
+    &-active {
+      background-color: $color-black;
+    }
+  }
+}
+
+.banners__content {
+  position: absolute;
+  padding: 130px 8%;
+  width: 70%;
+
+  h2 {
+    text-transform: uppercase;
+    color: $color-white;
+  }
+}
+
+.banners__text {
+  margin: 18px 0 40px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 0.05em;
+  color: $color-white;
+
+  @media (max-width: $mobiles-max) {
+    font-size: 15px;
+    line-height: 17px;
+  }
+}
