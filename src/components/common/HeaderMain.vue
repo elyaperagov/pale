@@ -14,58 +14,77 @@
             >
           </li>
         </ul>
-        <a href="#" class="">
-          <svg
-            class="icon icon--pink"
-            width="16"
-            height="20"
-            aria-hidden="true"
-          >
-            <use xlink:href="#cart"></use>
-          </svg>
-          <span v-show="counter" class="header__cart-counter"></span>
-
-          <span class="header__cart-total" v-html="data.total"></span>
-        </a>
-
-        <!-- <nav class="header__menu" v-if="!isMobile">
-          <a
-            class="header__menu-item"
-            v-for="(menu, i) in data.menu_payment"
-            :key="i"
-            @click.prevent="goTo(menu.link)"
-            :href="menu.link"
-            v-html="menu.name"
-          ></a>
-        </nav> -->
+        <div class="header__right-menu">
+          <button class="header__search">
+            <div class="header__search-icon">
+              <svg class="icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="#search"></use>
+              </svg>
+            </div>
+          </button>
+          <a href="#" class="header__cart">
+            <div class="header__cart-icon">
+              <svg class="icon" width="20" height="20" aria-hidden="true">
+                <use xlink:href="#cart"></use>
+              </svg>
+            </div>
+            <span v-show="counter" class="header__cart-counter"></span>
+            <span class="header__cart-total" v-html="data.total"></span>
+          </a>
+          <div class="header__languages">
+            <div
+              class="header__language"
+              v-for="(language, i) in data.languages"
+              :key="i"
+              @click="$switchActive(i, data.languages)"
+            >
+              <a
+                class="header__language-link"
+                :class="{ 'header__language-link--active': language.active }"
+                :href="language.link"
+                v-html="language.text"
+              ></a>
+              <span class="header__language-divider">/</span>
+            </div>
+          </div>
+        </div>
+        <button
+          class="button button--toggle"
+          @click="menuToggle()"
+          :class="{ close: !this.$store.state.menuShown }"
+        >
+          <span></span>
+        </button>
       </div>
-      <!-- <div
-        class="header__menu-toggle"
-        @click="menuToggle()"
-        :class="{ close: !$store.state.menuShown }"
-      >
-        <span></span>
-      </div> -->
     </div>
 
-    <!-- <transition name="fade">
+    <transition name="fade">
       <div
-        class="header__mobile"
+        class="header__mobile-wrapper"
         v-if="isMobile"
-        v-show="$store.state.menuShown"
+        v-show="this.$store.state.menuShown"
       >
-        <nav class="header__menu header__menu--mobile">
-          <a
-            class="header__menu-item"
-            v-for="(menu, i) in data.menu_payment"
-            :key="i"
-            @click.prevent="goTo(menu.link)"
-            :href="menu.link"
-            v-html="menu.name"
-          ></a>
-        </nav>
+        <div
+          class="header__mobile"
+          v-if="isMobile"
+          v-show="$store.state.menuShown"
+        >
+          <div class="container">
+            <ul class="header__menu" v-if="isMobile">
+              <li
+                class="header__menu-item"
+                v-for="(menu, i) in data.menu"
+                :key="i"
+              >
+                <a :href="menu.link" @click.prevent="goTo(menu.link)">
+                  {{ menu.name }}</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
-    </transition> -->
+    </transition>
   </header>
 </template>
 

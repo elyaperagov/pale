@@ -17,7 +17,7 @@ import Helpers from '../lib/Helpers.js'
 
 import Sprite from '../components/common/Sprite.vue'
 import HeaderMain from '../components/common/HeaderMain.vue'
-import Footer from '../components/common/Footer.vue'
+import FooterMain from '../components/common/FooterMain.vue'
 import Banners from '../components/home/Banners.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
@@ -154,7 +154,7 @@ new Vue({
   components: {
     Sprite,
     HeaderMain,
-    Footer,
+    FooterMain,
     Banners
   }
 }).$mount("#app");
