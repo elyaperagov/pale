@@ -44,12 +44,12 @@
     }
 
     &.close {
-      // background-color: $color-gray;
 
       span {
         background-color: $color-black;
         height: 2px;
         width: 30px;
+        margin-top: 5px;
       }
 
       &:before {
@@ -61,7 +61,7 @@
 
       &:after {
         height: 30px;
-        bottom: -6px;
+        bottom: -12px;
         background-color: $color-black;
         transform: rotate(90deg);
       }
