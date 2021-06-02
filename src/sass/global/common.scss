@@ -37,15 +37,30 @@ button {
   }
 }
 
-h1,
+h1 {
+  font-family: "Circe Bold", sans-serif;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 130%;
+
+  @media (max-width: $mobiles-max) {
+    margin-bottom: 20px;
+    font-size: 22px;
+    line-height: 120%;
+  }
+}
+
 h2 {
   font-family: "Circe", sans-serif;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   font-style: normal;
-  font-weight: 800;
-  font-size: 40px;
-  line-height: 100%;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 120%;
 
   @media (max-width: $mobiles-max) {
     margin-bottom: 20px;

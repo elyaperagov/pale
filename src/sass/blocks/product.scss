@@ -1,5 +1,6 @@
 .product__inner {
   display: flex;
+  padding-top: 120px;
 }
 
 .product__gallery {
@@ -11,45 +12,31 @@
   .swiper-button-prev {
     z-index: 1;
   }
-
-  // .swiper-container {
-  //   position: revert;
-  // }
-
-  .swiper-slide {
-    width: auto !important;
-  }
 }
 
 .product__gallery-inner {
   position: relative;
-  // width: 630px;
   margin: 0 auto;
 }
 
 .product__swiper {
   &--top {
-    // width: 550px;
-    // max-height: 769px;
     margin-bottom: 15px;
 
-    .swiper-wrapper {
-      // max-height: 769px;
-    }
-
     .swiper-button-prev {
-      left: -25px!important;
-      top: 50%;
+      left: 90% !important;
+      top: 100%;
     }
 
     .swiper-button-next {
-      right: -25px!important;
-      top: 50%;
+      right: 5% !important;
+      top: 100%;
     }
   }
 
   &--thumbs {
     max-width: 535px;
+    margin-left: 0 !important;
 
     .swiper-wrapper {
       max-width: 535px;

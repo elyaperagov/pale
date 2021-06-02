@@ -50,15 +50,11 @@
             </swiper>
           </div>
           <div class="product__info">
-            <h1 v-html="data.author"></h1>
+            <h2 v-html="data.author"></h2>
             <div class="product__top">
               <p class="product__article" v-html="data.article"></p>
 
             </div>
-
-            <!-- <div class="product__additional">
-              <p v-html="product.additional"></p>
-            </div> -->
           </div>
         </div>
         </div>
@@ -105,7 +101,7 @@ export default {
         }
       },
       swiperOptionThumbs: {
-        spaceBetween: 10,
+        spaceBetween: 30,
         centeredSlides: true,
         slidesPerView: 3,
         touchRatio: 0.2,
