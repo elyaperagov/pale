@@ -10,6 +10,12 @@
     bottom: -52px!important;
   }
 
+  .swiper-slide {
+    @media (max-width: $tablets-max) {
+      width: 100%;
+    }
+  }
+
   .swiper-pagination-bullet {
     width: 14px;
     height: 14px;
@@ -31,6 +37,21 @@
   h2 {
     text-transform: uppercase;
     color: $color-white;
+    font-weight: bold;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 0.05em;
+
+    @media (max-width: $tablets-max) {
+      font-size: 48px;
+      line-height: 62px;
+    }
+
+    @media (max-width: $mobiles-max) {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 31px;
+    }
   }
 }
 
@@ -47,4 +68,27 @@
     font-size: 15px;
     line-height: 17px;
   }
+}
+
+.banners__image {
+  height: 611px;
+
+  @media (max-width: $tablets-max) {
+    height: 460px;
+  }
+
+  @media (max-width: $mobiles-max) {
+    height: 342px;
+  }
+
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+}
+
+.banners__inner {
+  @media (max-width: $tablets-max) {}
+
 }
