@@ -1,6 +1,9 @@
 .product__inner {
   display: flex;
   padding: 120px 0;
+  @media (max-width: $tablets-max) {
+    flex-direction: column;
+  }
 }
 
 .product__gallery {
@@ -8,6 +11,9 @@
   margin-right: 11.3%;
   max-width: 629px;
   position: relative;
+  @media (max-width: $tablets-max) {
+    margin-right: 0;
+  }
 
   .swiper-button-next {
     width: 64px;

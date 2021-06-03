@@ -20,6 +20,7 @@ import HeaderMain from '../components/common/HeaderMain.vue'
 import FooterMain from '../components/common/FooterMain.vue'
 import Banners from '../components/home/Banners.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
+import ProductFull from '../components/product/ProductFull.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -157,6 +158,7 @@ new Vue({
     HeaderMain,
     FooterMain,
     Banners,
-    ProductSimple
+    ProductSimple,
+    ProductFull
   }
 }).$mount("#app");

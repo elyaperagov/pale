@@ -71,7 +71,7 @@ import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
 
 export default {
-  name: "ProductSimple",
+  name: "ProductFull",
   components: {
     Swiper,
     SwiperSlide,
@@ -130,7 +130,7 @@ export default {
   },
   computed: {
     data() {
-      return this.$store.state.blocks.product_simple;
+      return this.$store.state.blocks.product_full;
     }
   }
 };
