@@ -6,6 +6,7 @@
 .footer__inner {
   padding: 60px 0;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .footer__copyright {
@@ -26,6 +27,11 @@
   flex-wrap: wrap;
   width: 48.5%;
   margin-right: 24%;
+
+  @media (max-width: $tablets-max) {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 .footer__menu-item {
@@ -46,7 +52,16 @@
   width: 27.5%;
   margin-top: auto;
 
+  @media (max-width: $tablets-max) {
+    width: 100%;
+    margin-right: 0;
+  }
+
   p {
     margin: 0;
+
+    @media (max-width: $tablets-max) {
+      text-align: left;
+    }
   }
 }

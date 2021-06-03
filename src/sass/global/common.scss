@@ -225,7 +225,8 @@ table {
   }
 
   @media (max-width: $tablets-max) {
-    max-width: 638px;
+    padding-right: 80px;
+    padding-left: 80px;
   }
 
   @media (max-width: $mobiles-max) {

@@ -89,6 +89,10 @@
   &--banner {
     width: 28%;
     min-height: 50px;
+
+    @media (max-width: $tablets-max) {
+      width: 27.5%;
+    }
   }
 
   .icon {
