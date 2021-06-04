@@ -42,6 +42,10 @@
     align-items: left;
     border-bottom: 1px solid #E6E6E6;
     width: 100%;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
   }
 
   &:before {
@@ -249,6 +253,8 @@
   z-index: 1;
   top: 80px;
   background: #ffffff;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 5%);
+  padding-bottom: 16px;
 }
 
 .header__mobile-wrapper {

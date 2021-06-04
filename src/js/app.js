@@ -10,6 +10,9 @@ import 'vue-select/dist/vue-select.css'
 import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
+import {VueMasonryPlugin} from 'vue-masonry';
+
+
 
 import store from "../store"
 import axios from 'axios'
@@ -19,12 +22,15 @@ import Sprite from '../components/common/Sprite.vue'
 import HeaderMain from '../components/common/HeaderMain.vue'
 import FooterMain from '../components/common/FooterMain.vue'
 import Banners from '../components/home/Banners.vue'
+import Products from '../components/home/Products.vue'
+import Filters from '../components/home/Filters.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
 Vue.component('VueSlider', VueSlider)
+Vue.use(VueMasonryPlugin)
 
 Vue.use(VueImg);
 Vue.use(VueTheMask)
@@ -159,6 +165,8 @@ new Vue({
     FooterMain,
     Banners,
     ProductSimple,
+    Products,
+    Filters,
     ProductFull
   }
 }).$mount("#app");

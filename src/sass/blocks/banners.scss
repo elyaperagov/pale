@@ -8,6 +8,10 @@
 
   .swiper-pagination-bullets {
     bottom: -52px!important;
+
+    @media (max-width: $tablets-max) {
+      bottom: 14px !important;
+    }
   }
 
   .swiper-slide {
@@ -23,8 +27,18 @@
     background-color: $color-default-white;
     opacity: 1!important;
 
+    @media (max-width: $tablets-max) {
+      border: 1px solid $color-default-white;
+      background-color: $color-black;
+    }
+
     &-active {
       background-color: $color-black;
+
+      @media (max-width: $tablets-max) {
+        border: 1px solid $color-default-white;
+        background-color: $color-default-white;
+      }
     }
   }
 }
@@ -34,6 +48,11 @@
   padding: 130px 8%;
   width: 70%;
 
+  @media (max-width: $tablets-max) {
+    padding: 80px 80px 64px;
+    width: 100%;
+  }
+
   h2 {
     text-transform: uppercase;
     color: $color-white;
@@ -41,6 +60,7 @@
     font-size: 56px;
     line-height: 64px;
     letter-spacing: 0.05em;
+    margin: 0;
 
     @media (max-width: $tablets-max) {
       font-size: 48px;
@@ -63,6 +83,10 @@
   line-height: 19px;
   letter-spacing: 0.05em;
   color: $color-white;
+
+  @media (max-width: $tablets-max) {
+    margin: 15px 0 30px;
+  }
 
   @media (max-width: $mobiles-max) {
     font-size: 15px;
