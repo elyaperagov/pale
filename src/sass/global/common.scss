@@ -13,9 +13,9 @@ html {
 
 body {
   font-family: "Circe", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 150%;
   margin: 0 auto;
   height: 100%;
   color: $font-base-color;
@@ -61,21 +61,37 @@ h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 120%;
+
+  @media (max-width: $mobiles-max) {
+    font-size: 22px;
+    line-height: 120%;
+  }
 }
 
 h3 {
   font-family: "Circe", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 130%;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 160%;
   margin: 0;
+  @media (max-width: $mobiles-max) {
+    font-size: 20px;
+  }
 }
 
 h4 {
+  font-family: "Circe Bold", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 110%;
+  margin: 0 0 20px 0;
+}
+
+h5 {
   font-family: "Circe", sans-serif;
   font-weight: 400;
   font-size: 17px;
-  line-height: 110%;
+  line-height: 140%;
   margin: 0 0 20px 0;
 }
 
@@ -240,6 +256,10 @@ table {
 
   &--wide {
     max-width: 100%;
+    @media (max-width: $mobiles-max) {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }
 
