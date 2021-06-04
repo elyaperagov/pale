@@ -28,7 +28,7 @@
   &-image {
     display: flex;
     @media (max-width: $mobiles-max) {
-      height: 110px;
+      height: 155px;
       img {
         object-fit: cover;
         width: 100%;
