@@ -1,8 +1,16 @@
+.products {
+  margin-bottom: 120px;
+}
+
 .products__masonry {
   position: relative;
+  margin-top: 57px;
+  margin: 57px auto 0 auto;
 
   .products__item {
-
+    @media (max-width: $tablets-max) {
+      width: 289px;
+    }
   }
 }
 
@@ -10,6 +18,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.products__content {
+  margin-bottom: 62px;
 }
 
 .products__name-info {
@@ -46,4 +58,9 @@
   line-height: 25px;
   text-align: center;
   color: $color-gold;
+}
+
+.products__show-more {
+  margin: 0 auto;
+  display: block;
 }

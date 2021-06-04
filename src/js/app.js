@@ -24,6 +24,7 @@ import FooterMain from '../components/common/FooterMain.vue'
 import Banners from '../components/home/Banners.vue'
 import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
+import News from '../components/home/News.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 
@@ -167,6 +168,7 @@ new Vue({
     ProductSimple,
     Products,
     Filters,
-    ProductFull
+    ProductFull,
+    News
   }
 }).$mount("#app");

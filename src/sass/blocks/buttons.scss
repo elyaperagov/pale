@@ -86,6 +86,44 @@
     letter-spacing: 0.05em;
   }
 
+  &--show-more {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    background-color: transparent;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+
+    padding: 16px 0;
+    text-align: center;
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 26%;
+      height: 100%;
+      transition: $transition-settings;
+      background-color: $color-light-brown;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &--read-more {
+    margin: 0 auto 0 0;
+  }
+
   &--black {
     background: $color-light-black;
     color: $color-white;

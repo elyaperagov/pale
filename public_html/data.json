@@ -48,8 +48,40 @@
       "total": 0
 
     },
-
+    "filters": [
+      {
+        "active": true,
+        "text": "Абстракционизм",
+        "genre": "Abstract"
+      },
+      {
+        "active": false,
+        "text": "Абстракционизм",
+        "genre": "Abstract"
+      },
+      {
+        "active": false,
+        "text": "Абстракционизм",
+        "genre": "Abstract"
+      },
+      {
+        "active": false,
+        "text": "Абстракционизм",
+        "genre": "Abstract"
+      },
+      {
+        "active": false,
+        "text": "Абстракционизм",
+        "genre": "Abstract"
+      },
+      {
+        "active": false,
+        "text": "Классика",
+        "genre": "Classic"
+      }
+    ],
     "products": {
+      "show_more": "Показать ещё",
       "products": [
         {
           "img": "img/vnutri.jpg",
@@ -148,7 +180,30 @@
           "link": "#",
           "price": 77000
         },
-
+        {
+          "img": "img/red-flowers.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 469000
+        },
+        {
+          "img": "img/red-flowers.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Classic",
+          "link": "#",
+          "price": 469000
+        },
         {
           "img": "img/red-flowers.jpg",
           "img_width": "346",
@@ -162,6 +217,15 @@
           "price": 469000
         }
       ]
+    },
+
+    "news": {
+      "img": "img/ocean.jpg",
+      "width": 629,
+      "height": 414,
+      "title": "ПОСЛЕДНИЕ НОВОСТИ И СОБЫТИЯ",
+      "text": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis.",
+      "show_more": "Читать дальше"
     },
 
     "banners": {
