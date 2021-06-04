@@ -50,8 +50,7 @@
     },
 
     "products": {
-      "products": [
-        {
+      "products": [{
           "img": "img/vnutri.jpg",
           "img_width": "346",
           "img_height": "411",
@@ -274,8 +273,7 @@
       },
       "other_title": "Другие работы автора"
     },
-    "other_works": [
-      {
+    "other_works": [{
         "image": "img/other/other-1.jpg",
         "name": "Миротворец, 2018",
         "options": [
@@ -312,6 +310,154 @@
         "price": "$3200"
       }
     ],
+    "artists": {
+      "title": "ХУДОЖНИКИ",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Художники",
+          "link": ""
+        }
+      ],
+      "sections": [{
+          "title": "Участники текущих выставок",
+          "items": [
+            {
+              "image": "img/artists/artist-1.jpg",
+              "name": "Смирнова Вероника",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-2.jpg",
+              "name": "Самойлов Юрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-3.jpg",
+              "name": "Каварга Дмитрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-4.jpg",
+              "name": "Alien Jolie",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-5.jpg",
+              "name": "Бушуев Павел",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-6.jpg",
+              "name": "Мась Оксана",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-7.jpg",
+              "name": "Строев Денис",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-8.jpg",
+              "name": "Агуреева Мария",
+              "link": "/artist.html"
+            }
+          ]
+        },
+        {
+          "title": "Резиденты галереи",
+          "items": [
+            {
+              "image": "img/artists/artist-1.jpg",
+              "name": "Смирнова Вероника",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-2.jpg",
+              "name": "Самойлов Юрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-3.jpg",
+              "name": "Каварга Дмитрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-4.jpg",
+              "name": "Alien Jolie",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-5.jpg",
+              "name": "Бушуев Павел",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-6.jpg",
+              "name": "Мась Оксана",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-7.jpg",
+              "name": "Строев Денис",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-8.jpg",
+              "name": "Агуреева Мария",
+              "link": "/artist.html"
+            }
+          ]
+        },
+        {
+          "title": "Участники проектов галереи",
+          "items": [
+            {
+              "image": "img/artists/artist-1.jpg",
+              "name": "Смирнова Вероника",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-2.jpg",
+              "name": "Самойлов Юрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-3.jpg",
+              "name": "Каварга Дмитрий",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-4.jpg",
+              "name": "Alien Jolie",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-5.jpg",
+              "name": "Бушуев Павел",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-6.jpg",
+              "name": "Мась Оксана",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-7.jpg",
+              "name": "Строев Денис",
+              "link": "/artist.html"
+            },
+            {
+              "image": "img/artists/artist-8.jpg",
+              "name": "Агуреева Мария",
+              "link": "/artist.html"
+            }
+          ]
+        }
+      ]
+    },
     "footer": {
       "menu": [{
           "name": "Галерея",

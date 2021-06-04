@@ -26,6 +26,7 @@ import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
+import Artists from '../components/artists/Artists.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -167,6 +168,7 @@ new Vue({
     ProductSimple,
     Products,
     Filters,
-    ProductFull
+    ProductFull,
+    Artists
   }
 }).$mount("#app");
