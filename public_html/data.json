@@ -193,9 +193,8 @@
       ]
     },
     "product_simple": {
-      "title":"Бушуев ",
-      "breadcrumbs": [
-        {
+      "title": "",
+      "breadcrumbs": [{
           "text": "Главная",
           "link": "/home.html"
         },
@@ -216,9 +215,63 @@
         "img/product/bust.jpg",
         "img/product/bust.jpg",
         "img/product/bust.jpg",
+        "img/product/bust.jpg",
+        "img/product/bust.jpg",
         "img/product/bust.jpg"
       ],
-      "author": "Бушуев Павел"
+      "author": "Бушуев Павел",
+      "name": "Деформация. Бюст #1 - бронза",
+      "options": "Бронза  /  44 см / 2020",
+      "description": [
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+      ],
+      "price": "$1200",
+      "button": "Добавить в корзину",
+      "author_link": {
+        "text": "О художнике",
+        "link": "/artist.html"
+      }
+    },
+    "product_full": {
+      "title": "",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Каталог",
+          "link": "/catalog.html"
+        },
+        {
+          "text": "Картины",
+          "link": "/catalog.html"
+        },
+        {
+          "text": "Всадник без головы",
+          "link": ""
+        }
+      ],
+      "gallery": [
+        "img/product/horseman.jpg",
+        "img/product/horseman.jpg",
+        "img/product/horseman.jpg",
+        "img/product/horseman.jpg",
+        "img/product/horseman.jpg",
+        "img/product/horseman.jpg"
+      ],
+      "author": "Коршунов Иван Васильевич",
+      "name": "Всадник без головы в кафтане, на золотом фоне и подставке",
+      "options": "Холст, масло, золочение  /  30,5 x 41 см  /  2018",
+      "description": [
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti. At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti.",
+        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti."
+      ],
+      "price": "$1200",
+      "button": "Добавить в корзину",
+      "author_link": {
+        "text": "О художнике",
+        "link": "/artist.html"
+      }
     },
     "footer": {
       "menu": [{

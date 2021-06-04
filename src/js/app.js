@@ -25,6 +25,7 @@ import Banners from '../components/home/Banners.vue'
 import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
+import ProductFull from '../components/product/ProductFull.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -165,6 +166,7 @@ new Vue({
     Banners,
     ProductSimple,
     Products,
-    Filters
+    Filters,
+    ProductFull
   }
 }).$mount("#app");

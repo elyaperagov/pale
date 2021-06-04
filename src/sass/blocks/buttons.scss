@@ -86,6 +86,21 @@
     letter-spacing: 0.05em;
   }
 
+  &--black {
+    background: $color-light-black;
+    color: $color-white;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 110%;
+    text-align: center;
+    width: fit-content;
+    height: 50px;
+    padding: 0 30px;
+    &:hover {
+      background: $color-dark-gray;
+    }
+  }
+
   &--banner {
     width: 28%;
     min-height: 50px;
