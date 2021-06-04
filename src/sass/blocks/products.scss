@@ -1,0 +1,49 @@
+.products__masonry {
+  position: relative;
+
+  .products__item {
+
+  }
+}
+
+.products__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.products__name-info {
+  margin: 0;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  text-align: center;
+  color: $color-gray;
+}
+
+.products__item-info {
+  display: flex;
+
+  p, span {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: center;
+    color: $color-gray;
+  }
+}
+
+.products__author {
+  text-align: center;
+  margin: 14px 0 0;
+}
+
+.products__price {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+  text-align: center;
+  color: $color-gold;
+}

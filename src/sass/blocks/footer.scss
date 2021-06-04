@@ -31,20 +31,23 @@
   @media (max-width: $tablets-max) {
     width: 100%;
     margin-right: 0;
+    align-items: flex-start;
   }
 }
 
 .footer__menu-item {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 15px;
-  line-height: 30px;
-  color: $color-default-white;
-  opacity: 0.8;
-  transition: $transition-settings;
+  a {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 30px;
+    color: $color-default-white;
+    opacity: 0.8;
+    transition: $transition-settings;
 
-  &:hover {
-    opacity: 0.3;
+    &:hover {
+      opacity: 0.3;
+    }
   }
 }
 

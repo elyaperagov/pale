@@ -2,16 +2,15 @@
   <footer class="footer" v-if="data">
     <div class="container">
       <div class="footer__inner">
-        <nav class="footer__menu">
-          <a
-              class="footer__menu-item"
-              v-for="(item, i) in data.menu"
-              :key="i"
+        <ul class="footer__menu">
+          <li class="footer__menu-item" v-for="(item, i) in data.menu" :key="i">
+            <a
               @click.prevent="goTo(item.link)"
               :href="item.link"
               v-html="item.name"
             ></a>
-        </nav>
+          </li>
+        </ul>
         <div class="footer__copyright">
           <p v-html="data.text"></p>
         </div>
@@ -21,7 +20,6 @@
 </template>
 
 <script>
-
 export default {
   data() {
     return {};
@@ -29,10 +27,9 @@ export default {
   computed: {
     data() {
       return this.$store.state.blocks.footer;
-    },
+    }
   },
-  components: {
-  },
+  components: {},
   methods: {
     async goTo(link) {
       if (!this.$scrollTo(link)) {
@@ -41,7 +38,7 @@ export default {
           this.$scrollTo(link);
         }, 500);
       }
-    },
-  },
+    }
+  }
 };
 </script>
