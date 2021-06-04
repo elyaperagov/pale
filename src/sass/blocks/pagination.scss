@@ -1,0 +1,102 @@
+.pagination {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.pagination__wrapper {
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-between;
+  position: relative;
+
+  ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    li {
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      background: transparent;
+      cursor: pointer;
+      overflow: hidden;
+      border: 1px solid $color-gray;
+      flex-shrink: 0;
+      transition: all $transition-settings;
+      border-radius: 0;
+      margin-right: 10px;
+
+      a {
+        padding: 8px 0;
+        color: $color-gray;
+        display: flex;
+        width: 100%;
+        height: 100%;
+        font-style: normal;
+        line-height: 100%;
+        justify-content: center;
+        align-items: center;
+      }
+
+      &.active {
+        background: $color-light-brown;
+        border: 1px solid $color-light-brown;
+        a {
+          color: $font-base-color;
+        }
+      }
+
+      &:first-of-type {
+        outline: none;
+        border: none;
+        width: auto;
+        background: transparent;
+        padding: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        a {
+          &::before {
+            content: '';
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      &:last-of-type {
+        outline: none;
+        border: none;
+        width: auto;
+        background: transparent;
+        padding: 0;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-right: 0;
+
+        a {
+          &::after {
+            content: '';
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+
+    // .active {
+    //   border: 1px solid $color-black;
+
+    //   a {
+    //     color: $color-black;
+    //   }
+    // }
+  }
+
+  @media (max-width: $mobiles-max) {
+    width: 67%;
+    min-width: 228px;
+    max-width: 350px;
+  }
+}

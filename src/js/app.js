@@ -11,6 +11,7 @@ import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
 import {VueMasonryPlugin} from 'vue-masonry';
+import Paginate from 'vuejs-paginate'
 
 
 
@@ -26,12 +27,14 @@ import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
-import Artists from '../components/artists/Artists.vue'
-import Artist from '../components/artists/Artist.vue'
+import Artists from '../components/info/Artists.vue'
+import Artist from '../components/info/Artist.vue'
+import News from '../components/info/News.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
 Vue.component('VueSlider', VueSlider)
+Vue.component('paginate', Paginate)
 Vue.use(VueMasonryPlugin)
 
 Vue.use(VueImg);
@@ -171,6 +174,7 @@ new Vue({
     Filters,
     ProductFull,
     Artists,
-    Artist
+    Artist,
+    News
   }
 }).$mount("#app");

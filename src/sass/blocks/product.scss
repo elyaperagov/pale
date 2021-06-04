@@ -132,6 +132,7 @@
 .product__price {
   color: $color-gold;
   margin-bottom: 30px;
+  letter-spacing: 0.05em;
   @media (max-width: $tablets-max) {
     margin-top: 44px;
   }

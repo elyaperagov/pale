@@ -47,9 +47,9 @@ h1 {
   line-height: 130%;
 
   @media (max-width: $mobiles-max) {
-    margin-bottom: 20px;
     font-size: 22px;
-    line-height: 120%;
+    line-height: 130%;
+    margin-bottom: 10px;
   }
 }
 
@@ -95,20 +95,13 @@ h5 {
   margin: 0 0 20px 0;
 }
 
-// h5 {
-//   font-family: "Circe", sans-serif;
-//   font-weight: 800;
-//   font-size: 20px;
-//   line-height: 130%;
-//   margin: 0;
-// }
-
-// h6 {
-//   font-family: "Circe", sans-serif;
-//   font-size: 18px;
-//   line-height: 22px;
-//   margin: 0;
-// }
+h6 {
+  font-family: "Circe", sans-serif;
+  font-size: 17px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+}
 
 ul {
   list-style: none;

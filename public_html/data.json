@@ -524,6 +524,92 @@
       },
       "other_title": "Работы автора"
     },
+    "news": {
+      "title": "НОВОСТИ",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Новости",
+          "link": ""
+        }
+      ],
+      "items": [
+        {
+          "image": "img/news/news-1.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-2.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-3.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-4.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-5.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-6.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-7.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-8.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-9.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-10.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-11.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        },
+        {
+          "image": "img/news/news-12.jpg",
+          "name": "Название новости или события в 2 строки",
+          "date": "11.03.21",
+          "link": "/article.html"
+        }
+      ]
+    },
     "footer": {
       "menu": [{
           "name": "Галерея",
