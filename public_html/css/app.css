@@ -1887,17 +1887,17 @@ table {
   text-align: center;
 }
 
-.news__inner {
+.news-main__inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.news__inner h3 {
+.news-main__inner h3 {
   font-weight: bold;
   font-size: 36px;
   line-height: 47px;
 }
-.news__inner p {
+.news-main__inner p {
   font-style: normal;
   font-weight: normal;
   font-size: 15px;
@@ -1907,20 +1907,20 @@ table {
   margin-bottom: 40px;
 }
 
-.news__image {
+.news-main__image {
   width: 57%;
   -ms-flex-negative: 0;
       flex-shrink: 0;
   margin-right: 3%;
 }
-.news__image img {
+.news-main__image img {
   -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
   width: 100%;
 }
 
-.news__texts {
+.news-main__texts {
   width: 40%;
   padding-top: 34px;
 }

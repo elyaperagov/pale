@@ -1,4 +1,4 @@
-.news__inner {
+.news-main__inner {
   display: flex;
 
   h3 {
@@ -18,7 +18,7 @@
   }
 }
 
-.news__image {
+.news-main__image {
   width: 57%;
   flex-shrink: 0;
   margin-right: 3%;
@@ -30,7 +30,7 @@
   }
 }
 
-.news__texts {
+.news-main__texts {
   width: 40%;
   padding-top: 34px;
 }

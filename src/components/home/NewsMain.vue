@@ -1,8 +1,8 @@
 <template>
-  <section class="news" v-if="data">
+  <section class="news-main" v-if="data">
     <div class="container">
-      <div class="news__inner">
-        <div class="news__image">
+      <div class="news-main__inner">
+        <div class="news-main__image">
           <img
             :src="data.img"
             :alt="data.title"
@@ -10,7 +10,7 @@
             :height="data.height"
           />
         </div>
-        <div class="news__texts">
+        <div class="news-main__texts">
           <h3 v-html="data.title"></h3>
           <p v-html="data.text"></p>
           <button
@@ -25,7 +25,7 @@
 
 <script>
 export default {
-  name: "News",
+  name: "NewsMain",
   computed: {
     data() {
       return this.$store.state.blocks.news;
