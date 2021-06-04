@@ -458,6 +458,72 @@
         }
       ]
     },
+    "artist": {
+      "title": "",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Художники",
+          "link": "/artists.html"
+        },
+        {
+          "text": "Alien Jolie",
+          "link": ""
+        }
+      ],
+      "author": "Alien Jolie",
+      "image": "img/artist.jpg",
+      "texts": [
+        "Jolie Alien родилась в 2002 году в Москве.",
+        "Слушательница Института современного искусства Иосифа Бакштейна.",
+        "Художница работает с броскими образами, простыми сюжетами, кадрированными композициями и экспрессивным рисунком.",
+        "Каждая работа Jolie интроспективна, связана с личными воспоминаниями, что отчасти объясняет ее визуальный язык, в котором сплетены сюрреалистические образы, геометрические простые паттерны, броские надписи, сделанные краской и баллончиком.",
+        "Работы Jolie напоминают стену, которая долгое время покрывалась граффити: фигуры наплывают друг на друга, создавая эффект коллажа. Jolie конспектирует юность, к которой у нее есть прямой доступ и которая закрыта для мира взрослых.",
+        "Художница заканчивает обучение в МХПИ, совмещая карьеру в индустрии моды, участвуя в показах таких брендов, как Valentino, Off-White, Jil Sander, Paco Rabanne, Prada, Viviene Westwood, Simone Rocha и др. Снимается в международных рекламных кампаниях Mango, Fendi, Adidas.",
+        "Права на использование изображения работы «Whirpool» были приобретены компанией Mango для использования в выпуске коллекции футболок по всему миру. Была героиней материалов о ее творчестве в Document Journal, Vogue, InStyle, Elle и models.com.",
+        "Готовится к поступлению в Central Saint Martins College of Art and Design.",
+        "Комплементарные цвета, экспрессивный рисунок и коллажность композиций ее картин может показаться многим сумбурным, однако этот сумбур, неясность – то особое свойство работ Jolie, которое выделяет их из множества других. Как художник, она ценит и ставит перцепцию выше рефлексии, интуитивность и даже определенная автоматичность ее картин роднят их с арт-брют и некоторыми работами Жана Дюбюффе.",
+        "Язык Jolie крайне субъективен и даже интроспективен. Возможно, только классические техники сейчас могут позволить художнику такую роскошь как высказываться о самом себе и фиксировать реальность вокруг именно как непреходящее впечатление.",
+        "Работы находятся в коллекциях в России, Китае, Японии, Бельгии и Америке.",
+        "Живет и работает между Москвой, Лондоном, Токио."
+      ],
+      "exhibitions": {
+        "title": "ИЗБРАННЫЕ ВЫСТАВКИ:",
+        "items": [
+          "2021 - solo show «Symbiosis», Peak Moscow by a-s-t-r-a gallery",
+          "2020 - Cosmoscow Art Fair, Москва, Россия, a-s-t-r-a gallery",
+          "2020 - ENTER Art Fair, Копенгаген, Дания, a-s-t-r-a gallery",
+          "2020 - «Я потерял след мира», куратор Ирина Шульженко, пространство Рихтер",
+          "2019 -  group show «Один, Два, Три», куратор a-s-t-r-a, пространство Cube.Moscow;",
+          "2019 - solo show «20.11», куратор Ирина Шульженко и Дмитрий Янчогло, пространство «Рихтер» 2019,",
+          "2019 - solo show «1367 номер моего клеща - что делать?», куратор a-s-t-r-a, пространство Cube.Moscow;",
+          "live-перформанс на открытии a-s-t-r-a LAB, «Цветной» (создание пятиметровой росписи стены);",
+          "2018 - «Захотелось», галерея «Кино»"
+        ]
+      },
+      "publications": {
+        "title": "ИЗБРАННЫЕ ПУБЛИКАЦИИ:",
+        "items": [
+          "https://theblueprint.ru/culture/art/art-podarki?fbclid=IwAR00OMOTXQ1Ivqtkr5D9pzZ9O0aAQHTkeBrff8BBwew7Cmnh2XLN4SdeXfQ",
+          "https://sportchic.ru/fashion/model-i-hudozhnitsa-jolie-alien-otkryvaet-svoyu-vtoruyu-vystavku-v-moskve/",
+          "https://www.documentjournal.com/2018/11/model-jolie-alien-discusses-her-first-solo-art-exhibition/",
+          "https://theblueprint.ru/culture/interview/jolie-alien",
+          "https://www.vogue.ru/fashion/model-business/kto_takaya_zhenya_makarova",
+          "https://instyle.ru/moda/nashi-v-dele-chto-nuzhno-znat-o-modeli-zhene-makarovoy/",
+          "http://www.mhpi.edu.ru/all_news/jolie-alien/",
+          "https://typical-moscow.ru/vystavka-jolie-alien-ritz-carlton/",
+          "https://www.kommersant.ru/doc/4550243",
+          "https://theblueprint.ru/fashion/industry/art-fashion-russia",
+          "https://m.vk.com/@storagemag-jolie-alien",
+          "https://disk.yandex.ru/d/KcsKKl6zJ4Zk9Q",
+          "https://models.com/oftheminute/?p=99486",
+          "https://models.com/oftheminute/?p=114030"
+        ]
+      },
+      "other_title": "Работы автора"
+    },
     "footer": {
       "menu": [{
           "name": "Галерея",

@@ -261,6 +261,14 @@ table {
       padding-left: 0;
     }
   }
+
+  &--narrow {
+    max-width: 724px;
+    @media (max-width: $mobiles-max) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
 }
 
 .v-select,
