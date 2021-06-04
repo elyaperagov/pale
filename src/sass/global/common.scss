@@ -245,8 +245,8 @@ table {
   padding-left: 15px;
 
   @media (max-width: $tablets-max) {
-    max-width: 608px;
-    padding: 0;
+    padding-right: 80px;
+    padding-left: 80px;
   }
 
   @media (max-width: $mobiles-max) {

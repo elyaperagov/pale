@@ -49,6 +49,121 @@
 
     },
 
+    "products": {
+      "products": [
+        {
+          "img": "img/vnutri.jpg",
+          "img_width": "346",
+          "img_height": "411",
+          "name": "«Внутри», 2019",
+          "author": "Копытцева Анастасия",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 120000
+        },
+        {
+          "img": "img/estafeta.jpg",
+          "img_width": "346",
+          "img_height": "245",
+          "name": "«Эстафета»",
+          "author": "Горбунов Дмитрий",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 216000
+        },
+        {
+          "img": "img/zavist.jpg",
+          "img_width": "346",
+          "img_height": "490",
+          "name": "«Зависть»",
+          "author": "Шафутинский Игорь",
+          "materials": "Фотография",
+          "size": "230 x 255 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 416000
+        },
+        {
+          "img": "img/ruka-boga.jpg",
+          "img_width": "346",
+          "img_height": "518",
+          "name": "Рука бога, 2003",
+          "author": "Полонская Анастасия",
+          "materials": "Холст, масло",
+          "size": "470 x 240 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 305000
+        },
+        {
+          "img": "img/bezmyatezhnost.jpg",
+          "img_width": "346",
+          "img_height": "225",
+          "name": "«Безмятежность», 2021",
+          "author": "Белобородов Артём",
+          "materials": "Холст, масло",
+          "size": "10 x 10 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 3300
+        },
+
+        {
+          "img": "img/soorikats.jpg",
+          "img_width": "346",
+          "img_height": "232",
+          "name": "Возвращение сурикатов, 2008",
+          "author": "Абельцев Андрей",
+          "materials": "Холст, масло",
+          "size": "270 x 140 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 89000
+        },
+        {
+          "img": "img/prisutstvie.jpg",
+          "img_width": "346",
+          "img_height": "242",
+          "name": "Присутствие, 1928",
+          "author": "Калинин Владимир",
+          "materials": "Холст, масло",
+          "size": "100 x 210 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 305000
+        },
+        {
+          "img": "img/lisichka.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "Лисичка-сестричка, 2001",
+          "author": "Кныш Альберт",
+          "materials": "Холст, масло",
+          "size": "400 x 300 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 77000
+        },
+
+        {
+          "img": "img/red-flowers.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "#",
+          "price": 469000
+        }
+      ]
+    },
+
     "banners": {
       "title": "PALE - ВЫСТАВКА СОВРЕМЕННОГО ИСКУССТВА",
       "items": [{
