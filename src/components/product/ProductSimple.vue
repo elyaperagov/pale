@@ -51,10 +51,10 @@
           </div>
           <div class="product__info">
             <h2 v-html="data.author"></h2>
-            <h4 class="product__name" v-html="data.name"></h4>
+            <h5 class="product__name" v-html="data.name"></h5>
             <p class="product__description" v-html="data.options"></p>
             <p class="product__description" v-for="(desc, d) in data.description" :key="d" v-html="desc"></p>
-            <p class="product__price" v-html="data.price"></p>
+            <h4 class="product__price" v-html="data.price"></h4>
             <button class="button button--black" v-html="data.button"></button>
             <a class="product__author-link" :href="data.author_link.link" v-html="data.author_link.text"></a>
           </div>
