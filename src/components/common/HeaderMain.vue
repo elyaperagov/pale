@@ -121,17 +121,20 @@ export default {
         }, 500);
       }
     },
+
     menuToggle(state = null) {
       if (state === null) {
         state = !this.$store.state.menuShown;
       }
       this.$store.commit("setMenuState", state);
+      document.body.classList.toggle('scroll-off')
     },
     menuClose(state) {
       if (this.$store.state.menuShown === true) {
         this.$store.state.menuShown = false;
       }
       this.$store.commit("setMenuClosed", state);
+      document.body.classList.remove('scroll-off')
     },
     toggleMobile() {
       if (window.innerWidth <= this.mobileBreakpoint) {

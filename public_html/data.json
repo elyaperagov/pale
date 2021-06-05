@@ -46,7 +46,6 @@
       "profileLink": "#",
       "cartLink": "#",
       "total": 0
-
     },
     "filters": [
       {
@@ -80,6 +79,10 @@
         "genre": "Classic"
       }
     ],
+    "search": {
+      "title": "Поиск",
+      "placeholder": "Введите запрос, например, «Картина на холсте»"
+    },
     "products": {
       "show_more": "Показать ещё",
       "products": [{

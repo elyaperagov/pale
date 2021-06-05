@@ -1,18 +1,17 @@
 <template>
   <div v-if="data" class="products">
     <div class="container">
-      <Filters :filters="filters" />
+
+      <Filters :filters="filters" v-if="!isMobile"/>
       <template v-for="(filter, t) in filters">
         <div :key="t">
           <div class="products__content" :class="{ active: filter.active }">
             <div
               v-masonry
               class="products__masonry"
-              transition-duration="0.3s"
               item-selector=".products__item"
               fit-width="true"
               gutter="30"
-              column-width="346"
             >
               <div
                 v-masonry-tile
