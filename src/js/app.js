@@ -33,6 +33,7 @@ import Artists from '../components/info/Artists.vue'
 import Artist from '../components/info/Artist.vue'
 import News from '../components/info/News.vue'
 import Post from '../components/info/Post.vue'
+import Contacts from '../components/info/Contacts.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -181,6 +182,7 @@ new Vue({
     Artists,
     Artist,
     News,
-    Post
+    Post,
+    Contacts
   }
 }).$mount("#app");
