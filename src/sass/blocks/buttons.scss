@@ -84,6 +84,56 @@
     line-height: 17px;
     text-align: center;
     letter-spacing: 0.05em;
+
+    &:hover {
+      background-color: $color-gold;
+    }
+  }
+
+  &--show-more {
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    width: 190px;
+    background-color: transparent;
+
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 17px;
+
+    padding: 16px 0;
+    text-align: center;
+
+    @media (max-width: $mobiles-max) {
+      width: 45%;
+    }
+
+    &:before {
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: 26%;
+      height: 100%;
+      transition: $transition-settings;
+      background-color: $color-light-brown;
+      z-index: -1;
+    }
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+
+  &--read-more {
+    margin: 0 auto 0 0;
+
+    @media (max-width: $mobiles-max) {
+      margin: 0 auto;
+    }
   }
 
   &--black {
@@ -96,6 +146,7 @@
     width: fit-content;
     height: 50px;
     padding: 0 30px;
+
     &:hover {
       background: $color-dark-gray;
     }
@@ -107,6 +158,10 @@
 
     @media (max-width: $tablets-max) {
       width: 27.5%;
+    }
+
+    @media (max-width: $mobiles-max) {
+      width: 60%;
     }
   }
 
