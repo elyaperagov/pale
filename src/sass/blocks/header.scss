@@ -199,6 +199,10 @@
   margin-left: 30px;
   display: flex;
   flex-wrap: nowrap;
+
+  @media (max-width: $mobiles-max) {
+    display: none;
+  }
 }
 
 .header__language {
