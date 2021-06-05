@@ -32,6 +32,7 @@ import ProductFull from '../components/product/ProductFull.vue'
 import Artists from '../components/info/Artists.vue'
 import Artist from '../components/info/Artist.vue'
 import News from '../components/info/News.vue'
+import Post from '../components/info/Post.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -179,6 +180,7 @@ new Vue({
     Search,
     Artists,
     Artist,
-    News
+    News,
+    Post
   }
 }).$mount("#app");

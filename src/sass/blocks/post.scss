@@ -1,4 +1,4 @@
-.artist__inner {
+.post__inner {
   margin: 120px 0;
 
   @media (max-width: $tablets-max) {
@@ -10,13 +10,13 @@
   }
 }
 
-.artist__title {
+.post__title {
   @media (max-width: $mobiles-max) {
     padding: 0 20px;
   }
 }
 
-.artist__image {
+.post__image {
   margin: 60px 0;
   @media (max-width: $tablets-max) {
     margin: 40px 0 60px;
@@ -26,7 +26,7 @@
   }
 }
 
-.artist__texts {
+.post__texts {
   &-item {
     &:last-child {
       margin-bottom: 0;
@@ -37,7 +37,7 @@
   }
 }
 
-.artist__list {
+.post__list {
   margin-top: 40px;
 
   &-title {
