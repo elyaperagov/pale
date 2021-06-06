@@ -17,7 +17,9 @@
                 />
               </div>
               <h4 class="other__item-author" v-html="author"></h4>
-              <p class="other__item-name" v-html="work.name"></p>
+              <a class="other__item-link" :href="work.link">
+                <p v-html="work.name" class="other__item-name"></p>
+              </a>
               <p
                 class="other__item-description"
                 v-for="(option, o) in work.options"

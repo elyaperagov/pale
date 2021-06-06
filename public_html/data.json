@@ -343,6 +343,7 @@
     "other_works": [{
         "image": "img/other/other-1.jpg",
         "name": "Миротворец, 2018",
+        "link": "/product-full.html",
         "options": [
           "Холст, масло, золочение",
           "30,5 x 41 см"
@@ -352,6 +353,7 @@
       {
         "image": "img/other/other-2.jpg",
         "name": "Всадник без головы, 2018",
+        "link": "/product-full.html",
         "options": [
           "Холст, масло, золочение",
           "30,5 x 41 см"
@@ -361,6 +363,7 @@
       {
         "image": "img/other/other-3.jpg",
         "name": "Всадник без головы, 2018",
+        "link": "/product-full.html",
         "options": [
           "Холст, масло, золочение",
           "30,5 x 41 см"
@@ -370,6 +373,7 @@
       {
         "image": "img/other/other-4.jpg",
         "name": "Всадник без головы, 2018",
+        "link": "/product-full.html",
         "options": [
           "Холст, масло, золочение",
           "30,5 x 41 см"
@@ -741,6 +745,45 @@
         "Небольшой текст о компании...",
         "Небольшой текст о компании..."
       ]
+    },
+    "cart": {
+      "title": "КОРЗИНА",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Корзина",
+          "link": ""
+        }
+      ],
+      "currency": "$",
+      "total": "Всего:",
+      "button": "Оформить заказ",
+      "products": [
+        {
+          "image": "img/other/other-1.jpg",
+          "name":"Всадник без головы в кофтане, на золотом фоне и подставке",
+          "link": "/product-full.html",
+          "price": 1200
+        },
+        {
+          "image": "img/other/other-2.jpg",
+          "name":"Всадник без головы в кофтане",
+          "link": "/product-full.html",
+          "price": 200
+        },
+        {
+          "image": "img/other/other-3.jpg",
+          "name":"Всадник без головы в кофтане, на золотом фоне и подставке",
+          "link": "/product-full.html",
+          "price": 45400
+        }
+      ],
+      "empty": {
+        "title": "Ваша корзина пуста",
+        "text": "Вернуться в каталог"
+      }
     },
     "footer": {
       "menu": [{

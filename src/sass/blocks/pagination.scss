@@ -29,7 +29,7 @@
       overflow: hidden;
       border: 1px solid $color-gray;
       flex-shrink: 0;
-      transition: all $transition-settings;
+      transition: $transition-settings;
       border-radius: 0;
       margin-right: 10px;
 

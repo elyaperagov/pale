@@ -34,7 +34,7 @@
   }
 
   a {
-    transition: all $transition-settings;
+    transition: $transition-settings;
 
     &:hover {
       color: $color-gold;

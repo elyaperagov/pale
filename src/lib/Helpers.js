@@ -127,7 +127,7 @@ export default {
             }
             break;
           case "phone":
-            if (form[key].value.length < 6) {
+            if (form[key].value.length < 18) {
               error = "Неверный номер телефона";
             }
             break;
@@ -138,8 +138,8 @@ export default {
             break;
           case "email":
             if (
-              !form[key].value.includes("@") ||
-              !form[key].value.includes(".")
+              (!form[key].value.includes("@") ||
+              !form[key].value.includes(".")) && form[key].value.length > 0
             ) {
               error = "Вы указали неверный email";
             }
@@ -152,11 +152,6 @@ export default {
             break;
           case "accept":
             if (!form[key].value) {
-              error = "error";
-            }
-            break;
-          default:
-            if (form[key].value.length < 1) {
               error = "error";
             }
             break;
