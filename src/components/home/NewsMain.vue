@@ -1,6 +1,6 @@
 <template>
   <section class="news-main" v-if="data">
-    <div class="container" v-if="!isMobile">
+    <div class="container" v-if="this.$root.width >= 768">
       <div class="news-main__inner">
         <div class="news-main__image">
           <img
@@ -21,7 +21,7 @@
       </div>
     </div>
 
-    <div class="news-main__inner" v-if="isMobile">
+    <div class="news-main__inner" v-if="this.$root.width < 768">
       <div class="news-main__image">
         <img
           :src="data.img"
@@ -50,13 +50,12 @@ export default {
   data() {
     return {
       mobileBreakpoint: 1024,
-      windowWidth: window.innerWidth,
-      isMobile: false,
-    }
+      isMobile: false
+    };
   },
   methods: {
     toggleMobile() {
-      if (window.innerWidth <= this.mobileBreakpoint) {
+      if (this.$root.width <= this.mobileBreakpoint) {
         this.isMobile = true;
       } else {
         this.isMobile = false;
@@ -68,11 +67,11 @@ export default {
   },
   mounted() {
     window.addEventListener("resize", this.handleResize);
-    this.toggleMobile();
+    this.handleResize();
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.handleResize);
-    this.toggleMobile();
+    this.handleResize();
   },
   computed: {
     data() {

@@ -9,9 +9,7 @@
         </div>
         <ul class="header__menu" v-if="!isMobile">
           <li class="header__menu-item" v-for="(menu, i) in data.menu" :key="i">
-            <a :href="menu.link" @click.prevent="goTo(menu.link)">
-              {{ menu.name }}</a
-            >
+            <a :href="menu.link"> {{ menu.name }}</a>
           </li>
         </ul>
         <div class="header__right-menu">
@@ -76,9 +74,63 @@
                 v-for="(menu, i) in data.menu"
                 :key="i"
               >
-                <a :href="menu.link" @click.prevent="goTo(menu.link)">
-                  {{ menu.name }}</a
+                <a :href="menu.link" v-html="">
+                  {{ menu.name }}
+                  <div class="header__right-icon">
+                    <svg class="icon" width="12" height="20" aria-hidden="true">
+                      <use xlink:href="#right"></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li class="header__menu-item" v-if="this.$root.width < 768">
+                <div
+                  class="header__language"
+                  v-for="(language, i) in data.languages"
+                  :key="i"
+                  :class="{ 'header__language--active': language.active }"
+                  @click="switchActiveLang(i, data.languages)"
                 >
+                  <a
+                    class="header__language-link"
+                    :class="{
+                      'header__language-link--active': language.active
+                    }"
+                    :href="language.link"
+                  >
+                    {{ language.text_mobile }}
+                    <div class="header__right-icon">
+                      <svg
+                        class="icon"
+                        width="12"
+                        height="20"
+                        aria-hidden="true"
+                      >
+                        <use xlink:href="#right"></use>
+                      </svg>
+                    </div>
+                  </a>
+                </div>
+
+                <!-- <li
+                  class="faq__item"
+                  v-for="(item, index) in faqItems"
+                  :key="index"
+                  @click="toggleBlock(index)"
+                  :class="{ 'faq__item--active': item.showOptions}"
+                >
+                  <div class="faq__item-content">
+                    <p class="faq__item-question">{{ item.text }}</p>
+
+                  </div>
+                  <slide-up-down
+                    :active="item.showOptions"
+                    v-bind:class="{ show: item.show }"
+                  >
+                    <div class="faq__item-text">
+                      <p>{{ item.answer }}</p>
+                    </div>
+                  </slide-up-down>
+                </li> -->
               </li>
             </ul>
           </div>
@@ -93,6 +145,9 @@ export default {
   components: {},
   data() {
     return {
+      active: true,
+      showOptions: false,
+      duration: 500,
       mobileBreakpoint: 1024,
       windowWidth: window.innerWidth,
       isMobile: false,
@@ -113,28 +168,24 @@ export default {
     this.toggleMobile();
   },
   methods: {
-    async goTo(link) {
-      if (!this.$scrollTo(link)) {
-        await this.$router.push({ path: "/" });
-        setTimeout(() => {
-          this.$scrollTo(link);
-        }, 500);
+    switchActiveLang(i, arr) {
+      for (i in arr) {
+        arr[i].active = !arr[i].active;
       }
     },
-
     menuToggle(state = null) {
       if (state === null) {
         state = !this.$store.state.menuShown;
       }
       this.$store.commit("setMenuState", state);
-      document.body.classList.toggle('scroll-off')
+      document.body.classList.toggle("scroll-off");
     },
     menuClose(state) {
       if (this.$store.state.menuShown === true) {
         this.$store.state.menuShown = false;
       }
       this.$store.commit("setMenuClosed", state);
-      document.body.classList.remove('scroll-off')
+      document.body.classList.remove("scroll-off");
     },
     toggleMobile() {
       if (window.innerWidth <= this.mobileBreakpoint) {

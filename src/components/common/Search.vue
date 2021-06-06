@@ -4,7 +4,7 @@
       <div
         class="search__inner"
         @click="SearchInit()"
-        :class="{ 'search--active': active }"
+        :class="{ 'search--active': data.active }"
       >
         <p class="search__title" v-html="data.title"></p>
         <input
@@ -12,8 +12,10 @@
           name="search"
           id="search"
           class="input search__input"
-          :class="{ active: active }"
-          :placeholder="data.placeholder"
+          :class="{ active: data.active }"
+          :placeholder="
+            this.$root.width > 768 ? data.placeholder : data.placeholder_mobile
+          "
         />
         <button class="search__button">
           <div class="search__icon">
@@ -35,6 +37,11 @@
 <script>
 export default {
   name: "Search",
+  data() {
+    return {};
+  },
+  methods: {},
+  created() {},
   methods: {
     SearchInit(e) {
       if (this.$root.width > 767) {
@@ -53,7 +60,8 @@ export default {
         this.active = false;
       }
     });
-  }
+  },
+  mounted() {}
 };
 </script>
 
