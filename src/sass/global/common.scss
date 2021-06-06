@@ -13,9 +13,9 @@ html {
 
 body {
   font-family: "Circe", sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 400;
-  line-height: 140%;
+  line-height: 150%;
   margin: 0 auto;
   height: 100%;
   color: $font-base-color;
@@ -47,9 +47,9 @@ h1 {
   line-height: 130%;
 
   @media (max-width: $mobiles-max) {
-    margin-bottom: 20px;
     font-size: 22px;
-    line-height: 120%;
+    line-height: 130%;
+    margin-bottom: 10px;
   }
 }
 
@@ -61,38 +61,47 @@ h2 {
   font-weight: 400;
   font-size: 36px;
   line-height: 120%;
+
+  @media (max-width: $mobiles-max) {
+    font-size: 22px;
+    line-height: 120%;
+  }
 }
 
 h3 {
   font-family: "Circe", sans-serif;
-  font-weight: 700;
-  font-size: 28px;
-  line-height: 130%;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 160%;
   margin: 0;
+  @media (max-width: $mobiles-max) {
+    font-size: 20px;
+  }
 }
 
 h4 {
-  font-family: "Circe", sans-serif;
-  font-weight: 400;
+  font-family: "Circe Bold", sans-serif;
+  font-weight: 700;
   font-size: 17px;
   line-height: 110%;
   margin: 0 0 20px 0;
 }
 
-// h5 {
-//   font-family: "Circe", sans-serif;
-//   font-weight: 800;
-//   font-size: 20px;
-//   line-height: 130%;
-//   margin: 0;
-// }
+h5 {
+  font-family: "Circe", sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 140%;
+  margin: 0 0 20px 0;
+}
 
-// h6 {
-//   font-family: "Circe", sans-serif;
-//   font-size: 18px;
-//   line-height: 22px;
-//   margin: 0;
-// }
+h6 {
+  font-family: "Circe", sans-serif;
+  font-size: 17px;
+  line-height: 110%;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px 0;
+}
 
 ul {
   list-style: none;
@@ -101,7 +110,7 @@ ul {
 }
 
 p {
-  margin: 0 0 20px 0;
+  margin: 0 0 15px 0;
 }
 
 .wrapper {
@@ -240,6 +249,18 @@ table {
 
   &--wide {
     max-width: 100%;
+    @media (max-width: $tablets-max) {
+      padding-right: 0;
+      padding-left: 0;
+    }
+  }
+
+  &--narrow {
+    max-width: 754px;
+    @media (max-width: $mobiles-max) {
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 }
 

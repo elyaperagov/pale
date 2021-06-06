@@ -17,6 +17,10 @@
   h1 {
     flex-grow: 1;
   }
+  @media (max-width: $mobiles-max) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 .breadcrumbs__list {
