@@ -1,0 +1,42 @@
+.search-success__page {
+  display: flex;
+  margin-bottom: 11px;
+}
+
+.search-success__image {
+  flex-shrink: 0;
+  margin-right: 4.5%;
+  width: 22%;
+  min-width: 150px;
+  height: 128px;
+
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.search-success__wrapper {
+  margin-top: 120px;
+
+  @media (max-width: $tablets-max) {
+    margin-top: 30px;
+  }
+}
+
+.search-success__inner {
+  padding: 0 8.5%;
+
+  @media (max-width: $tablets-max) {
+    padding: 0;
+  }
+}
+
+.search-success__pages {
+  padding: 38px 10% 0;
+
+  @media (max-width: $tablets-max) {
+    padding: 0;
+  }
+}

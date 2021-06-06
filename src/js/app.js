@@ -26,7 +26,8 @@ import Banners from '../components/home/Banners.vue'
 import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
 import NewsMain from '../components/home/NewsMain.vue'
-import Search from '../components/home/Search.vue'
+import Search from '../components/common/Search.vue'
+import SearchSuccess from '../components/home/SearchSuccess.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 import Artists from '../components/info/Artists.vue'
@@ -181,6 +182,7 @@ new Vue({
     ProductFull,
     NewsMain,
     Search,
+    SearchSuccess,
     Artists,
     Artist,
     News,

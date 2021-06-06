@@ -1,5 +1,5 @@
 .header {
-
+  margin-bottom: 16px;
 }
 
 .header__menu {
@@ -25,9 +25,15 @@
   align-items: center;
 
   @media (max-width: $tablets-max) {
+    margin-left: 0;
     justify-content: flex-end;
     width: 50%;
     padding-right: 60px;
+    padding-right: 27%;
+  }
+
+  @media (max-width: $mobiles-max) {
+    padding-right: 23%;
   }
 }
 
@@ -94,6 +100,12 @@
       display: block;
       width: 100%;
       z-index: 0;
+    }
+
+    @media (max-width: $mobiles-max) {
+      padding: 18px 0;
+      display: flex;
+      justify-content: space-between;
     }
   }
 }
@@ -208,6 +220,14 @@
 .header__language {
   display: flex;
 
+  @media (max-width: $mobiles-max) {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+
   &:last-of-type {
     .header__language-divider {
       display: none;
@@ -269,4 +289,13 @@
   width: 100%;
   z-index: 2;
   background: #ffffff;
+}
+
+.header__right-icon {
+  display: none;
+
+  @media (max-width: $mobiles-max) {
+    display: block;
+    transform: translate(-5px, 5px);
+  }
 }

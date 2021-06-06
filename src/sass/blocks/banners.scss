@@ -37,7 +37,7 @@
       background-color: $color-black;
     }
 
-    @media (max-width: $tablets-max) {
+    @media (max-width: $mobiles-max) {
       width: 7px;
       height: 7px;
       margin: 0 2px!important;

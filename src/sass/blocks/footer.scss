@@ -10,6 +10,10 @@
   @media (max-width: $tablets-max) {
     flex-wrap: wrap;
   }
+
+  @media (max-width: $mobiles-max) {
+    padding: 47px 0;
+  }
 }
 
 .footer__copyright {
@@ -21,6 +25,10 @@
     margin-top: 30px;
     width: 100%;
     min-width: auto;
+  }
+
+  @media (max-width: $mobiles-max) {
+    margin-top: 16px;
   }
 
   p {
@@ -72,5 +80,9 @@
     &:hover {
       opacity: 0.3;
     }
+  }
+
+  @media (max-width: $mobiles-max) {
+    margin-bottom: 8px;
   }
 }
