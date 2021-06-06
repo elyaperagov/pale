@@ -4,6 +4,10 @@
   @media (max-width: $tablets-max) {
     margin: 90px 0;
   }
+
+  @media (max-width: $mobiles-max) {
+    margin: 58px 0 60px;
+  }
 }
 
 .search__inner {
@@ -67,7 +71,7 @@
   }
 
   @media (max-width: $mobiles-max) {
-    padding: 43px 0 38px 27px;
+    padding: 42px 0 36px 27px;
   }
 }
 

@@ -46,13 +46,17 @@
   width: 57%;
   flex-shrink: 0;
   margin-right: 3%;
+  height: 414px;
 
   @media (max-width: $tablets-max) {
+    height: 400px;
     width: 100%;
     margin-right: 0;
   }
 
   @media (max-width: $tablets-max) {
+    height: auto;
+    min-height: 211px;
     width: 100%;
     margin-right: 0;
   }

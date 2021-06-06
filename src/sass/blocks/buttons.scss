@@ -23,6 +23,11 @@
     padding: 0;
     z-index: 3;
 
+    @media (max-width: $mobiles-max) {
+      right: -3px;
+      top: 14px;
+    }
+
     &:before {
       content: '';
       position: absolute;
@@ -162,6 +167,7 @@
 
     @media (max-width: $mobiles-max) {
       width: 60%;
+      max-width: 250px;
     }
   }
 
