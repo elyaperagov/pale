@@ -10,6 +10,36 @@
         <ul class="header__menu" v-if="!isMobile">
           <li class="header__menu-item" v-for="(menu, i) in data.menu" :key="i">
             <a :href="menu.link"> {{ menu.name }}</a>
+            <ul class="header__dropdown-items" v-if="menu.categories">
+              <li
+                class="header__dropdown-item"
+                v-for="(category, j) in menu.categories"
+                :key="j"
+              >
+                <a :href="category.link">
+                  {{ category.text }}
+                  <div
+                    class="header__right-icon"
+                    v-if="category.sub_categories"
+                  >
+                    <svg class="icon" width="10" height="14" aria-hidden="true">
+                      <use xlink:href="#right"></use>
+                    </svg>
+                  </div>
+                  <ul class="header__sub-items" v-if="category.sub_categories">
+                    <li
+                      class="header__sub-item"
+                      v-for="(sub_category, k) in category.sub_categories"
+                      :key="k"
+                    >
+                      <a :href="sub_category.link">
+                        {{ sub_category.text }}
+                      </a>
+                    </li>
+                  </ul>
+                </a>
+              </li>
+            </ul>
           </li>
         </ul>
         <div class="header__right-menu">

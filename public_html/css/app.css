@@ -494,7 +494,6 @@ body {
   font-weight: 400;
   line-height: 150%;
   width: 100%;
-  max-width: 1130px;
   margin: auto;
   margin: 0 auto;
   height: 100%;
@@ -932,6 +931,11 @@ table {
   -o-transition: 0.3s all;
   transition: 0.3s all;
 }
+.header__menu-item:hover .header__dropdown-items {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
 @media (max-width: 1023px) {
   .header__menu-item {
     padding: 0;
@@ -1220,6 +1224,87 @@ table {
         -ms-transform: translate(-5px, 5px);
             transform: translate(-5px, 5px);
   }
+}
+
+.header__dropdown-item {
+  padding-bottom: 10px;
+  display: block;
+  position: relative;
+}
+.header__dropdown-item a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__dropdown-item .header__right-icon {
+  display: block;
+  margin-left: auto;
+  -webkit-transform: translate(3px, 3px);
+      -ms-transform: translate(3px, 3px);
+          transform: translate(3px, 3px);
+}
+@media (max-width: 767px) {
+  .header__dropdown-item .header__right-icon {
+    -webkit-transform: translate(-5px, 5px);
+        -ms-transform: translate(-5px, 5px);
+            transform: translate(-5px, 5px);
+  }
+}
+.header__dropdown-item:hover .header__sub-items {
+  visibility: visible;
+  opacity: 1;
+  z-index: 10;
+}
+
+.header__dropdown-items {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: 0.3s all;
+      -ms-transform: 0.3s all;
+          transform: 0.3s all;
+  top: 25px;
+  left: -8px;
+  padding: 28px 15px 15px 20px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  width: 180px;
+}
+
+.header__sub-items {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: 0.3s all;
+      -ms-transform: 0.3s all;
+          transform: 0.3s all;
+  top: 25px;
+  left: 155px;
+  padding: 20px 15px 15px 24px;
+  background: #ffffff;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+  width: 180px;
+}
+
+.header__sub-item {
+  padding-bottom: 10px;
+  display: block;
 }
 
 .footer {
@@ -2048,6 +2133,10 @@ table {
           align-items: center;
   margin-top: 90px;
 }
+.pagination--catalog {
+  margin-top: 75px;
+  margin-bottom: 120px;
+}
 
 .pagination__wrapper {
   display: -webkit-box;
@@ -2444,6 +2533,22 @@ table {
   .products__masonry {
     margin: 58px auto 0 auto;
   }
+}
+.products__masonry .products__item {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.products__masonry .products__item img {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+.products__masonry .products__item:hover img {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
 }
 @media (max-width: 1023px) {
   .products__masonry .products__item {
@@ -3552,5 +3657,38 @@ table {
 .order__product-name {
   font-size: 15px;
   color: #72717B;
+}
+
+.catalog__products .products {
+  margin-bottom: 0;
+}
+.catalog__products h1 {
+  text-transform: uppercase;
+}
+.catalog__products .products__item {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.catalog__products .products__item img {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.catalog__products .products__item:hover img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+@media (max-width: 1023px) {
+  .catalog__products .products__item {
+    width: 289px;
+  }
+}
+@media (max-width: 767px) {
+  .catalog__products .products__item {
+    width: 280px;
+  }
 }
 /*# sourceMappingURL=app.css.map*/

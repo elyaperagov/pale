@@ -23,6 +23,17 @@
   }
 
   .products__item {
+    transition: $transition-settings;
+
+    img {
+      transition: $transition-settings;
+      filter: grayscale(1);
+    }
+
+    &:hover img {
+      filter: grayscale(0);
+    }
+
     @media (max-width: $tablets-max) {
       width: 289px;
     }
