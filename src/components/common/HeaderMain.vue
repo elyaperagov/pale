@@ -13,7 +13,7 @@
           </li>
         </ul>
         <div class="header__right-menu">
-          <button class="header__search">
+          <button class="header__search" @click.prevent="showSearchModal()">
             <div class="header__search-icon">
               <svg class="icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="#search"></use>
@@ -110,39 +110,25 @@
                     </div>
                   </a>
                 </div>
-
-                <!-- <li
-                  class="faq__item"
-                  v-for="(item, index) in faqItems"
-                  :key="index"
-                  @click="toggleBlock(index)"
-                  :class="{ 'faq__item--active': item.showOptions}"
-                >
-                  <div class="faq__item-content">
-                    <p class="faq__item-question">{{ item.text }}</p>
-
-                  </div>
-                  <slide-up-down
-                    :active="item.showOptions"
-                    v-bind:class="{ show: item.show }"
-                  >
-                    <div class="faq__item-text">
-                      <p>{{ item.answer }}</p>
-                    </div>
-                  </slide-up-down>
-                </li> -->
               </li>
             </ul>
           </div>
         </div>
       </div>
     </transition>
+    <transition name="fade">
+      <SearchModal />
+    </transition>
   </header>
 </template>
 
 <script>
+import SearchModal from "../modals/SearchModal.vue";
+
 export default {
-  components: {},
+  components: {
+    SearchModal
+  },
   data() {
     return {
       active: true,
@@ -196,6 +182,9 @@ export default {
     },
     handleResize() {
       this.toggleMobile();
+    },
+    showSearchModal() {
+      this.$store.commit("SearchOpen");
     }
   },
   created() {

@@ -19,6 +19,7 @@
           ></button>
         </div>
       </div>
+       <SearchMain :search="search"></SearchMain>
     </div>
 
     <div class="news-main__inner" v-if="this.$root.width < 768">
@@ -39,14 +40,20 @@
             v-html="data.show_more"
           ></button>
         </div>
+        <SearchMain :search="search"></SearchMain>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import SearchMain from "../common/SearchMain.vue";
+
 export default {
   name: "NewsMain",
+  components: {
+    SearchMain
+  },
   data() {
     return {
       mobileBreakpoint: 1024,
@@ -76,6 +83,9 @@ export default {
   computed: {
     data() {
       return this.$store.state.blocks.news;
+    },
+     search() {
+      return this.$store.state.blocks.search;
     }
   }
 };

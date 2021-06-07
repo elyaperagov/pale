@@ -15,7 +15,9 @@ body {
   font-family: "Circe", sans-serif;
   font-size: 15px;
   font-weight: 400;
-  line-height: 150%;
+  line-height: 150%;width: 100%;
+  max-width: 1130px;
+  margin: auto;
   margin: 0 auto;
   height: 100%;
   color: $font-base-color;
@@ -261,6 +263,11 @@ table {
       padding-right: 0;
       padding-left: 0;
     }
+  }
+
+  &--modal {
+    max-width: 1130px;
+    margin: auto;
   }
 }
 

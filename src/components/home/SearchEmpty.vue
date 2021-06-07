@@ -6,25 +6,7 @@
         <div class="search-page__inner">
           <h2>{{ data.title }} «{{ data.request }}»</h2>
           <div class="search-page__pages">
-            <div
-              class="search-page__page"
-              v-for="(result, i) in data.results"
-              :key="i"
-            >
-              <div class="search-page__image">
-                <a :href="result.href">
-                  <img :src="result.img" :alt="result.page_title" />
-                </a>
-              </div>
-              <div class="search-page__texts">
-                <a
-                  class="search-page__page-title"
-                  :href="result.href"
-                  v-html="result.page_title"
-                ></a>
-                <p class="search-page__text" v-html="result.text"></p>
-              </div>
-            </div>
+            <p class="search-page__empty-result" v-html="data.results"></p>
           </div>
         </div>
         <SearchMain :search="search"/>
@@ -46,9 +28,10 @@ export default {
   data() {
     return {};
   },
+
   computed: {
     data() {
-      return this.$store.state.blocks.search_success;
+      return this.$store.state.blocks.search_empty;
     },
     search() {
       return this.$store.state.blocks.search;
