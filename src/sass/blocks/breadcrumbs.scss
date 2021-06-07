@@ -25,8 +25,9 @@
 
 .breadcrumbs__list {
   display: flex;
-  @media (max-width: $mobiles-max) {
+  @media (max-width: $tablets-max) {
     flex-wrap: wrap;
+    justify-content: flex-end;
   }
 }
 
@@ -38,7 +39,7 @@
   letter-spacing: 0.5px;
   color: #646464;
   position: relative;
-  margin-right: 10px;
+  margin: 5px 10px 5px 0;
 
   &:after {
     content: "/";
@@ -50,7 +51,7 @@
       display: none;
     }
     .breadcrumbs__link {
-      color: $color-gray;
+      color: $color-middle-gray;
     }
   }
 }

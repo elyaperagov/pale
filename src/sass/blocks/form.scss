@@ -1,11 +1,20 @@
 .form__fields {
-  max-width: 47.5%;
+  max-width: 56.5%;
   flex-grow: 1;
   flex-shrink: 0;
+  @media (max-width: $tablets-max) {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .form__group {
   margin-bottom: 60px;
+  @media (max-width: $tablets-max) {
+    max-width: 56.5%;
+  }
 
   &:last-of-type {
     margin-bottom: 30px;

@@ -55,13 +55,16 @@
             <p class="product__description" v-html="data.options"></p>
             <p class="product__description" v-for="(desc, d) in data.description" :key="d" v-html="desc"></p>
             <h4 class="product__price" v-html="data.price"></h4>
-            <button class="button button--black" v-html="data.button"></button>
+            <button class="button button--black" v-html="data.button" @click="addToCart()"></button>
             <a class="product__author-link" :href="data.author_link.link" v-html="data.author_link.text"></a>
           </div>
         </div>
         </div>
       </div>
     </section>
+    <transition name="fade">
+      <Message />
+    </transition>
   </div>
 </template>
 
@@ -69,13 +72,15 @@
 import Breadcrumbs from "../common/Breadcrumbs.vue";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
+import Message from "../modals/Message.vue";
 
 export default {
   name: "ProductSimple",
   components: {
     Swiper,
     SwiperSlide,
-    Breadcrumbs
+    Breadcrumbs,
+    Message,
   },
   directives: {
     swiper: directive
@@ -127,6 +132,12 @@ export default {
     }
   },
   methods: {
+    addToCart() {
+        this.$store.state.showMessage = true;
+      setTimeout(() => {
+        this.$store.state.showMessage = false;
+      }, 3000);
+    },
   },
   computed: {
     data() {

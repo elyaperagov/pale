@@ -1,5 +1,5 @@
 .order__inner {
-  margin: 120px 0;
+  margin: 120px 8.5%;
 
   @media (max-width: $tablets-max) {
     margin: 90px 0;
@@ -12,8 +12,11 @@
 
 .order__form {
   &-wrapper {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $tablets-max) {
+      flex-direction: column-reverse;
+    }
   }
 }
 
@@ -21,6 +24,7 @@
   position: relative;
   padding-left: 20px;
   margin-bottom: 60px;
+
   &:before {
     position: absolute;
     content: "";
@@ -31,5 +35,41 @@
     left: 0px;
     z-index: -1;
     transition: $transition-settings;
+  }
+}
+
+.order__total {
+  max-width: 28%;
+  @media (max-width: $tablets-max) {
+    max-width: 100%;
+    margin-bottom: 90px;
+  }
+  &-wrapper {
+    padding: 40px 30px 30px 30px;
+    background: $color-light-gray;
+  }
+  &-title {
+    font-family: 'Circe Bold';
+    font-weight: 700;
+  }
+  &-summa {
+    color: $color-gold;
+  }
+  hr {
+    width: 100%;
+    height: 1px;
+    margin: 34.5px 0 20.5px 0;
+    background: $color-gray;
+    border: none;
+    @media (max-width: $tablets-max) {
+      max-width: 193px;
+    }
+  }
+}
+
+.order__product {
+  &-name {
+    font-size: 15px;
+    color: $color-middle-gray;
   }
 }

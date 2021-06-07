@@ -171,6 +171,11 @@
     }
   }
 
+  &--submit {
+    margin-left: auto;
+    margin-right: 0;
+  }
+
   .icon {
     stroke: $color-white;
     transition: $transition-settings;

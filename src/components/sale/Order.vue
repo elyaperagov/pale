@@ -201,6 +201,8 @@
                   </div>
                 </div>
                 <div class="order__total">
+                  <div class="order__total-wrapper">
+                    <h5 class="order__total-title" v-html="total_title"></h5>
                   <div
                     class="order__product"
                     v-for="(product, p) in products"
@@ -213,12 +215,17 @@
                       ></h5>
                     </div>
                   </div>
+                  <hr>
+                  <div class="order__total-summa">
+                    <span v-html="total"></span> <span v-html="currency"></span><span v-html="summa"></span>
+                  </div>
+                  </div>
                 </div>
               </div>
               <button
                 type="submit"
                 name="submit"
-                class="button button--big button--submit"
+                class="button button--black button--big button--submit"
                 @click.prevent="sendFrom()"
                 v-html="button"
               ></button>
@@ -265,6 +272,8 @@ export default {
       delivery_title: "Доставка и оплата",
       delivery_method: "Способ доставки",
       payment_method: "Способ оплаты",
+      total_title: "Ваш заказ",
+      total: "Сумма:",
       button: "Перейти к оплате",
       currency: "$",
       products: [
@@ -337,7 +346,15 @@ export default {
     };
   },
   props: {},
-  computed: {},
+  computed: {
+    summa() {
+      let sum = 0;
+      for (let key in this.products) {
+        sum += parseFloat(this.products[key].price);
+      }
+      return sum;
+    },
+  },
   mounted() {},
   methods: {
     async sendFrom() {

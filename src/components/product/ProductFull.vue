@@ -66,6 +66,7 @@
               <button
                 class="button button--black"
                 v-html="data.button"
+                @click="addToCart()"
               ></button>
               <a
                 class="product__author-link"
@@ -77,9 +78,10 @@
         </div>
       </div>
     </section>
-    <OtherWorks
-      :title="data.other_title" :author="data.author"
-    ></OtherWorks>
+    <OtherWorks :title="data.other_title" :author="data.author"></OtherWorks>
+    <transition name="fade">
+      <Message />
+    </transition>
   </div>
 </template>
 
@@ -87,7 +89,8 @@
 import Breadcrumbs from "../common/Breadcrumbs.vue";
 import { Swiper, SwiperSlide, directive } from "vue-awesome-swiper";
 import "swiper/css/swiper.css";
-import OtherWorks from "../common/OtherWorks.vue"
+import OtherWorks from "../common/OtherWorks.vue";
+import Message from "../modals/Message.vue";
 
 export default {
   name: "ProductFull",
@@ -95,7 +98,8 @@ export default {
     Swiper,
     SwiperSlide,
     Breadcrumbs,
-    OtherWorks
+    OtherWorks,
+    Message,
   },
   directives: {
     swiper: directive,
@@ -146,7 +150,14 @@ export default {
       }
     },
   },
-  methods: {},
+  methods: {
+    addToCart() {
+        this.$store.state.showMessage = true;
+      setTimeout(() => {
+        this.$store.state.showMessage = false;
+      }, 3000);
+    },
+  },
   computed: {
     data() {
       return this.$store.state.blocks.product_full;
