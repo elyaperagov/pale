@@ -1,6 +1,14 @@
 .search {
   margin: 115px 0;
 
+  &--modal {
+    margin: 0;
+
+    input {
+      border: none;
+    }
+  }
+
   @media (max-width: $tablets-max) {
     margin: 90px 0;
   }
@@ -12,6 +20,10 @@
 
 .search__inner {
   position: relative;
+
+  @media (min-width: $tablets) {
+    min-width: 510px;
+  }
 
   &:before {
     position: absolute;
@@ -81,4 +93,8 @@
   top: 36px;
   background-color: $color-default-white;
   border: none;
+
+  @media (max-width: $tablets-max) {
+    right: 10px;
+  }
 }

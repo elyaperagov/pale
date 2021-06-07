@@ -26,8 +26,9 @@ import Banners from '../components/home/Banners.vue'
 import Products from '../components/home/Products.vue'
 import Filters from '../components/home/Filters.vue'
 import NewsMain from '../components/home/NewsMain.vue'
-import Search from '../components/common/Search.vue'
+import SearchMain from '../components/common/SearchMain.vue'
 import SearchSuccess from '../components/home/SearchSuccess.vue'
+import SearchEmpty from '../components/home/SearchEmpty.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 import Artists from '../components/info/Artists.vue'
@@ -181,7 +182,7 @@ new Vue({
     Filters,
     ProductFull,
     NewsMain,
-    Search,
+    SearchMain,
     SearchSuccess,
     Artists,
     Artist,
@@ -189,6 +190,7 @@ new Vue({
     Post,
     Contacts,
     Cart,
-    Order
+    Order,
+    SearchEmpty
   }
 }).$mount("#app");

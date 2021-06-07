@@ -15,7 +15,8 @@ const store = new Vuex.Store({
     cities: {},
     showMessage: false,
     showOrderSuccess: false,
-    showSearchSuccess: false
+    showSearchSuccess: false,
+    showSearch: false,
   },
   mutations: {
     setMenuState: (state, shown) => {
@@ -43,9 +44,13 @@ const store = new Vuex.Store({
     ModalClose: (state) => {
       state.showOrderSuccess = false;
       state.showSearchSuccess = false;
+      state.showSearch = false;
     },
     OrderSuccessOpen: (state) => {
       state.showOrderSuccess = true;
+    },
+    SearchOpen: (state) => {
+      state.showSearch = true;
     },
   },
   actions: {},
