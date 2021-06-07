@@ -147,4 +147,9 @@
   margin-top: 30px;
   padding-bottom: 2px;
   border-bottom: 1px solid $color-black;
+  transition: $transition-settings;
+  &:hover {
+    color: $color-gold;
+    border-bottom: 1px solid $color-gold;
+  }
 }

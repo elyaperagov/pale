@@ -54,6 +54,11 @@
       color: $color-middle-gray;
     }
   }
+  &:hover {
+    a {
+      text-decoration: underline;
+    }
+  }
 }
 
 .breadcrumbs__divider {

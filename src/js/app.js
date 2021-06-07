@@ -39,6 +39,7 @@ import Post from '../components/info/Post.vue'
 import Contacts from '../components/info/Contacts.vue'
 import Cart from '../components/sale/Cart.vue'
 import Order from '../components/sale/Order.vue'
+import E404 from '../components/common/E404.vue'
 
 Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
@@ -80,7 +81,9 @@ new Vue({
       timeout_stick: null,
       bowser: {},
       ym_counter: null,
-      recaptcha_key: null
+      recaptcha_key: null,
+      tabletBreakpoint: 1025,
+      mobileBreakpoint: 768,
     }
   },
   watch: {
@@ -106,7 +109,14 @@ new Vue({
       deep: true
     }
   },
-  computed: {},
+  computed: {
+    isTablet() {
+      return this.width <= this.tabletBreakpoint;
+    },
+    isMobile() {
+      return this.width <= this.mobileBreakpoint;
+    }
+  },
   async created() {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
@@ -193,6 +203,7 @@ new Vue({
     Cart,
     Order,
     SearchEmpty,
-    Catalog
+    Catalog,
+    E404
   }
 }).$mount("#app");
