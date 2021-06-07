@@ -31,6 +31,7 @@ import SearchSuccess from '../components/home/SearchSuccess.vue'
 import SearchEmpty from '../components/home/SearchEmpty.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
+import Catalog from '../components/catalog/Catalog.vue'
 import Artists from '../components/info/Artists.vue'
 import Artist from '../components/info/Artist.vue'
 import News from '../components/info/News.vue'
@@ -191,6 +192,7 @@ new Vue({
     Contacts,
     Cart,
     Order,
-    SearchEmpty
+    SearchEmpty,
+    Catalog
   }
 }).$mount("#app");

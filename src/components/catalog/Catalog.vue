@@ -1,10 +1,13 @@
 <template>
-  <div v-if="data" class="products">
+  <section class="catalog" v-if="data">
+    <Breadcrumbs
+      :breadcrumbs="data.breadcrumbs"
+      :title="data.title"
+    ></Breadcrumbs>
     <div class="container">
-      <Filters :filters="filters" v-if="!isMobile" />
-      <template v-for="(filter, t) in filters">
-        <div :key="t">
-          <div class="products__content" :class="{ active: filter.active }">
+      <div class="catalog__products">
+        <div class="products">
+          <div class="products__content">
             <div
               v-masonry
               class="products__masonry"
@@ -16,9 +19,7 @@
                 v-masonry-tile
                 class="products__item"
                 v-for="(item, index) in data.products"
-                v-if="filter.active && (filter.genre === item.genre)"
                 :key="index"
-                v-show="index < count"
               >
                 <a class="products__link" :href="item.link">
                   <img
@@ -45,25 +46,21 @@
             </div>
           </div>
         </div>
-      </template>
-      <button
-        class="button button--show-more"
-        @click.prevent="showMore()"
-        v-if="count < data.products.length"
-      >
-        {{ data.show_more }}
-      </button>
+        <Pagination class="pagination--catalog"/>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
-import Filters from "./Filters.vue";
+import Breadcrumbs from "../common/Breadcrumbs.vue";
+import Pagination from "../common/Pagination.vue";
 
 export default {
-  name: "Products",
+  name: "Catalog",
   components: {
-    Filters
+    Breadcrumbs,
+    Pagination
   },
   data() {
     return {
@@ -71,41 +68,12 @@ export default {
       mobileBreakpoint: 1024,
       windowWidth: window.innerWidth,
       isMobile: false,
-      count: 9
+      // count: 9
     };
   },
-
-  methods: {
-    showMore() {
-      this.count = this.data.products.length;
-    },
-    toggleMobile() {
-      if (window.innerWidth <= this.mobileBreakpoint) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    },
-    handleResize() {
-      this.toggleMobile();
-    }
-  },
-
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-
   computed: {
     data() {
-      return this.$store.state.blocks.products;
-    },
-    filters() {
-      return this.$store.state.blocks.filters;
+      return this.$store.state.blocks.catalog;
     }
   }
 };
