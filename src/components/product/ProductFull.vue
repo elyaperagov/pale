@@ -21,7 +21,13 @@
                     class="product__item"
                   >
                     <div class="product__item-image">
-                      <img :src="image" />
+                      <img
+                        :src="image"
+                        :alt="data.title"
+                        v-img="{
+                          src: image,
+                        }"
+                      />
                     </div>
                   </swiper-slide>
                 </swiper>
@@ -152,7 +158,7 @@ export default {
   },
   methods: {
     addToCart() {
-        this.$store.state.showMessage = true;
+      this.$store.state.showMessage = true;
       setTimeout(() => {
         this.$store.state.showMessage = false;
       }, 3000);

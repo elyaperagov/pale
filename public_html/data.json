@@ -911,47 +911,50 @@
       },
       "other_title": "Другие работы автора"
     },
-    "other_works": [{
-        "image": "img/other/other-1.jpg",
-        "name": "Миротворец, 2018",
-        "link": "/product-full.html",
-        "options": [
-          "Холст, масло, золочение",
-          "30,5 x 41 см"
-        ],
-        "price": "$10900"
-      },
-      {
-        "image": "img/other/other-2.jpg",
-        "name": "Всадник без головы, 2018",
-        "link": "/product-full.html",
-        "options": [
-          "Холст, масло, золочение",
-          "30,5 x 41 см"
-        ],
-        "price": "$3200"
-      },
-      {
-        "image": "img/other/other-3.jpg",
-        "name": "Всадник без головы, 2018",
-        "link": "/product-full.html",
-        "options": [
-          "Холст, масло, золочение",
-          "30,5 x 41 см"
-        ],
-        "price": "$700"
-      },
-      {
-        "image": "img/other/other-4.jpg",
-        "name": "Всадник без головы, 2018",
-        "link": "/product-full.html",
-        "options": [
-          "Холст, масло, золочение",
-          "30,5 x 41 см"
-        ],
-        "price": "$3200"
-      }
-    ],
+    "other_works": {
+      "items": [{
+          "image": "img/other/other-1.jpg",
+          "name": "Миротворец, 2018",
+          "link": "/product-full.html",
+          "options": [
+            "Холст, масло, золочение",
+            "30,5 x 41 см"
+          ],
+          "price": "$10900"
+        },
+        {
+          "image": "img/other/other-2.jpg",
+          "name": "Всадник без головы, 2018",
+          "link": "/product-full.html",
+          "options": [
+            "Холст, масло, золочение",
+            "30,5 x 41 см"
+          ],
+          "price": "$3200"
+        },
+        {
+          "image": "img/other/other-3.jpg",
+          "name": "Всадник без головы, 2018",
+          "link": "/product-full.html",
+          "options": [
+            "Холст, масло, золочение",
+            "30,5 x 41 см"
+          ],
+          "price": "$700"
+        },
+        {
+          "image": "img/other/other-4.jpg",
+          "name": "Всадник без головы, 2018",
+          "link": "/product-full.html",
+          "options": [
+            "Холст, масло, золочение",
+            "30,5 x 41 см"
+          ],
+          "price": "$3200"
+        }
+      ],
+      "all_works": "Все работы"
+    },
     "artists": {
       "title": "ХУДОЖНИКИ",
       "breadcrumbs": [{
@@ -971,7 +974,7 @@
               "link": "/artist.html"
             },
             {
-              "image": "img/artists/artist-2.jpg",
+              "image": "",
               "name": "Самойлов Юрий",
               "link": "/artist.html"
             },

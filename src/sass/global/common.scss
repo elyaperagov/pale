@@ -252,10 +252,8 @@ table {
 
   &--wide {
     max-width: 100%;
-    @media (max-width: $tablets-max) {
-      padding-right: 0;
-      padding-left: 0;
-    }
+    padding-right: 0;
+    padding-left: 0;
   }
 
   &--narrow {
