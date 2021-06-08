@@ -24,14 +24,11 @@
 
   .products__item {
     transition: $transition-settings;
+    filter: grayscale(0);
 
-    img {
+    &--gray {
       transition: $transition-settings;
       filter: grayscale(1);
-    }
-
-    &:hover img {
-      filter: grayscale(0);
     }
 
     @media (max-width: $tablets-max) {
@@ -98,4 +95,17 @@
 .products__show-more {
   margin: 0 auto;
   display: block;
+}
+
+.products__image {
+  height: auto;
+  width: 100%;
+
+  @media (max-width: $tablets-max) {
+    width: 289px;
+  }
+
+  @media (max-width: $mobiles-max) {
+    width: 280px;
+  }
 }

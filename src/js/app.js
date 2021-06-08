@@ -145,9 +145,11 @@ new Vue({
     onScroll(e) {
       this.window_top = window.pageYOffset;
     },
-    onResize() {
+    onResize(state) {
       this.width = window.innerWidth;
       this.height = window.innerHeight;
+      this.$store.commit("setMenuClosed", state);
+      document.body.classList.remove("scroll-off");
       this.getOffsetLeft();
     },
     getOffsetLeft() {

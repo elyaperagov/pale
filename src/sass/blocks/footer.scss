@@ -20,6 +20,11 @@
   min-width: 324px;
   width: 29.5%;
   margin-top: auto;
+  transition: $transition-settings;
+
+  &:hover a {
+    color: $color-gold;
+  }
 
   @media (max-width: $tablets-max) {
     margin-top: 30px;
@@ -31,10 +36,12 @@
     margin-top: 16px;
   }
 
-  p {
+  a {
+    transition: $transition-settings;
     font-weight: normal;
     font-size: 15px;
     line-height: 30px;
+    cursor: pointer;
     text-align: right;
     color: $color-default-white;
     opacity: 0.3;

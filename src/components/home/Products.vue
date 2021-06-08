@@ -1,7 +1,7 @@
 <template>
   <div v-if="data" class="products">
     <div class="container">
-      <Filters :filters="filters" v-if="!$root.isMobile" />
+      <Filters :filters="filters" v-if="!$root.isTablet" />
       <template v-for="(filter, t) in filters">
         <div :key="t">
           <div class="products__content" :class="{ active: filter.active }">
@@ -12,21 +12,30 @@
               fit-width="true"
               gutter="30"
             >
-              <template v-for="(item, index) in data.products">
+              <template
+                v-for="(item, index) in data.products"
+                @mouseenter="$switchActiveReverse(index, data.products)"
+                @mouseleave="$switchActive(index, data.products)"
+              >
                 <div
                   v-masonry-tile
                   class="products__item"
                   v-if="filter.active && filter.genre === item.genre"
                   :key="index"
                   v-show="index < count"
+                  @mouseenter="$switchActive(index, data.products)"
+                  @mouseleave="makeAllItemsActive(index, data.products)"
+                  :class="item.active ? '' : 'products__item--gray'"
                 >
                   <a class="products__link" :href="item.link">
-                    <img
-                      :src="item.img"
-                      :alt="item.name"
-                      :width="item.img_width"
-                      :height="item.img_height"
-                    />
+                    <div class="products__image">
+                      <img
+                        :src="item.img"
+                        :alt="item.name"
+                        :width="item.img_width"
+                        :height="item.img_height"
+                      />
+                    </div>
                     <div class="products__info">
                       <p class="products__author" v-html="item.author"></p>
                       <p class="products__name-info" v-html="item.name"></p>
@@ -76,6 +85,11 @@ export default {
   methods: {
     showMore() {
       this.count = this.data.products.length;
+    },
+    makeAllItemsActive(i, arr) {
+      for (i in arr) {
+        arr[i].active = true;
+      }
     }
   },
 

@@ -30,10 +30,7 @@ export default {
   },
   data() {
     return {
-      currency: "₽",
-      mobileBreakpoint: 1024,
-      windowWidth: window.innerWidth,
-      isMobile: false
+      currency: "₽"
       // count: 9
     };
   },

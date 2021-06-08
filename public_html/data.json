@@ -123,7 +123,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 120000
+          "price": 120000,
+          "active": true
         },
         {
           "img": "img/estafeta-color.jpg",
@@ -135,7 +136,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 216000
+          "price": 216000,
+          "active": true
         },
         {
           "img": "img/zavist-color.jpg",
@@ -147,7 +149,8 @@
           "size": "230 x 255 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 416000
+          "price": 416000,
+          "active": true
         },
         {
           "img": "img/ruka-boga-color.jpg",
@@ -159,7 +162,8 @@
           "size": "470 x 240 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/bezmyatezhnost-color.jpg",
@@ -171,7 +175,8 @@
           "size": "10 x 10 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 3300
+          "price": 3300,
+          "active": true
         },
         {
           "img": "img/soorikats-color.jpg",
@@ -183,7 +188,8 @@
           "size": "270 x 140 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 89000
+          "price": 89000,
+          "active": true
         },
         {
           "img": "img/prisutstvie-color.jpg",
@@ -195,7 +201,8 @@
           "size": "100 x 210 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/lisichka-color.jpg",
@@ -207,7 +214,8 @@
           "size": "400 x 300 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 77000
+          "price": 77000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -219,7 +227,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         },
         {
           "img": "img/vnutri-color.jpg",
@@ -231,7 +240,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 120000
+          "price": 120000,
+          "active": true
         },
         {
           "img": "img/estafeta-color.jpg",
@@ -243,7 +253,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 216000
+          "price": 216000,
+          "active": true
         },
         {
           "img": "img/zavist-color.jpg",
@@ -255,7 +266,8 @@
           "size": "230 x 255 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 416000
+          "price": 416000,
+          "active": true
         },
         {
           "img": "img/ruka-boga-color.jpg",
@@ -267,7 +279,8 @@
           "size": "470 x 240 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/bezmyatezhnost-color.jpg",
@@ -279,7 +292,8 @@
           "size": "10 x 10 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 3300
+          "price": 3300,
+          "active": true
         },
         {
           "img": "img/soorikats-color.jpg",
@@ -291,7 +305,8 @@
           "size": "270 x 140 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 89000
+          "price": 89000,
+          "active": true
         },
         {
           "img": "img/prisutstvie-color.jpg",
@@ -303,7 +318,8 @@
           "size": "100 x 210 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/lisichka-color.jpg",
@@ -315,7 +331,8 @@
           "size": "400 x 300 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 77000
+          "price": 77000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -327,7 +344,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         }
       ]
     },
@@ -356,7 +374,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 120000
+          "price": 120000,
+          "active": true
         },
         {
           "img": "img/estafeta-color.jpg",
@@ -368,7 +387,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 216000
+          "price": 216000,
+          "active": true
         },
         {
           "img": "img/zavist-color.jpg",
@@ -380,7 +400,8 @@
           "size": "230 x 255 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 416000
+          "price": 416000,
+          "active": true
         },
         {
           "img": "img/ruka-boga-color.jpg",
@@ -392,7 +413,8 @@
           "size": "470 x 240 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/bezmyatezhnost-color.jpg",
@@ -404,7 +426,8 @@
           "size": "10 x 10 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 3300
+          "price": 3300,
+          "active": true
         },
         {
           "img": "img/soorikats-color.jpg",
@@ -416,7 +439,8 @@
           "size": "270 x 140 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 89000
+          "price": 89000,
+          "active": true
         },
         {
           "img": "img/prisutstvie-color.jpg",
@@ -428,7 +452,8 @@
           "size": "100 x 210 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/lisichka-color.jpg",
@@ -440,7 +465,8 @@
           "size": "400 x 300 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 77000
+          "price": 77000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -452,7 +478,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         },
         {
           "img": "img/vnutri-color.jpg",
@@ -464,7 +491,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 120000
+          "price": 120000,
+          "active": true
         },
         {
           "img": "img/estafeta-color.jpg",
@@ -476,7 +504,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 216000
+          "price": 216000,
+          "active": true
         },
         {
           "img": "img/zavist-color.jpg",
@@ -488,7 +517,8 @@
           "size": "230 x 255 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 416000
+          "price": 416000,
+          "active": true
         },
         {
           "img": "img/ruka-boga-color.jpg",
@@ -500,7 +530,8 @@
           "size": "470 x 240 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/bezmyatezhnost-color.jpg",
@@ -512,7 +543,8 @@
           "size": "10 x 10 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 3300
+          "price": 3300,
+          "active": true
         },
         {
           "img": "img/soorikats-color.jpg",
@@ -524,7 +556,8 @@
           "size": "270 x 140 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 89000
+          "price": 89000,
+          "active": true
         },
         {
           "img": "img/prisutstvie-color.jpg",
@@ -536,7 +569,8 @@
           "size": "100 x 210 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/lisichka-color.jpg",
@@ -548,7 +582,8 @@
           "size": "400 x 300 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 77000
+          "price": 77000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -560,7 +595,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         }
       ]
     },
@@ -667,7 +703,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 120000
+          "price": 120000,
+          "active": true
         },
         {
           "img": "img/estafeta-color.jpg",
@@ -679,7 +716,8 @@
           "size": "120 x 95 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 216000
+          "price": 216000,
+          "active": true
         },
         {
           "img": "img/zavist-color.jpg",
@@ -691,7 +729,8 @@
           "size": "230 x 255 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 416000
+          "price": 416000,
+          "active": true
         },
         {
           "img": "img/ruka-boga-color.jpg",
@@ -703,7 +742,8 @@
           "size": "470 x 240 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/bezmyatezhnost-color.jpg",
@@ -715,7 +755,8 @@
           "size": "10 x 10 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 3300
+          "price": 3300,
+          "active": true
         },
         {
           "img": "img/soorikats-color.jpg",
@@ -727,7 +768,8 @@
           "size": "270 x 140 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 89000
+          "price": 89000,
+          "active": true
         },
         {
           "img": "img/prisutstvie-color.jpg",
@@ -739,7 +781,8 @@
           "size": "100 x 210 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 305000
+          "price": 305000,
+          "active": true
         },
         {
           "img": "img/lisichka-color.jpg",
@@ -751,7 +794,8 @@
           "size": "400 x 300 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 77000
+          "price": 77000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -763,7 +807,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -775,7 +820,8 @@
           "size": "310 x 310 см",
           "genre": "Classic",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         },
         {
           "img": "img/red-flowers-color.jpg",
@@ -787,7 +833,8 @@
           "size": "310 x 310 см",
           "genre": "Abstract",
           "link": "/product-full.html",
-          "price": 469000
+          "price": 469000,
+          "active": true
         }
       ]
     },
