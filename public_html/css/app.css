@@ -942,12 +942,12 @@ table {
             justify-content: flex-end;
     width: 50%;
     padding-right: 60px;
-    padding-right: 27%;
+    padding-right: 10%;
   }
 }
 @media (max-width: 767px) {
   .header__right-menu {
-    padding-right: 23%;
+    padding-right: 75px;
   }
 }
 
