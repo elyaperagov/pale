@@ -1,6 +1,6 @@
 <template>
   <section class="banners" v-if="data">
-    <div class="container" v-if="!$root.isMobile">
+    <div class="container" v-if="!$root.isTablet">
       <h1 class="banners__page-title visually-hidden" v-html="data.title"></h1>
       <div class="banners__inner">
         <swiper

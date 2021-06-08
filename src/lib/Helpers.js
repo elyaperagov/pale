@@ -52,6 +52,14 @@ export default {
       }
       Vue.set(arr[i], 'active', true);
     };
+    Vue.prototype.$switchActiveReverse = function (i, arr) {
+      for (let key in arr) {
+        if (i != key) {
+          Vue.set(arr[key], 'active', true);
+        }
+      }
+      Vue.set(arr[i], 'active', false);
+    };
     Vue.prototype.$toggleArray = function (i, arr, key_name) {
       for (let key in arr) {
         if (i != key) {

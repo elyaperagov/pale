@@ -7,26 +7,4 @@
   h1 {
     text-transform: uppercase;
   }
-
-  .products__item {
-    transition: $transition-settings;
-
-    img {
-      transition: $transition-settings;
-
-      filter: grayscale(0);
-    }
-
-    &:hover img {
-      filter: grayscale(1);
-    }
-
-    @media (max-width: $tablets-max) {
-      width: 289px;
-    }
-
-    @media (max-width: $mobiles-max) {
-      width: 280px;
-    }
-  }
 }

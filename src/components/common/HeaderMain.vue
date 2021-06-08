@@ -14,7 +14,7 @@
             <img loading="lazy" :src="data.logoSrc" :alt="data.logoAlt" />
           </a>
         </div>
-        <ul class="header__menu" v-if="!$root.isMobile">
+        <ul class="header__menu" v-if="!$root.isTablet">
           <li class="header__menu-item" v-for="(menu, i) in data.menu" :key="i">
             <a :href="menu.link"> {{ menu.name }}</a>
             <ul class="header__dropdown-items" v-if="menu.categories">
@@ -96,16 +96,16 @@
     <transition name="fade">
       <div
         class="header__mobile-wrapper"
-        v-if="$root.isMobile"
+        v-if="$root.isTablet"
         v-show="this.$store.state.menuShown"
       >
         <div
           class="header__mobile"
-          v-if="$root.isMobile"
+          v-if="$root.isTablet"
           v-show="$store.state.menuShown"
         >
           <div class="container">
-            <ul class="header__menu" v-if="$root.isMobile">
+            <ul class="header__menu" v-if="$root.isTablet">
               <li
                 class="header__menu-item"
                 v-for="(menu, i) in data.menu"

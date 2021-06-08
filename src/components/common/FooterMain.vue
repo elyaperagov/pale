@@ -8,7 +8,7 @@
           </li>
         </ul>
         <div class="footer__copyright">
-          <p v-html="data.text"></p>
+          <a href="/home.html" v-html="data.text"></a>
         </div>
       </div>
     </div>
