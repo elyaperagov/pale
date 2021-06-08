@@ -12,7 +12,7 @@
       },
       "menu": [{
           "name": "Галерея",
-          "link": "/gallery.html",
+          "link": "/catalog.html",
           "categories": [{
               "text": "Картины",
               "link": "#"
@@ -1412,15 +1412,15 @@
     "footer": {
       "menu": [{
           "name": "Галерея",
-          "link": "#gallery"
+          "link": "/catalog.html"
         },
         {
           "name": "Художники",
-          "link": "#painters"
+          "link": "/artists.html"
         },
         {
           "name": "Корзина",
-          "link": "#cart"
+          "link": "/cart.html"
         },
         {
           "name": "О нас",
@@ -1428,11 +1428,11 @@
         },
         {
           "name": "Контакты",
-          "link": "#contacts"
+          "link": "/contacts.html"
         },
         {
           "name": "Поиск",
-          "link": "#search"
+          "link": "/search-success.html"
         },
         {
           "name": "Доставка и оплата",
