@@ -64,4 +64,11 @@
     margin: 15px 0 0 0;
     letter-spacing: 0.05em;
   }
+
+  &:hover {
+    .news__item-name h6 {
+      text-decoration: line-through;
+      text-decoration-color: $color-gold;
+    }
+  }
 }

@@ -21,9 +21,11 @@
                   class="artists__item"
                   :href="item.link"
                 >
-                  <div class="artists__item-image">
+                  <div class="artists__item-image" v-if="item.image">
                     <img :src="item.image" :alt="item.name" />
                   </div>
+                  <div v-else class="artists__item-image"></div>
+                  <div class="artists__item-gradient"></div>
                   <div class="artists__item-name">
                     <span v-html="item.name"></span>
                   </div>

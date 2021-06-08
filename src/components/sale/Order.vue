@@ -222,12 +222,19 @@
                   </div>
                 </div>
               </div>
-              <button
+              <button v-if="form.payment.value === 'Картой на сайте'"
                 type="submit"
                 name="submit"
                 class="button button--black button--big button--submit"
                 @click.prevent="sendFrom()"
-                v-html="button"
+                v-html="button_pay"
+              ></button>
+              <button v-else
+                type="submit"
+                name="submit"
+                class="button button--black button--big button--submit"
+                @click.prevent="sendFrom()"
+                v-html="button_end"
               ></button>
             </form>
           </div>
@@ -274,7 +281,8 @@ export default {
       payment_method: "Способ оплаты",
       total_title: "Ваш заказ",
       total: "Сумма:",
-      button: "Перейти к оплате",
+      button_pay: "Перейти к оплате",
+      button_end: "Завершить оформление",
       currency: "$",
       products: [
         {
