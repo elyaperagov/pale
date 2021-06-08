@@ -12,7 +12,7 @@
       },
       "menu": [{
           "name": "Галерея",
-          "link": "#gallery",
+          "link": "/gallery.html",
           "categories": [{
               "text": "Картины",
               "link": "#"
@@ -67,19 +67,19 @@
         },
         {
           "name": "Художники",
-          "link": "#painters"
+          "link": "/artists.html"
         },
         {
           "name": "Виртуальная галерея",
-          "link": "#virtual"
+          "link": "/gallery.html"
         },
         {
           "name": "Контакты",
-          "link": "#contacts"
+          "link": "/contacts.html"
         },
         {
           "name": "Новости",
-          "link": "#news"
+          "link": "/news.html"
         }
       ],
       "languages": [{
@@ -122,7 +122,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 120000
         },
         {
@@ -134,7 +134,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 216000
         },
         {
@@ -146,7 +146,7 @@
           "materials": "Фотография",
           "size": "230 x 255 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 416000
         },
         {
@@ -158,7 +158,7 @@
           "materials": "Холст, масло",
           "size": "470 x 240 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -170,7 +170,7 @@
           "materials": "Холст, масло",
           "size": "10 x 10 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 3300
         },
         {
@@ -182,7 +182,7 @@
           "materials": "Холст, масло",
           "size": "270 x 140 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 89000
         },
         {
@@ -194,7 +194,7 @@
           "materials": "Холст, масло",
           "size": "100 x 210 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -206,7 +206,7 @@
           "materials": "Холст, масло",
           "size": "400 x 300 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 77000
         },
         {
@@ -218,7 +218,7 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 469000
         },
         {
@@ -230,7 +230,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 120000
         },
         {
@@ -242,7 +242,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 216000
         },
         {
@@ -254,7 +254,7 @@
           "materials": "Фотография",
           "size": "230 x 255 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 416000
         },
         {
@@ -266,7 +266,7 @@
           "materials": "Холст, масло",
           "size": "470 x 240 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -278,7 +278,7 @@
           "materials": "Холст, масло",
           "size": "10 x 10 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 3300
         },
         {
@@ -290,7 +290,7 @@
           "materials": "Холст, масло",
           "size": "270 x 140 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 89000
         },
         {
@@ -302,7 +302,7 @@
           "materials": "Холст, масло",
           "size": "100 x 210 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -314,7 +314,7 @@
           "materials": "Холст, масло",
           "size": "400 x 300 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 77000
         },
         {
@@ -326,7 +326,240 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
+          "price": 469000
+        }
+      ]
+    },
+    "gallery": {
+      "title": "Виртуальная галерея",
+      "breadcrumbs": [{
+          "text": "Главная",
+          "link": "/home.html"
+        },
+        {
+          "text": "Каталог",
+          "link": "/catalog.html"
+        },
+        {
+          "text": "Виртуальная галерея",
+          "link": "/gallery.html"
+        }
+      ],
+      "products": [{
+          "img": "img/vnutri-color.jpg",
+          "img_width": "346",
+          "img_height": "411",
+          "name": "«Внутри», 2019",
+          "author": "Копытцева Анастасия",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 120000
+        },
+        {
+          "img": "img/estafeta-color.jpg",
+          "img_width": "346",
+          "img_height": "245",
+          "name": "«Эстафета»",
+          "author": "Горбунов Дмитрий",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 216000
+        },
+        {
+          "img": "img/zavist-color.jpg",
+          "img_width": "346",
+          "img_height": "490",
+          "name": "«Зависть»",
+          "author": "Шафутинский Игорь",
+          "materials": "Фотография",
+          "size": "230 x 255 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 416000
+        },
+        {
+          "img": "img/ruka-boga-color.jpg",
+          "img_width": "346",
+          "img_height": "518",
+          "name": "Рука бога, 2003",
+          "author": "Полонская Анастасия",
+          "materials": "Холст, масло",
+          "size": "470 x 240 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 305000
+        },
+        {
+          "img": "img/bezmyatezhnost-color.jpg",
+          "img_width": "346",
+          "img_height": "225",
+          "name": "«Безмятежность», 2021",
+          "author": "Белобородов Артём",
+          "materials": "Холст, масло",
+          "size": "10 x 10 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 3300
+        },
+        {
+          "img": "img/soorikats-color.jpg",
+          "img_width": "346",
+          "img_height": "232",
+          "name": "Возвращение сурикатов, 2008",
+          "author": "Абельцев Андрей",
+          "materials": "Холст, масло",
+          "size": "270 x 140 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 89000
+        },
+        {
+          "img": "img/prisutstvie-color.jpg",
+          "img_width": "346",
+          "img_height": "242",
+          "name": "Присутствие, 1928",
+          "author": "Калинин Владимир",
+          "materials": "Холст, масло",
+          "size": "100 x 210 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 305000
+        },
+        {
+          "img": "img/lisichka-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "Лисичка-сестричка, 2001",
+          "author": "Кныш Альберт",
+          "materials": "Холст, масло",
+          "size": "400 x 300 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 77000
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 469000
+        },
+        {
+          "img": "img/vnutri-color.jpg",
+          "img_width": "346",
+          "img_height": "411",
+          "name": "«Внутри», 2019",
+          "author": "Копытцева Анастасия",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 120000
+        },
+        {
+          "img": "img/estafeta-color.jpg",
+          "img_width": "346",
+          "img_height": "245",
+          "name": "«Эстафета»",
+          "author": "Горбунов Дмитрий",
+          "materials": "Холст, масло",
+          "size": "120 x 95 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 216000
+        },
+        {
+          "img": "img/zavist-color.jpg",
+          "img_width": "346",
+          "img_height": "490",
+          "name": "«Зависть»",
+          "author": "Шафутинский Игорь",
+          "materials": "Фотография",
+          "size": "230 x 255 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 416000
+        },
+        {
+          "img": "img/ruka-boga-color.jpg",
+          "img_width": "346",
+          "img_height": "518",
+          "name": "Рука бога, 2003",
+          "author": "Полонская Анастасия",
+          "materials": "Холст, масло",
+          "size": "470 x 240 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 305000
+        },
+        {
+          "img": "img/bezmyatezhnost-color.jpg",
+          "img_width": "346",
+          "img_height": "225",
+          "name": "«Безмятежность», 2021",
+          "author": "Белобородов Артём",
+          "materials": "Холст, масло",
+          "size": "10 x 10 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 3300
+        },
+        {
+          "img": "img/soorikats-color.jpg",
+          "img_width": "346",
+          "img_height": "232",
+          "name": "Возвращение сурикатов, 2008",
+          "author": "Абельцев Андрей",
+          "materials": "Холст, масло",
+          "size": "270 x 140 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 89000
+        },
+        {
+          "img": "img/prisutstvie-color.jpg",
+          "img_width": "346",
+          "img_height": "242",
+          "name": "Присутствие, 1928",
+          "author": "Калинин Владимир",
+          "materials": "Холст, масло",
+          "size": "100 x 210 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 305000
+        },
+        {
+          "img": "img/lisichka-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "Лисичка-сестричка, 2001",
+          "author": "Кныш Альберт",
+          "materials": "Холст, масло",
+          "size": "400 x 300 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 77000
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
           "price": 469000
         }
       ]
@@ -341,7 +574,7 @@
         },
         {
           "text": "Результаты поиска",
-          "link": "/search-results.html"
+          "link": "/search-empty.html"
         },
         {
           "text": "Куинджи",
@@ -354,20 +587,20 @@
       "request": "Бакштейн",
       "results": [{
           "img": "img/bakshtein.jpg",
-          "href": "#",
+          "href": "/post.html",
           "page_title": "Название страницы",
           "text": "Слушательница Института современного искусства Иосифа Бакштейна. Художница работает с броскими образами, простыми сюжетами, кадрированными композициями и экспрессивным рисунком."
         },
         {
           "img": "img/bakshtein.jpg",
           "page_title": "Название страницы",
-          "href": "#",
+          "href": "/post.html",
           "text": "Слушательница Института современного искусства Иосифа Бакштейна. Художница работает с броскими образами, простыми сюжетами, кадрированными композициями и экспрессивным рисунком."
         },
         {
           "img": "img/bakshtein.jpg",
           "page_title": "Название страницы",
-          "href": "#",
+          "href": "/post.html",
           "text": "Слушательница Института современного искусства Иосифа Бакштейна. Художница работает с броскими образами, простыми сюжетами, кадрированными композициями и экспрессивным рисунком."
         }
       ],
@@ -377,7 +610,7 @@
         },
         {
           "text": "Результаты поиска",
-          "link": "/search-results.html"
+          "link": "/search-success.html"
         },
         {
           "text": "Бакштейн",
@@ -433,7 +666,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 120000
         },
         {
@@ -445,7 +678,7 @@
           "materials": "Холст, масло",
           "size": "120 x 95 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 216000
         },
         {
@@ -457,7 +690,7 @@
           "materials": "Фотография",
           "size": "230 x 255 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 416000
         },
         {
@@ -469,7 +702,7 @@
           "materials": "Холст, масло",
           "size": "470 x 240 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -481,7 +714,7 @@
           "materials": "Холст, масло",
           "size": "10 x 10 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 3300
         },
         {
@@ -493,7 +726,7 @@
           "materials": "Холст, масло",
           "size": "270 x 140 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 89000
         },
         {
@@ -505,7 +738,7 @@
           "materials": "Холст, масло",
           "size": "100 x 210 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 305000
         },
         {
@@ -517,7 +750,7 @@
           "materials": "Холст, масло",
           "size": "400 x 300 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 77000
         },
         {
@@ -529,7 +762,7 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 469000
         },
         {
@@ -541,7 +774,7 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Classic",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 469000
         },
         {
@@ -553,7 +786,7 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Abstract",
-          "link": "#",
+          "link": "/product-full.html",
           "price": 469000
         }
       ]

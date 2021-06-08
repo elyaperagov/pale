@@ -1,13 +1,20 @@
 <template>
-  <header class="header" v-if="data" :style="{ top: $root.header_top + 'px' }">
+  <header
+    class="header"
+    v-if="data"
+    :class="{
+      'header--hidden': $root.window_top < 800 && $root.window_top !== 0,
+      'header--fixed': $root.window_top > 800
+    }"
+  >
     <div class="container">
       <div class="header__top">
         <div class="header__logo">
-          <a :href="'/home'" class="header__logo-link">
+          <a :href="'/home.html'" class="header__logo-link">
             <img loading="lazy" :src="data.logoSrc" :alt="data.logoAlt" />
           </a>
         </div>
-        <ul class="header__menu" v-if="!isMobile">
+        <ul class="header__menu" v-if="!$root.isMobile">
           <li class="header__menu-item" v-for="(menu, i) in data.menu" :key="i">
             <a :href="menu.link"> {{ menu.name }}</a>
             <ul class="header__dropdown-items" v-if="menu.categories">
@@ -89,22 +96,22 @@
     <transition name="fade">
       <div
         class="header__mobile-wrapper"
-        v-if="isMobile"
+        v-if="$root.isMobile"
         v-show="this.$store.state.menuShown"
       >
         <div
           class="header__mobile"
-          v-if="isMobile"
+          v-if="$root.isMobile"
           v-show="$store.state.menuShown"
         >
           <div class="container">
-            <ul class="header__menu" v-if="isMobile">
+            <ul class="header__menu" v-if="$root.isMobile">
               <li
                 class="header__menu-item"
                 v-for="(menu, i) in data.menu"
                 :key="i"
               >
-                <a :href="menu.link" v-html="">
+                <a :href="menu.link">
                   {{ menu.name }}
                   <div class="header__right-icon">
                     <svg class="icon" width="12" height="20" aria-hidden="true">
@@ -164,9 +171,6 @@ export default {
       active: true,
       showOptions: false,
       duration: 500,
-      mobileBreakpoint: 1024,
-      windowWidth: window.innerWidth,
-      isMobile: false,
       counter: 0
     };
   },
@@ -175,14 +179,7 @@ export default {
       return this.$store.state.blocks.header_main;
     }
   },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
+  beforeDestroy() {},
   methods: {
     switchActiveLang(i, arr) {
       for (i in arr) {
@@ -202,16 +199,6 @@ export default {
       }
       this.$store.commit("setMenuClosed", state);
       document.body.classList.remove("scroll-off");
-    },
-    toggleMobile() {
-      if (window.innerWidth <= this.mobileBreakpoint) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    },
-    handleResize() {
-      this.toggleMobile();
     },
     showSearchModal() {
       this.$store.commit("SearchOpen");

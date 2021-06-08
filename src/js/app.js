@@ -10,7 +10,9 @@ import 'vue-select/dist/vue-select.css'
 import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
-import {VueMasonryPlugin} from 'vue-masonry';
+import {
+  VueMasonryPlugin
+} from 'vue-masonry';
 import Paginate from 'vuejs-paginate'
 
 
@@ -32,6 +34,8 @@ import SearchEmpty from '../components/home/SearchEmpty.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 import Catalog from '../components/catalog/Catalog.vue'
+import CatalogItems from '../components/catalog/CatalogItems.vue'
+import VirtualGallery from '../components/catalog/VirtualGallery.vue'
 import Artists from '../components/info/Artists.vue'
 import Artist from '../components/info/Artist.vue'
 import News from '../components/info/News.vue'
@@ -74,7 +78,7 @@ new Vue({
     return {
       window_top: 0,
       header_top: 0,
-      header_height: 183,
+      header_height: 90,
       offsetLeft: 0,
       width: null,
       height: null,
@@ -204,6 +208,8 @@ new Vue({
     Order,
     SearchEmpty,
     Catalog,
+    VirtualGallery,
+    CatalogItems,
     E404
   }
 }).$mount("#app");

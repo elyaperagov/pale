@@ -19,7 +19,7 @@
           ></button>
         </div>
       </div>
-       <SearchMain :search="search"></SearchMain>
+      <SearchMain :search="search"></SearchMain>
     </div>
 
     <div class="news-main__inner" v-if="this.$root.width < 768">
@@ -55,36 +55,16 @@ export default {
     SearchMain
   },
   data() {
-    return {
-      mobileBreakpoint: 1024,
-      isMobile: false
-    };
+    return {};
   },
-  methods: {
-    toggleMobile() {
-      if (this.$root.width <= this.mobileBreakpoint) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    },
-    handleResize() {
-      this.toggleMobile();
-    }
-  },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-    this.handleResize();
-  },
+  methods: {},
+  mounted() {},
+  beforeDestroy() {},
   computed: {
     data() {
       return this.$store.state.blocks.news;
     },
-     search() {
+    search() {
       return this.$store.state.blocks.search;
     }
   }
