@@ -10,7 +10,9 @@ import 'vue-select/dist/vue-select.css'
 import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
-import {VueMasonryPlugin} from 'vue-masonry';
+import {
+  VueMasonryPlugin
+} from 'vue-masonry';
 import Paginate from 'vuejs-paginate'
 
 
@@ -32,6 +34,8 @@ import SearchEmpty from '../components/home/SearchEmpty.vue'
 import ProductSimple from '../components/product/ProductSimple.vue'
 import ProductFull from '../components/product/ProductFull.vue'
 import Catalog from '../components/catalog/Catalog.vue'
+import CatalogItems from '../components/catalog/CatalogItems.vue'
+import VirtualGallery from '../components/catalog/VirtualGallery.vue'
 import Artists from '../components/info/Artists.vue'
 import Artist from '../components/info/Artist.vue'
 import News from '../components/info/News.vue'
@@ -73,14 +77,15 @@ new Vue({
     return {
       window_top: 0,
       header_top: 0,
-      header_height: 183,
+      header_height: 90,
       offsetLeft: 0,
       width: null,
       height: null,
       timeout_stick: null,
       bowser: {},
       ym_counter: null,
-      recaptcha_key: null
+      recaptcha_key: null,
+      mobileBreakpoint: 1024
     }
   },
   watch: {
@@ -106,7 +111,12 @@ new Vue({
       deep: true
     }
   },
-  computed: {},
+  computed: {
+    isMobile() {
+      return this.width <= this.mobileBreakpoint;
+    },
+
+  },
   async created() {
     this.width = window.innerWidth;
     this.height = window.innerHeight;
@@ -193,6 +203,8 @@ new Vue({
     Cart,
     Order,
     SearchEmpty,
-    Catalog
+    Catalog,
+    VirtualGallery,
+    CatalogItems
   }
 }).$mount("#app");

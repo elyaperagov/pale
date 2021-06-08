@@ -27,7 +27,7 @@
             </div>
           </div>
         </div>
-        <SearchMain :search="search"/>
+        <SearchMain :search="search" />
       </div>
     </div>
   </section>

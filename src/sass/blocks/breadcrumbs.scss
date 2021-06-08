@@ -16,6 +16,7 @@
   align-items: center;
   h1 {
     flex-grow: 1;
+    margin-right: 10px;
   }
   @media (max-width: $mobiles-max) {
     flex-direction: column;

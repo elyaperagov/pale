@@ -5,9 +5,10 @@
       :title="data.title"
     ></Breadcrumbs>
     <div class="container">
+      <Virtual />
       <div class="catalog__products">
-        <CatalogItems :catalog_items="catalog_items"/>
-        <Pagination class="pagination--catalog"/>
+        <CatalogItems :catalog_items="catalog_items" />
+        <Pagination class="pagination--catalog" />
       </div>
     </div>
   </section>
@@ -17,30 +18,32 @@
 import Breadcrumbs from "../common/Breadcrumbs.vue";
 import Pagination from "../common/Pagination.vue";
 import CatalogItems from "./CatalogItems.vue";
+import Virtual from "./Virtual.vue";
 
 export default {
   name: "Catalog",
   components: {
     Breadcrumbs,
     Pagination,
-    CatalogItems
+    CatalogItems,
+    Virtual
   },
   data() {
     return {
       currency: "₽",
       mobileBreakpoint: 1024,
       windowWidth: window.innerWidth,
-      isMobile: false,
+      isMobile: false
       // count: 9
     };
   },
   computed: {
     data() {
-      return this.$store.state.blocks.catalog;
+      return this.$store.state.blocks.gallery;
     },
     catalog_items() {
-      return this.$store.state.blocks.catalog.products;
-    },
+      return this.$store.state.blocks.gallery.products;
+    }
   }
 };
 </script>

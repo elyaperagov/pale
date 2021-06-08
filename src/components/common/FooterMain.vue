@@ -4,11 +4,7 @@
       <div class="footer__inner">
         <ul class="footer__menu">
           <li class="footer__menu-item" v-for="(item, i) in data.menu" :key="i">
-            <a
-              @click.prevent="goTo(item.link)"
-              :href="item.link"
-              v-html="item.name"
-            ></a>
+            <a :href="item.link" v-html="item.name"></a>
           </li>
         </ul>
         <div class="footer__copyright">
@@ -30,15 +26,6 @@ export default {
     }
   },
   components: {},
-  methods: {
-    async goTo(link) {
-      if (!this.$scrollTo(link)) {
-        await this.$router.push({ path: "/" });
-        setTimeout(() => {
-          this.$scrollTo(link);
-        }, 500);
-      }
-    }
-  }
+  methods: {}
 };
 </script>

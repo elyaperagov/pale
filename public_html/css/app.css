@@ -524,6 +524,7 @@ h1 {
   font-weight: 700;
   font-size: 36px;
   line-height: 130%;
+  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   h1 {
@@ -865,7 +866,38 @@ table {
 }
 
 .header {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: #ffffff;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+.header--hidden {
+  -webkit-transform: translateY(-90px);
+      -ms-transform: translateY(-90px);
+          transform: translateY(-90px);
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.header--fixed {
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+  background: #ffffff;
+  z-index: 10;
+  position: fixed;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
 }
 
 .header__menu {
@@ -1689,7 +1721,7 @@ table {
 }
 
 .banners {
-  margin-top: 20px;
+  margin-top: 90px;
 }
 .banners .swiper-container {
   overflow-x: clip;
@@ -2064,6 +2096,7 @@ table {
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
+  margin-right: 10px;
 }
 @media (max-width: 767px) {
   .breadcrumbs__inner {
@@ -2978,6 +3011,10 @@ table {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
+.search-page__page-title:hover {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
 
 .search-page__text {
   margin: 12px 0;
@@ -3690,5 +3727,46 @@ table {
   .catalog__products .products__item {
     width: 280px;
   }
+}
+
+.virtual {
+  width: 100%;
+  height: 656px;
+  position: relative;
+  margin-top: 118px;
+  margin-bottom: 120px;
+}
+@media (max-width: 1023px) {
+  .virtual {
+    height: 450px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .virtual {
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+.virtual iframe {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+.icon {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
+  transition: 0.3s all;
+}
+.icon--search {
+  fill: #111111;
+}
+.icon--search:hover {
+  fill: #EECC7D;
 }
 /*# sourceMappingURL=app.css.map*/

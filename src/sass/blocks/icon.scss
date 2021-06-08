@@ -1,0 +1,11 @@
+.icon {
+  transition: $transition-settings;
+
+  &--search {
+    fill: $color-black;
+
+    &:hover {
+      fill: $color-gold;
+    }
+  }
+}

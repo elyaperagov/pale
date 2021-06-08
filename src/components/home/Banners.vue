@@ -1,6 +1,6 @@
 <template>
   <section class="banners" v-if="data">
-    <div class="container" v-if="!isMobile">
+    <div class="container" v-if="!$root.isMobile">
       <h1 class="banners__page-title visually-hidden" v-html="data.title"></h1>
       <div class="banners__inner">
         <swiper
@@ -79,9 +79,6 @@ export default {
   },
   data() {
     return {
-      mobileBreakpoint: 1024,
-      windowWidth: window.innerWidth,
-      isMobile: false,
       SliderOptions: {
         slidesPerView: 1,
         spaceBetween: 20,
@@ -90,6 +87,9 @@ export default {
         pagination: {
           el: ".swiper-pagination",
           clickable: true
+        },
+        autoplay: {
+          delay: 5000
         }
       }
     };
@@ -100,25 +100,8 @@ export default {
     }
   },
   mounted() {},
-  methods: {
-    toggleMobile() {
-      if (window.innerWidth <= this.mobileBreakpoint) {
-        this.isMobile = true;
-      } else {
-        this.isMobile = false;
-      }
-    },
-    handleResize() {
-      this.toggleMobile();
-    }
-  },
-  mounted() {
-    window.addEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  },
-  beforeDestroy() {
-    window.removeEventListener("resize", this.handleResize);
-    this.toggleMobile();
-  }
+  methods: {},
+  mounted() {},
+  beforeDestroy() {}
 };
 </script>

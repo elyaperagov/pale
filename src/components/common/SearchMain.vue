@@ -13,7 +13,9 @@
         class="input search__input"
         :class="{ active: search.active }"
         :placeholder="
-          this.$root.width > 768 ? search.placeholder : search.placeholder_mobile
+          this.$root.width > 768
+            ? search.placeholder
+            : search.placeholder_mobile
         "
       />
       <button class="search__button">
@@ -22,9 +24,9 @@
             width="30"
             height="30"
             aria-hidden="true"
-            class="icon icon--header"
+            class="icon icon--search"
           >
-            <use xlink:href="#search" class="icon icon--header"></use>
+            <use xlink:href="#search"></use>
           </svg>
         </div>
       </button>
@@ -50,8 +52,7 @@ export default {
       }
     }
   },
-  computed: {
-  },
+  computed: {},
   created() {
     document.addEventListener("click", e => {
       if (!e.target.classList.value.includes("header")) {

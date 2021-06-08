@@ -1,5 +1,25 @@
 .header {
-  margin-bottom: 16px;
+  padding-bottom: 16px;
+  transition: $transition-settings;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: $color-default-white;
+  transform: translateY(0);
+
+  &--hidden {
+    transform: translateY(-90px);
+    transition: $transition-settings;
+  }
+
+  &--fixed {
+    transform: translateY(0);
+    transition: $transition-settings;
+    background: $color-default-white;
+    z-index: 10;
+    position: fixed;
+    box-shadow: 0 0 10px rgb(0 0 0 / 15%);
+  }
 }
 
 .header__menu {
