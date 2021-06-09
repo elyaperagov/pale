@@ -57,7 +57,7 @@
               </svg>
             </div>
           </button>
-          <a href="#" class="header__cart">
+          <a :href="data.cart" class="header__cart">
             <div class="header__cart-icon">
               <svg class="icon" width="20" height="20" aria-hidden="true">
                 <use xlink:href="#cart"></use>

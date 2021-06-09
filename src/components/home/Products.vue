@@ -25,7 +25,7 @@
                   v-show="index < count"
                   @mouseenter="$switchActive(index, data.products)"
                   @mouseleave="makeAllItemsActive(index, data.products)"
-                  :class="item.active ? '' : 'products__item--gray'"
+                  :class="item.active ? '' : 'products__item--modified'"
                 >
                   <a class="products__link" :href="item.link">
                     <div class="products__image">

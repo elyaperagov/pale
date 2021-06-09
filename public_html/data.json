@@ -3,6 +3,7 @@
     "header_main": {
       "logoSrc": "/img/logo.png",
       "logoAlt": "логотип pale",
+      "cart": "/cart.html",
       "search": {
         "isOpen": false,
         "label": "Поиск по каталогу",
@@ -819,6 +820,58 @@
           "materials": "Холст, масло",
           "size": "310 x 310 см",
           "genre": "Classic",
+          "link": "/product-full.html",
+          "price": 469000,
+          "active": true
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 469000,
+          "active": true
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 469000,
+          "active": true
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
+          "link": "/product-full.html",
+          "price": 469000,
+          "active": true
+        },
+        {
+          "img": "img/red-flowers-color.jpg",
+          "img_width": "346",
+          "img_height": "260",
+          "name": "8 красных цветов, 2015",
+          "author": "Никешина Татьяна",
+          "materials": "Холст, масло",
+          "size": "310 x 310 см",
+          "genre": "Abstract",
           "link": "/product-full.html",
           "price": 469000,
           "active": true

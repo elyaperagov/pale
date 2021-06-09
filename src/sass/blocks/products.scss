@@ -26,7 +26,13 @@
     transition: $transition-settings;
     filter: grayscale(0);
 
-    &--gray {
+    &:hover {
+      img {
+        transform: scale(1.02);
+      }
+    }
+
+    &--modified {
       transition: $transition-settings;
       filter: grayscale(1);
     }
@@ -100,12 +106,10 @@
 .products__image {
   height: auto;
   width: 100%;
+  overflow: hidden;
 
-  @media (max-width: $tablets-max) {
-    width: 289px;
+  img {
+    transition: $transition-settings;
   }
 
-  @media (max-width: $mobiles-max) {
-    width: 280px;
-  }
 }

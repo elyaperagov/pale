@@ -285,6 +285,11 @@
   font-weight: normal;
   font-size: 15px;
   line-height: 22px;
+  transition: $transition-settings;
+
+  &:hover {
+    color: #999999;
+  }
 }
 
 .header__cart-icon {
