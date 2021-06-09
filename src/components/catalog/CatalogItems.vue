@@ -1,21 +1,13 @@
 <template>
   <div class="products">
     <div class="products__content">
-      <div
-        v-masonry
-        class="products__masonry"
-        transition-duration="0.3s"
-        item-selector=".products__item"
-        fit-width="true"
-        gutter="30"
-      >
+      <div ref="masonry" class="products__masonry">
         <template
           v-for="(item, index) in catalog_items"
           @mouseenter="$switchActiveReverse(index, catalog_items)"
           @mouseleave="$switchActive(index, catalog_items)"
         >
           <div
-            v-masonry-tile
             class="products__item"
             :key="index"
             @mouseenter="$switchActive(index, catalog_items)"
@@ -55,7 +47,8 @@ export default {
   name: "CatalogItems",
   data() {
     return {
-      currency: "₽"
+      currency: "₽",
+      count: 9
     };
   },
   methods: {
@@ -63,10 +56,27 @@ export default {
       for (i in arr) {
         arr[i].active = true;
       }
+    },
+    initMasonry() {
+      if (this.$refs.masonry) {
+        const masonry = new Masonry(this.$refs.masonry, {
+          itemSelector: ".products__item",
+          percentPosition: true,
+          transitionDuration: "0.3s",
+          fitWidth: "true",
+          gutter: 30
+        });
+      }
     }
   },
+
   props: {
     catalog_items: Array
+  },
+  mounted() {
+    this.$nextTick(() => {
+      this.initMasonry();
+    });
   }
 };
 </script>

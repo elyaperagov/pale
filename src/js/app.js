@@ -10,6 +10,7 @@ import 'vue-select/dist/vue-select.css'
 import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
+import Masonry from "masonry-layout"
 import {
   VueMasonryPlugin
 } from 'vue-masonry';
@@ -63,6 +64,8 @@ Vue.config.ignoredElements = [
   'noindex',
   /^ion-/
 ]
+
+window.Masonry = Masonry;
 
 Vue.config.productionTip = false;
 

@@ -80,7 +80,6 @@ export default {
   mounted() {},
   methods: {
     removeProduct(p) {
-      debugger;
       this.data.products.splice(p, 1);
     },
   },
