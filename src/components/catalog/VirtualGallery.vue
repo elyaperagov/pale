@@ -39,7 +39,7 @@ export default {
       return this.$store.state.blocks.gallery;
     },
     catalog_items() {
-      return this.$store.state.blocks.gallery.products;
+      return this.$store.state.blocks.catalog.products;
     }
   }
 };
