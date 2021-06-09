@@ -7,4 +7,22 @@
   h1 {
     text-transform: uppercase;
   }
+
+  .products__item {
+    transition: $transition-settings;
+    filter: grayscale(1);
+
+    &--modified {
+      transition: $transition-settings;
+      filter: grayscale(0);
+    }
+
+    @media (max-width: $tablets-max) {
+      width: 289px;
+    }
+
+    @media (max-width: $mobiles-max) {
+      width: 280px;
+    }
+  }
 }

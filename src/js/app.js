@@ -15,8 +15,6 @@ import {
 } from 'vue-masonry';
 import Paginate from 'vuejs-paginate'
 
-
-
 import store from "../store"
 import axios from 'axios'
 import Helpers from '../lib/Helpers.js'

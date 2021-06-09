@@ -20,7 +20,7 @@
             :key="index"
             @mouseenter="$switchActive(index, catalog_items)"
             @mouseleave="makeAllItemsActive(index, catalog_items)"
-            :class="item.active ? '' : 'products__item--gray'"
+            :class="item.active ? '' : 'products__item--modified'"
           >
             <a class="products__link" :href="item.link">
               <div class="products__image">

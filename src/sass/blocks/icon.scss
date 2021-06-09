@@ -1,8 +1,12 @@
 .icon {
   transition: $transition-settings;
+  fill: $color-black;
+
+  &:hover {
+    fill: #999999;
+  }
 
   &--search {
-    fill: $color-black;
 
     &:hover {
       fill: $color-gold;

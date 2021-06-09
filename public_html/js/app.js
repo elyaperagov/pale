@@ -2514,19 +2514,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({data:function data(){return{};},computed:{}});
 
 /***/ }),
@@ -3548,7 +3535,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({name:"Cart",components:{Breadcrumbs:_common_Breadcrumbs_vue__WEBPACK_IMPORTED_MODULE_0__["default"]},data:function data(){return{};},props:{},computed:{data:function data(){return this.$store.state.blocks.cart;},summa:function summa(){var sum=0;for(var key in this.data.products){sum+=parseFloat(this.data.products[key].price);}return sum;}},mounted:function mounted(){},methods:{removeProduct:function removeProduct(p){this.data.products.splice(p,1);}}});
+/* harmony default export */ __webpack_exports__["default"] = ({name:"Cart",components:{Breadcrumbs:_common_Breadcrumbs_vue__WEBPACK_IMPORTED_MODULE_0__["default"]},data:function data(){return{};},props:{},computed:{data:function data(){return this.$store.state.blocks.cart;},summa:function summa(){var sum=0;for(var key in this.data.products){sum+=parseFloat(this.data.products[key].price);}return sum;}},mounted:function mounted(){},methods:{removeProduct:function removeProduct(p){debugger;this.data.products.splice(p,1);}}});
 
 /***/ }),
 
@@ -20447,7 +20434,7 @@ var render = function() {
                   ],
                   key: index,
                   staticClass: "products__item",
-                  class: item.active ? "" : "products__item--gray",
+                  class: item.active ? "" : "products__item--modified",
                   on: {
                     mouseenter: function($event) {
                       return _vm.$switchActive(index, _vm.catalog_items)
@@ -20976,39 +20963,46 @@ var render = function() {
                   ]
                 ),
                 _vm._v(" "),
-                _c("a", { staticClass: "header__cart", attrs: { href: "#" } }, [
-                  _c("div", { staticClass: "header__cart-icon" }, [
-                    _c(
-                      "svg",
-                      {
-                        staticClass: "icon",
-                        attrs: {
-                          width: "20",
-                          height: "20",
-                          "aria-hidden": "true"
+                _c(
+                  "a",
+                  {
+                    staticClass: "header__cart",
+                    attrs: { href: _vm.data.cart }
+                  },
+                  [
+                    _c("div", { staticClass: "header__cart-icon" }, [
+                      _c(
+                        "svg",
+                        {
+                          staticClass: "icon",
+                          attrs: {
+                            width: "20",
+                            height: "20",
+                            "aria-hidden": "true"
+                          }
+                        },
+                        [_c("use", { attrs: { "xlink:href": "#cart" } })]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.counter,
+                          expression: "counter"
                         }
-                      },
-                      [_c("use", { attrs: { "xlink:href": "#cart" } })]
-                    )
-                  ]),
-                  _vm._v(" "),
-                  _c("span", {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.counter,
-                        expression: "counter"
-                      }
-                    ],
-                    staticClass: "header__cart-counter"
-                  }),
-                  _vm._v(" "),
-                  _c("span", {
-                    staticClass: "header__cart-total",
-                    domProps: { innerHTML: _vm._s(_vm.data.total) }
-                  })
-                ]),
+                      ],
+                      staticClass: "header__cart-counter"
+                    }),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass: "header__cart-total",
+                      domProps: { innerHTML: _vm._s(_vm.data.total) }
+                    })
+                  ]
+                ),
                 _vm._v(" "),
                 _c(
                   "div",
@@ -21668,35 +21662,6 @@ var render = function() {
           "symbol",
           {
             attrs: {
-              id: "loop",
-              viewBox: "0 0 20 20",
-              xmlns: "http://www.w3.org/2000/svg"
-            }
-          },
-          [
-            _c("g", [
-              _c("path", {
-                attrs: {
-                  d:
-                    "M19.8779 19.2887L13.7925 13.2033C15.0565 11.7999 15.8334 9.94957 15.8334 7.91664C15.8333 3.55145 12.2819 0 7.91668 0C3.55145 0 0 3.55145 0 7.91668C0 12.2819 3.55145 15.8334 7.91668 15.8334C9.94961 15.8334 11.7999 15.0565 13.2034 13.7925L19.2887 19.8779C19.3701 19.9593 19.4768 20 19.5834 20C19.69 20 19.7966 19.9593 19.878 19.8779C20.0407 19.7152 20.0407 19.4515 19.8779 19.2887ZM7.91668 15C4.01125 15 0.833359 11.8225 0.833359 7.91668C0.833359 4.01086 4.01125 0.83332 7.91668 0.83332C11.8221 0.83332 15 4.01082 15 7.91668C15 11.8225 11.8221 15 7.91668 15Z"
-                }
-              })
-            ]),
-            _vm._v(" "),
-            _c("defs", [
-              _c("clipPath", { attrs: { id: "clip0" } }, [
-                _c("rect", {
-                  attrs: { width: "20", height: "20", fill: "white" }
-                })
-              ])
-            ])
-          ]
-        ),
-        _vm._v(" "),
-        _c(
-          "symbol",
-          {
-            attrs: {
               id: "cart",
               viewBox: "0 0 20 20",
               xmlns: "http://www.w3.org/2000/svg"
@@ -21728,9 +21693,7 @@ var render = function() {
             _vm._v(" "),
             _c("defs", [
               _c("clipPath", { attrs: { id: "clip0" } }, [
-                _c("rect", {
-                  attrs: { width: "20", height: "20", fill: "white" }
-                })
+                _c("rect", { attrs: { width: "20", height: "20" } })
               ])
             ])
           ]
@@ -22189,7 +22152,7 @@ var render = function() {
                                       staticClass: "products__item",
                                       class: item.active
                                         ? ""
-                                        : "products__item--gray",
+                                        : "products__item--modified",
                                       on: {
                                         mouseenter: function($event) {
                                           return _vm.$switchActive(
