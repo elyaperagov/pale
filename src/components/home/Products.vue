@@ -2,10 +2,19 @@
   <div class="products" v-if="data">
     <div class="container">
       <Filters :filters="filters" v-if="!$root.isTablet" />
+
       <div class="products__content">
-        <CatalogItems :catalog_items="catalog_items" />
+        <CatalogItems
+          ref="catalog_items"
+          :itemsToShow="itemsToShow"
+          :catalog_items="catalog_items"
+        />
       </div>
-      <button class="button button--show-more" @click.prevent="showMore()">
+      <button
+        class="button button--show-more"
+        v-if="this.itemsToShow <= this.catalog_items.length"
+        @click.prevent="loadMore()"
+      >
         {{ data.show_more }}
       </button>
     </div>
@@ -25,35 +34,24 @@ export default {
   data() {
     return {
       currency: "₽",
-      count: 9
+      itemsToShow: 9
     };
   },
 
   methods: {
-    showMore() {
-      // this.count = this.data.products.length;
-    },
-    makeAllItemsActive(i, arr) {
-      for (i in arr) {
-        arr[i].active = true;
+    async loadMore() {
+      if (this.itemsToShow > this.catalog_items.length) {
+        return;
       }
-    },
-    initMasonry() {
-      if (this.$refs.masonry) {
-        const masonry = new Masonry(this.$refs.masonry, {
-          itemSelector: ".products__item",
 
-          fitWidth: "true",
-          gutter: 30
-        });
-      }
+      await this.addItems();
+      this.$refs.catalog_items.resizeAllMasonryItems();
+    },
+    addItems() {
+      this.itemsToShow += 9;
     }
   },
-  mounted() {
-    this.$nextTick(() => {
-      this.initMasonry();
-    });
-  },
+  mounted() {},
   beforeDestroy() {},
 
   computed: {

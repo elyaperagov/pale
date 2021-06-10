@@ -6,8 +6,12 @@
     ></Breadcrumbs>
     <div class="container">
       <div class="catalog__products">
-        <CatalogItems :catalog_items="catalog_items"/>
-        <Pagination class="pagination--catalog"/>
+        <CatalogItems
+          :data="data"
+          :itemsToShow="itemsToShow"
+          :catalog_items="catalog_items"
+        />
+        <Pagination class="pagination--catalog" />
       </div>
     </div>
   </section>
@@ -27,8 +31,8 @@ export default {
   },
   data() {
     return {
-      currency: "₽"
-      // count: 9
+      currency: "₽",
+      itemsToShow: 18
     };
   },
   computed: {
@@ -37,7 +41,7 @@ export default {
     },
     catalog_items() {
       return this.$store.state.blocks.catalog.products;
-    },
+    }
   }
 };
 </script>

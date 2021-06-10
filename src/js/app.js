@@ -11,9 +11,6 @@ import VueLazyload from 'vue-lazyload'
 import VueImg from 'v-img';
 import Cookies from 'js-cookie';
 import Masonry from "masonry-layout"
-import {
-  VueMasonryPlugin
-} from 'vue-masonry';
 import Paginate from 'vuejs-paginate'
 
 import store from "../store"
@@ -48,7 +45,6 @@ Vue.component('slide-up-down', SlideUpDown)
 Vue.component('v-select', vSelect)
 Vue.component('VueSlider', VueSlider)
 Vue.component('paginate', Paginate)
-Vue.use(VueMasonryPlugin)
 
 Vue.use(VueImg);
 Vue.use(VueTheMask)

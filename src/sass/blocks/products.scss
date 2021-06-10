@@ -14,6 +14,24 @@
   position: relative;
   margin: 57px auto 0 auto;
 
+  overflow: hidden;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: 0;
+
+  @media only screen and (max-width: $tablets-max) {
+    grid-template-columns: repeat(2, minmax(50%,1fr));
+    grid-gap: 7px 15px;
+  }
+
+  @media only screen and (max-width: $mobiles-max) {
+    grid-template-columns: repeat(1, minmax(100%,1fr));
+  }
+
+  @media only screen and (min-width: $desktops) {
+    grid-template-columns: repeat(3, minmax(33.3%, 1fr));
+  }
+
   @media (max-width: $tablets-max) {
     margin: 89px auto 0 auto;
   }
@@ -25,6 +43,7 @@
   .products__item {
     transition: $transition-settings;
     filter: grayscale(0);
+
 
     &:hover {
       img {
@@ -38,11 +57,11 @@
     }
 
     @media (max-width: $tablets-max) {
-      width: 289px;
+      max-width: 289px;
     }
 
     @media (max-width: $mobiles-max) {
-      width: 280px;
+      margin: 0 auto;
     }
   }
 }
@@ -111,5 +130,4 @@
   img {
     transition: $transition-settings;
   }
-
 }

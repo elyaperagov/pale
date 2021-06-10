@@ -2759,6 +2759,26 @@ table {
 .products__masonry {
   position: relative;
   margin: 57px auto 0 auto;
+  overflow: hidden;
+  display: grid;
+  grid-gap: 10px;
+  grid-auto-rows: 0;
+}
+@media only screen and (max-width: 1023px) {
+  .products__masonry {
+    grid-template-columns: repeat(2, minmax(50%, 1fr));
+    grid-gap: 7px 15px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .products__masonry {
+    grid-template-columns: repeat(1, minmax(100%, 1fr));
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .products__masonry {
+    grid-template-columns: repeat(3, minmax(33.3%, 1fr));
+  }
 }
 @media (max-width: 1023px) {
   .products__masonry {
@@ -2791,12 +2811,12 @@ table {
 }
 @media (max-width: 1023px) {
   .products__masonry .products__item {
-    width: 289px;
+    max-width: 289px;
   }
 }
 @media (max-width: 767px) {
   .products__masonry .products__item {
-    width: 280px;
+    margin: 0 auto;
   }
 }
 
