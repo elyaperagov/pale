@@ -1,7 +1,7 @@
 <template>
   <div class="products">
     <div class="products__content">
-      <div ref="masonry" class="products__masonry">
+      <div class="products__masonry">
         <template
           v-for="(item, index) in catalog_items"
           @mouseenter="$switchActiveReverse(index, catalog_items)"
@@ -9,6 +9,7 @@
         >
           <div
             class="products__item"
+            v-if="index < itemsToShow"
             :key="index"
             @mouseenter="$switchActive(index, catalog_items)"
             @mouseleave="makeAllItemsActive(index, catalog_items)"
@@ -47,36 +48,83 @@ export default {
   name: "CatalogItems",
   data() {
     return {
-      currency: "₽",
-      count: 9
+      currency: "₽"
     };
   },
   methods: {
+    async loadMore() {
+      if (this.itemsToShow > this.catalog_items.length) {
+        return;
+      }
+
+      await this.addItems();
+      this.resizeAllMasonryItems();
+    },
+    addItems() {
+      this.itemsToShow += 9;
+    },
+
     makeAllItemsActive(i, arr) {
       for (i in arr) {
         arr[i].active = true;
       }
     },
-    initMasonry() {
-      if (this.$refs.masonry) {
-        const masonry = new Masonry(this.$refs.masonry, {
-          itemSelector: ".products__item",
-          percentPosition: true,
-          transitionDuration: "0.3s",
-          fitWidth: "true",
-          gutter: 30
-        });
+
+    resizeMasonryItem(item) {
+      /* Get the grid object, its row-gap, and the size of its implicit rows */
+      var grid = document.getElementsByClassName("products__masonry")[0],
+        rowGap = parseInt(
+          window.getComputedStyle(grid).getPropertyValue("grid-row-gap")
+        ),
+        rowHeight = parseInt(
+          window.getComputedStyle(grid).getPropertyValue("grid-auto-rows")
+        );
+
+      /*
+       * Spanning for any brick = S
+       * Grid's row-gap = G
+       * Size of grid's implicitly create row-track = R
+       * Height of item content = H
+       * Net height of the item = H1 = H + G
+       * Net height of the implicit row-track = T = G + R
+       * S = H1 / T
+       */
+      var rowSpan = Math.ceil(
+        (item.querySelector(".products__link").getBoundingClientRect().height +
+          rowGap) /
+          (rowHeight + rowGap)
+      );
+
+      /* Set the spanning as calculated above (S) */
+      item.style.gridRowEnd = "span " + rowSpan;
+    },
+    resizeAllMasonryItems() {
+      // Get all item class objects in one list
+      var allItems = document.getElementsByClassName("products__item");
+
+      /*
+       * Loop through the above list and execute the spanning function to
+       * each list-item (i.e. each masonry item)
+       */
+      for (var i = 0; i < allItems.length; i++) {
+        this.resizeMasonryItem(allItems[i]);
       }
     }
   },
 
   props: {
-    catalog_items: Array
+    catalog_items: Array,
+    itemsToShow: Number,
+    data: Object
   },
   mounted() {
-    this.$nextTick(() => {
-      this.initMasonry();
+    let masonryEvents = ["load", "resize"];
+    let that = this;
+    masonryEvents.forEach(function(event) {
+      window.addEventListener(event, that.resizeAllMasonryItems);
     });
+
+    this.resizeAllMasonryItems();
   }
 };
 </script>

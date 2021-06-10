@@ -7,7 +7,11 @@
     <div class="container">
       <Virtual />
       <div class="catalog__products">
-        <CatalogItems :catalog_items="catalog_items" />
+        <CatalogItems
+          :data="data"
+          :itemsToShow="itemsToShow"
+          :catalog_items="catalog_items"
+        />
         <Pagination class="pagination--catalog" />
       </div>
     </div>
@@ -30,8 +34,8 @@ export default {
   },
   data() {
     return {
-      currency: "₽"
-      // count: 9
+      currency: "₽",
+      itemsToShow: 18
     };
   },
   computed: {
