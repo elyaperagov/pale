@@ -1,5 +1,6 @@
 <template>
   <div class="products">
+
     <div class="products__content">
       <div class="products__masonry">
         <template
@@ -52,17 +53,6 @@ export default {
     };
   },
   methods: {
-    async loadMore() {
-      if (this.itemsToShow > this.catalog_items.length) {
-        return;
-      }
-
-      await this.addItems();
-      this.resizeAllMasonryItems();
-    },
-    addItems() {
-      this.itemsToShow += 9;
-    },
 
     makeAllItemsActive(i, arr) {
       for (i in arr) {

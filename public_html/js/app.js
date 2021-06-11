@@ -1869,9 +1869,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
-/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-function asyncGeneratorStep(gen,resolve,reject,_next,_throw,key,arg){try{var info=gen[key](arg);var value=info.value;}catch(error){reject(error);return;}if(info.done){resolve(value);}else{Promise.resolve(value).then(_next,_throw);}}function _asyncToGenerator(fn){return function(){var self=this,args=arguments;return new Promise(function(resolve,reject){var gen=fn.apply(self,args);function _next(value){asyncGeneratorStep(gen,resolve,reject,_next,_throw,"next",value);}function _throw(err){asyncGeneratorStep(gen,resolve,reject,_next,_throw,"throw",err);}_next(undefined);});};}//
 //
 //
 //
@@ -1916,7 +1913,9 @@ function asyncGeneratorStep(gen,resolve,reject,_next,_throw,key,arg){try{var inf
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({name:"CatalogItems",data:function data(){return{currency:"₽"};},methods:{loadMore:function loadMore(){var _this=this;return _asyncToGenerator(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(!(_this.itemsToShow>_this.catalog_items.length)){_context.next=2;break;}return _context.abrupt("return");case 2:_context.next=4;return _this.addItems();case 4:_this.resizeAllMasonryItems();case 5:case"end":return _context.stop();}}},_callee);}))();},addItems:function addItems(){this.itemsToShow+=9;},makeAllItemsActive:function makeAllItemsActive(i,arr){for(i in arr){arr[i].active=true;}},resizeMasonryItem:function resizeMasonryItem(item){/* Get the grid object, its row-gap, and the size of its implicit rows */var grid=document.getElementsByClassName("products__masonry")[0],rowGap=parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap")),rowHeight=parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));/*
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({name:"CatalogItems",data:function data(){return{currency:"₽"};},methods:{makeAllItemsActive:function makeAllItemsActive(i,arr){for(i in arr){arr[i].active=true;}},resizeMasonryItem:function resizeMasonryItem(item){/* Get the grid object, its row-gap, and the size of its implicit rows */var grid=document.getElementsByClassName("products__masonry")[0],rowGap=parseInt(window.getComputedStyle(grid).getPropertyValue("grid-row-gap")),rowHeight=parseInt(window.getComputedStyle(grid).getPropertyValue("grid-auto-rows"));/*
        * Spanning for any brick = S
        * Grid's row-gap = G
        * Size of grid's implicitly create row-track = R
@@ -2626,6 +2625,9 @@ var _name$components$data;function _defineProperty(obj,key,value){if(key in obj)
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+function asyncGeneratorStep(gen,resolve,reject,_next,_throw,key,arg){try{var info=gen[key](arg);var value=info.value;}catch(error){reject(error);return;}if(info.done){resolve(value);}else{Promise.resolve(value).then(_next,_throw);}}function _asyncToGenerator(fn){return function(){var self=this,args=arguments;return new Promise(function(resolve,reject){var gen=fn.apply(self,args);function _next(value){asyncGeneratorStep(gen,resolve,reject,_next,_throw,"next",value);}function _throw(err){asyncGeneratorStep(gen,resolve,reject,_next,_throw,"throw",err);}_next(undefined);});};}//
 //
 //
 //
@@ -2640,8 +2642,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-/* harmony default export */ __webpack_exports__["default"] = ({data:function data(){return{};},props:{filters:Array},computed:{},components:{},methods:{}});
+/* harmony default export */ __webpack_exports__["default"] = ({data:function data(){return{};},props:{filters:Array,catalog_items:Array,filtered_items:Array},computed:{},components:{},methods:{filterItems:function filterItems(filter){var _this=this;return _asyncToGenerator(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:_this.filtered_items=[];_context.next=3;return _this.catalog_items.filter(function(catalog_item){if(catalog_item.genre===filter.genre){_this.filtered_items.push(catalog_item);}});case 3:_this.$refs.catalog_items.resizeAllMasonryItems();case 4:case"end":return _context.stop();}}},_callee);}))();}}});
 
 /***/ }),
 
@@ -2743,7 +2744,18 @@ function asyncGeneratorStep(gen,resolve,reject,_next,_throw,key,arg){try{var inf
 //
 //
 //
-/* harmony default export */ __webpack_exports__["default"] = ({name:"Products",components:{Filters:_Filters_vue__WEBPACK_IMPORTED_MODULE_1__["default"],CatalogItems:_catalog_CatalogItems_vue__WEBPACK_IMPORTED_MODULE_2__["default"]},data:function data(){return{currency:"₽",itemsToShow:9};},methods:{loadMore:function loadMore(){var _this=this;return _asyncToGenerator(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(!(_this.itemsToShow>_this.catalog_items.length)){_context.next=2;break;}return _context.abrupt("return");case 2:_context.next=4;return _this.addItems();case 4:_this.$refs.catalog_items.resizeAllMasonryItems();case 5:case"end":return _context.stop();}}},_callee);}))();},addItems:function addItems(){this.itemsToShow+=9;}},mounted:function mounted(){},beforeDestroy:function beforeDestroy(){},computed:{data:function data(){return this.$store.state.blocks.products;},filters:function filters(){return this.$store.state.blocks.filters;},catalog_items:function catalog_items(){return this.$store.state.blocks.catalog.products;}}});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({name:"Products",components:{Filters:_Filters_vue__WEBPACK_IMPORTED_MODULE_1__["default"],CatalogItems:_catalog_CatalogItems_vue__WEBPACK_IMPORTED_MODULE_2__["default"]},data:function data(){return{currency:"₽",itemsToShow:9,filtered_items:[]};},methods:{loadMore:function loadMore(){var _this=this;return _asyncToGenerator(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context){while(1){switch(_context.prev=_context.next){case 0:if(!(_this.itemsToShow>_this.catalog_items.length)){_context.next=2;break;}return _context.abrupt("return");case 2:_context.next=4;return _this.addItems();case 4:_this.$refs.catalog_items.resizeAllMasonryItems();case 5:case"end":return _context.stop();}}},_callee);}))();},addItems:function addItems(){this.itemsToShow+=9;},filterItems:function filterItems(filter){var _this2=this;return _asyncToGenerator(/*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2(){return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2){while(1){switch(_context2.prev=_context2.next){case 0:_this2.filtered_items=[];_context2.next=3;return _this2.catalog_items.filter(function(catalog_item){if(catalog_item.genre===filter.genre){_this2.filtered_items.push(catalog_item);}});case 3:_this2.$refs.catalog_items.resizeAllMasonryItems();case 4:case"end":return _context2.stop();}}},_callee2);}))();}},mounted:function mounted(){var _this3=this;setTimeout(function(){_this3.filtered_items=_this3.catalog_items;},500);setTimeout(function(){_this3.$refs.catalog_items.resizeAllMasonryItems();},501);},beforeDestroy:function beforeDestroy(){},computed:{data:function data(){return this.$store.state.blocks.catalog;},filters:function filters(){return this.$store.state.blocks.filters;},catalog_items:function catalog_items(){return this.$store.state.blocks.catalog.products;}}});
 
 /***/ }),
 
@@ -21545,28 +21557,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("section", { staticClass: "filters" }, [
-    _c(
-      "ul",
-      { staticClass: "filters__items" },
-      _vm._l(_vm.filters, function(item, i) {
-        return _c(
-          "li",
-          {
-            key: i,
-            staticClass: "filters__item",
-            on: {
-              click: function($event) {
-                return _vm.$switchActive(i, _vm.filters)
-              }
-            }
-          },
-          [_c("span", { domProps: { innerHTML: _vm._s(item.text) } })]
-        )
-      }),
-      0
-    )
-  ])
+  return _c("div")
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -21692,47 +21683,61 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _vm.data
     ? _c("div", { staticClass: "products" }, [
-        _c(
-          "div",
-          { staticClass: "container" },
-          [
-            !_vm.$root.isTablet
-              ? _c("Filters", { attrs: { filters: _vm.filters } })
-              : _vm._e(),
-            _vm._v(" "),
+        _c("div", { staticClass: "container" }, [
+          _c("section", { staticClass: "filters" }, [
             _c(
-              "div",
-              { staticClass: "products__content" },
-              [
-                _c("CatalogItems", {
-                  ref: "catalog_items",
-                  attrs: {
-                    itemsToShow: _vm.itemsToShow,
-                    catalog_items: _vm.catalog_items
-                  }
-                })
-              ],
-              1
-            ),
-            _vm._v(" "),
-            this.itemsToShow <= this.catalog_items.length
-              ? _c(
-                  "button",
+              "ul",
+              { staticClass: "filters__items" },
+              _vm._l(_vm.filters, function(item, i) {
+                return _c(
+                  "li",
                   {
-                    staticClass: "button button--show-more",
+                    key: i,
+                    staticClass: "filters__item",
                     on: {
                       click: function($event) {
-                        $event.preventDefault()
-                        return _vm.loadMore()
+                        _vm.$switchActive(i, _vm.filters), _vm.filterItems(item)
                       }
                     }
                   },
-                  [_vm._v("\n      " + _vm._s(_vm.data.show_more) + "\n    ")]
+                  [_c("span", { domProps: { innerHTML: _vm._s(item.text) } })]
                 )
-              : _vm._e()
-          ],
-          1
-        )
+              }),
+              0
+            )
+          ]),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "products__content" },
+            [
+              _c("CatalogItems", {
+                ref: "catalog_items",
+                attrs: {
+                  itemsToShow: _vm.itemsToShow,
+                  catalog_items: _vm.filtered_items
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          this.itemsToShow <= this.filtered_items.length
+            ? _c(
+                "button",
+                {
+                  staticClass: "button button--show-more",
+                  on: {
+                    click: function($event) {
+                      $event.preventDefault()
+                      return _vm.loadMore()
+                    }
+                  }
+                },
+                [_vm._v("\n      " + _vm._s(_vm.data.show_more) + "\n    ")]
+              )
+            : _vm._e()
+        ])
       ])
     : _vm._e()
 }
