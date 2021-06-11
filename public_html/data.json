@@ -104,6 +104,7 @@
       "total": 0
     },
     "catalog": {
+      "show_more": "Показать ещё",
       "title": "Галерея",
       "breadcrumbs": [{
           "text": "Главная",
@@ -460,7 +461,7 @@
           "author": "Кныш Альберт",
           "materials": "Холст, масло",
           "size": "400 x 300 см",
-          "genre": "Abstract",
+          "genre": "Classic",
           "link": "/product-full.html",
           "price": 77000,
           "active": true
@@ -473,7 +474,7 @@
           "author": "Никешина Татьяна",
           "materials": "Холст, масло",
           "size": "310 x 310 см",
-          "genre": "Abstract",
+          "genre": "Classic",
           "link": "/product-full.html",
           "price": 469000,
           "active": true
@@ -586,9 +587,6 @@
       "placeholder": "Введите запрос, например, «Картина на холсте»",
       "placeholder_mobile": "Введите ваш запрос",
       "active": false
-    },
-    "products": {
-      "show_more": "Показать ещё"
     },
 
     "news": {

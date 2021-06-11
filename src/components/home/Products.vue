@@ -1,18 +1,29 @@
 <template>
   <div class="products" v-if="data">
     <div class="container">
-      <Filters :filters="filters" v-if="!$root.isTablet" />
-
+      <!-- <Filters :filters="filters" v-if="!$root.isTablet" /> -->
+      <section class="filters">
+        <ul class="filters__items">
+          <li
+            class="filters__item"
+            v-for="(item, i) in filters"
+            @click="$switchActive(i, filters), filterItems(item)"
+            :key="i"
+          >
+            <span v-html="item.text"></span>
+          </li>
+        </ul>
+      </section>
       <div class="products__content">
         <CatalogItems
           ref="catalog_items"
           :itemsToShow="itemsToShow"
-          :catalog_items="catalog_items"
+          :catalog_items="filtered_items"
         />
       </div>
       <button
         class="button button--show-more"
-        v-if="this.itemsToShow <= this.catalog_items.length"
+        v-if="this.itemsToShow <= this.filtered_items.length"
         @click.prevent="loadMore()"
       >
         {{ data.show_more }}
@@ -34,7 +45,8 @@ export default {
   data() {
     return {
       currency: "₽",
-      itemsToShow: 9
+      itemsToShow: 9,
+      filtered_items: []
     };
   },
 
@@ -49,14 +61,30 @@ export default {
     },
     addItems() {
       this.itemsToShow += 9;
+    },
+    async filterItems(filter) {
+      this.filtered_items = [];
+      await this.catalog_items.filter(catalog_item => {
+        if (catalog_item.genre === filter.genre) {
+          this.filtered_items.push(catalog_item);
+        }
+      });
+      this.$refs.catalog_items.resizeAllMasonryItems();
     }
   },
-  mounted() {},
+  mounted() {
+    setTimeout(() => {
+      this.filtered_items = this.catalog_items;
+    }, 500);
+    setTimeout(() => {
+      this.$refs.catalog_items.resizeAllMasonryItems();
+    }, 501);
+  },
   beforeDestroy() {},
 
   computed: {
     data() {
-      return this.$store.state.blocks.products;
+      return this.$store.state.blocks.catalog;
     },
     filters() {
       return this.$store.state.blocks.filters;
