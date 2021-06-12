@@ -2162,6 +2162,11 @@ table {
 .breadcrumbs--title {
   height: 150px;
 }
+@media (max-width: 767px) {
+  .breadcrumbs--title {
+    height: 115px;
+  }
+}
 
 .breadcrumbs__inner {
   display: -webkit-box;
@@ -2252,8 +2257,13 @@ table {
   margin-top: 90px;
 }
 .pagination--catalog {
-  margin-top: 75px;
+  margin-top: 0;
   margin-bottom: 120px;
+}
+@media (max-width: 1023px) {
+  .pagination--catalog {
+    margin-bottom: 88px;
+  }
 }
 
 .pagination__wrapper {
@@ -2761,18 +2771,19 @@ table {
   margin: 57px auto 0 auto;
   overflow: hidden;
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 10.4px 10px;
   grid-auto-rows: 0;
 }
 @media only screen and (max-width: 1023px) {
   .products__masonry {
     grid-template-columns: repeat(2, minmax(50%, 1fr));
-    grid-gap: 7px 15px;
+    grid-gap: 8.3px 15px;
   }
 }
 @media only screen and (max-width: 767px) {
   .products__masonry {
     grid-template-columns: repeat(1, minmax(100%, 1fr));
+    grid-gap: 8.3px 15px;
   }
 }
 @media only screen and (min-width: 1024px) {
@@ -2831,10 +2842,45 @@ table {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-transform: translateX(-10px);
+      -ms-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+@media (max-width: 1023px) {
+  .products__info {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 
 .products__content {
   margin-bottom: 62px;
+}
+@media (max-width: 1023px) {
+  .products__content {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .products__content {
+    margin-bottom: 24px;
+  }
+}
+.products__content--catalog {
+  margin-top: 106px;
+  margin-bottom: 65px !important;
+}
+@media (max-width: 1023px) {
+  .products__content--catalog {
+    margin-top: 90px !important;
+    margin-bottom: 60px !important;
+  }
+}
+@media (max-width: 767px) {
+  .products__content--catalog {
+    margin-top: 60px !important;
+  }
 }
 
 .products__name-info {
@@ -2859,6 +2905,7 @@ table {
   line-height: 24px;
   text-align: center;
   color: #c1c1c1;
+  margin: 0;
 }
 
 .products__author {
@@ -2877,9 +2924,7 @@ table {
   line-height: 25px;
   text-align: center;
   color: #EECC7D;
-  -webkit-transform: translateY(-8px);
-      -ms-transform: translateY(-8px);
-          transform: translateY(-8px);
+  margin: 12px 0 0 0;
 }
 
 .products__show-more {
@@ -4005,6 +4050,9 @@ table {
 
 .catalog__products .products {
   margin-bottom: 0;
+}
+.catalog__products .products__content {
+  margin-bottom: 93px;
 }
 .catalog__products h1 {
   text-transform: uppercase;

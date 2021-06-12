@@ -7,6 +7,7 @@
     <div class="container">
       <div class="catalog__products">
         <CatalogItems
+          class="products__content--catalog"
           :data="data"
           :itemsToShow="itemsToShow"
           :catalog_items="catalog_items"

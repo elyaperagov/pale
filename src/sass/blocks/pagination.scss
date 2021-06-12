@@ -5,8 +5,12 @@
   margin-top: 90px;
 
   &--catalog {
-    margin-top: 75px;
+    margin-top: 0;
     margin-bottom: 120px;
+
+    @media (max-width: $tablets-max) {
+      margin-bottom: 88px;
+    }
   }
 }
 
