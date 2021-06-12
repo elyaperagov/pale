@@ -11,7 +11,7 @@
           <div class="modal__content">
             <div class="success">
               <h2 class="success__title" v-html="data.success.title"></h2>
-              <a class="success__tlink" href="/catalog.html" v-html="data.success.text"></a>
+              <a class="success__tlink" href="/home.html" v-html="data.success.text"></a>
             </div>
           </div>
         </div>
