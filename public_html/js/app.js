@@ -2261,6 +2261,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({components:{SearchModal:_modals_SearchModal_vue__WEBPACK_IMPORTED_MODULE_0__["default"]},data:function data(){return{active:true,showOptions:false,duration:500,counter:0};},computed:{data:function data(){return this.$store.state.blocks.header_main;}},beforeDestroy:function beforeDestroy(){},methods:{switchActiveLang:function switchActiveLang(i,arr){for(i in arr){arr[i].active=!arr[i].active;}},menuToggle:function menuToggle(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:null;if(state===null){state=!this.$store.state.menuShown;}this.$store.commit("setMenuState",state);document.body.classList.toggle("scroll-off");},menuClose:function menuClose(state){if(this.$store.state.menuShown===true){this.$store.state.menuShown=false;}this.$store.commit("setMenuClosed",state);document.body.classList.remove("scroll-off");},showSearchModal:function showSearchModal(){this.$store.commit("SearchOpen");}},created:function created(){var that=this;document.addEventListener("keyup",function(evt){if(evt.keyCode===27){that.menuClose(true);}});}});
 
 /***/ }),
@@ -20383,121 +20397,141 @@ var render = function() {
                 ? _c(
                     "ul",
                     { staticClass: "header__menu" },
-                    _vm._l(_vm.data.menu, function(menu, i) {
-                      return _c(
-                        "li",
-                        { key: i, staticClass: "header__menu-item" },
-                        [
-                          _c("a", { attrs: { href: menu.link } }, [
-                            _vm._v(" " + _vm._s(menu.name))
-                          ]),
-                          _vm._v(" "),
-                          menu.categories
+                    [
+                      _vm._l(_vm.data.menu, function(menu, i) {
+                        return [
+                          menu.name !== "Главная страница"
                             ? _c(
-                                "ul",
-                                { staticClass: "header__dropdown-items" },
-                                _vm._l(menu.categories, function(category, j) {
-                                  return _c(
-                                    "li",
-                                    {
-                                      key: j,
-                                      staticClass: "header__dropdown-item"
-                                    },
-                                    [
-                                      _c(
-                                        "a",
-                                        { attrs: { href: category.link } },
-                                        [
-                                          _vm._v(
-                                            "\n                " +
-                                              _vm._s(category.text) +
-                                              "\n                "
-                                          ),
-                                          category.sub_categories
-                                            ? _c(
-                                                "div",
+                                "li",
+                                { key: i, staticClass: "header__menu-item" },
+                                [
+                                  _c("a", { attrs: { href: menu.link } }, [
+                                    _vm._v(" " + _vm._s(menu.name))
+                                  ]),
+                                  _vm._v(" "),
+                                  menu.categories
+                                    ? _c(
+                                        "ul",
+                                        {
+                                          staticClass: "header__dropdown-items"
+                                        },
+                                        _vm._l(menu.categories, function(
+                                          category,
+                                          j
+                                        ) {
+                                          return _c(
+                                            "li",
+                                            {
+                                              key: j,
+                                              staticClass:
+                                                "header__dropdown-item"
+                                            },
+                                            [
+                                              _c(
+                                                "a",
                                                 {
-                                                  staticClass:
-                                                    "header__right-icon"
+                                                  attrs: { href: category.link }
                                                 },
                                                 [
-                                                  _c(
-                                                    "svg",
-                                                    {
-                                                      staticClass: "icon",
-                                                      attrs: {
-                                                        width: "10",
-                                                        height: "14",
-                                                        "aria-hidden": "true"
-                                                      }
-                                                    },
-                                                    [
-                                                      _c("use", {
-                                                        attrs: {
-                                                          "xlink:href": "#right"
-                                                        }
-                                                      })
-                                                    ]
-                                                  )
+                                                  _vm._v(
+                                                    "\n                  " +
+                                                      _vm._s(category.text) +
+                                                      "\n                  "
+                                                  ),
+                                                  category.sub_categories
+                                                    ? _c(
+                                                        "div",
+                                                        {
+                                                          staticClass:
+                                                            "header__right-icon"
+                                                        },
+                                                        [
+                                                          _c(
+                                                            "svg",
+                                                            {
+                                                              staticClass:
+                                                                "icon",
+                                                              attrs: {
+                                                                width: "10",
+                                                                height: "14",
+                                                                "aria-hidden":
+                                                                  "true"
+                                                              }
+                                                            },
+                                                            [
+                                                              _c("use", {
+                                                                attrs: {
+                                                                  "xlink:href":
+                                                                    "#right"
+                                                                }
+                                                              })
+                                                            ]
+                                                          )
+                                                        ]
+                                                      )
+                                                    : _vm._e(),
+                                                  _vm._v(" "),
+                                                  category.sub_categories
+                                                    ? _c(
+                                                        "ul",
+                                                        {
+                                                          staticClass:
+                                                            "header__sub-items"
+                                                        },
+                                                        _vm._l(
+                                                          category.sub_categories,
+                                                          function(
+                                                            sub_category,
+                                                            k
+                                                          ) {
+                                                            return _c(
+                                                              "li",
+                                                              {
+                                                                key: k,
+                                                                staticClass:
+                                                                  "header__sub-item"
+                                                              },
+                                                              [
+                                                                _c(
+                                                                  "a",
+                                                                  {
+                                                                    attrs: {
+                                                                      href:
+                                                                        sub_category.link
+                                                                    }
+                                                                  },
+                                                                  [
+                                                                    _vm._v(
+                                                                      "\n                        " +
+                                                                        _vm._s(
+                                                                          sub_category.text
+                                                                        ) +
+                                                                        "\n                      "
+                                                                    )
+                                                                  ]
+                                                                )
+                                                              ]
+                                                            )
+                                                          }
+                                                        ),
+                                                        0
+                                                      )
+                                                    : _vm._e()
                                                 ]
                                               )
-                                            : _vm._e(),
-                                          _vm._v(" "),
-                                          category.sub_categories
-                                            ? _c(
-                                                "ul",
-                                                {
-                                                  staticClass:
-                                                    "header__sub-items"
-                                                },
-                                                _vm._l(
-                                                  category.sub_categories,
-                                                  function(sub_category, k) {
-                                                    return _c(
-                                                      "li",
-                                                      {
-                                                        key: k,
-                                                        staticClass:
-                                                          "header__sub-item"
-                                                      },
-                                                      [
-                                                        _c(
-                                                          "a",
-                                                          {
-                                                            attrs: {
-                                                              href:
-                                                                sub_category.link
-                                                            }
-                                                          },
-                                                          [
-                                                            _vm._v(
-                                                              "\n                      " +
-                                                                _vm._s(
-                                                                  sub_category.text
-                                                                ) +
-                                                                "\n                    "
-                                                            )
-                                                          ]
-                                                        )
-                                                      ]
-                                                    )
-                                                  }
-                                                ),
-                                                0
-                                              )
-                                            : _vm._e()
-                                        ]
+                                            ]
+                                          )
+                                        }),
+                                        0
                                       )
-                                    ]
-                                  )
-                                }),
-                                0
+                                    : _vm._e()
+                                ]
                               )
                             : _vm._e()
                         ]
-                      )
-                    }),
-                    0
+                      })
+                    ],
+                    2
                   )
                 : _vm._e(),
               _vm._v(" "),
