@@ -11,7 +11,12 @@
         "type": "text",
         "request": null
       },
-      "menu": [{
+      "menu": [
+        {
+          "name": "Главная страница",
+          "link": "/home.html"
+        },
+        {
           "name": "Галерея",
           "link": "/catalog.html",
           "categories": [{
