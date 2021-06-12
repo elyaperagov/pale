@@ -43,20 +43,22 @@
                         <use xlink:href="#right"></use>
                       </svg>
                     </div>
-                    <ul
-                      class="header__sub-items"
+                    <div
+                      class="header__sub-overlay"
                       v-if="category.sub_categories"
                     >
-                      <li
-                        class="header__sub-item"
-                        v-for="(sub_category, k) in category.sub_categories"
-                        :key="k"
-                      >
-                        <a :href="sub_category.link">
-                          {{ sub_category.text }}
-                        </a>
-                      </li>
-                    </ul>
+                      <ul class="header__sub-items">
+                        <li
+                          class="header__sub-item"
+                          v-for="(sub_category, k) in category.sub_categories"
+                          :key="k"
+                        >
+                          <a :href="sub_category.link">
+                            {{ sub_category.text }}
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
                   </a>
                 </li>
               </ul>

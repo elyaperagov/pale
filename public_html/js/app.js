@@ -2275,6 +2275,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({components:{SearchModal:_modals_SearchModal_vue__WEBPACK_IMPORTED_MODULE_0__["default"]},data:function data(){return{active:true,showOptions:false,duration:500,counter:0};},computed:{data:function data(){return this.$store.state.blocks.header_main;}},beforeDestroy:function beforeDestroy(){},methods:{switchActiveLang:function switchActiveLang(i,arr){for(i in arr){arr[i].active=!arr[i].active;}},menuToggle:function menuToggle(){var state=arguments.length>0&&arguments[0]!==undefined?arguments[0]:null;if(state===null){state=!this.$store.state.menuShown;}this.$store.commit("setMenuState",state);document.body.classList.toggle("scroll-off");},menuClose:function menuClose(state){if(this.$store.state.menuShown===true){this.$store.state.menuShown=false;}this.$store.commit("setMenuClosed",state);document.body.classList.remove("scroll-off");},showSearchModal:function showSearchModal(){this.$store.commit("SearchOpen");}},created:function created(){var that=this;document.addEventListener("keyup",function(evt){if(evt.keyCode===27){that.menuClose(true);}});}});
 
 /***/ }),
@@ -20473,48 +20475,57 @@ var render = function() {
                                                   _vm._v(" "),
                                                   category.sub_categories
                                                     ? _c(
-                                                        "ul",
+                                                        "div",
                                                         {
                                                           staticClass:
-                                                            "header__sub-items"
+                                                            "header__sub-overlay"
                                                         },
-                                                        _vm._l(
-                                                          category.sub_categories,
-                                                          function(
-                                                            sub_category,
-                                                            k
-                                                          ) {
-                                                            return _c(
-                                                              "li",
-                                                              {
-                                                                key: k,
-                                                                staticClass:
-                                                                  "header__sub-item"
-                                                              },
-                                                              [
-                                                                _c(
-                                                                  "a",
+                                                        [
+                                                          _c(
+                                                            "ul",
+                                                            {
+                                                              staticClass:
+                                                                "header__sub-items"
+                                                            },
+                                                            _vm._l(
+                                                              category.sub_categories,
+                                                              function(
+                                                                sub_category,
+                                                                k
+                                                              ) {
+                                                                return _c(
+                                                                  "li",
                                                                   {
-                                                                    attrs: {
-                                                                      href:
-                                                                        sub_category.link
-                                                                    }
+                                                                    key: k,
+                                                                    staticClass:
+                                                                      "header__sub-item"
                                                                   },
                                                                   [
-                                                                    _vm._v(
-                                                                      "\n                        " +
-                                                                        _vm._s(
-                                                                          sub_category.text
-                                                                        ) +
-                                                                        "\n                      "
+                                                                    _c(
+                                                                      "a",
+                                                                      {
+                                                                        attrs: {
+                                                                          href:
+                                                                            sub_category.link
+                                                                        }
+                                                                      },
+                                                                      [
+                                                                        _vm._v(
+                                                                          "\n                          " +
+                                                                            _vm._s(
+                                                                              sub_category.text
+                                                                            ) +
+                                                                            "\n                        "
+                                                                        )
+                                                                      ]
                                                                     )
                                                                   ]
                                                                 )
-                                                              ]
-                                                            )
-                                                          }
-                                                        ),
-                                                        0
+                                                              }
+                                                            ),
+                                                            0
+                                                          )
+                                                        ]
                                                       )
                                                     : _vm._e()
                                                 ]
