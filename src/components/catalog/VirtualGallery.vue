@@ -12,7 +12,6 @@
           :itemsToShow="itemsToShow"
           :catalog_items="catalog_items"
         />
-        <Pagination class="pagination--catalog" />
       </div>
     </div>
   </section>
@@ -20,7 +19,6 @@
 
 <script>
 import Breadcrumbs from "../common/Breadcrumbs.vue";
-import Pagination from "../common/Pagination.vue";
 import CatalogItems from "./CatalogItems.vue";
 import Virtual from "./Virtual.vue";
 
@@ -28,7 +26,6 @@ export default {
   name: "Catalog",
   components: {
     Breadcrumbs,
-    Pagination,
     CatalogItems,
     Virtual
   },

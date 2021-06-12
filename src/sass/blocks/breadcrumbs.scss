@@ -9,6 +9,10 @@
 
   &--title {
     height: 150px;
+
+    @media (max-width: $mobiles-max) {
+      height: 115px;
+    }
   }
 }
 

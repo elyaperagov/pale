@@ -1,8 +1,7 @@
 <template>
   <div class="products" v-if="data">
     <div class="container">
-      <!-- <Filters :filters="filters" v-if="!$root.isTablet" /> -->
-      <section class="filters">
+      <section class="filters" v-if="!$root.isTablet">
         <ul class="filters__items">
           <li
             class="filters__item"
@@ -14,13 +13,11 @@
           </li>
         </ul>
       </section>
-      <div class="products__content">
-        <CatalogItems
-          ref="catalog_items"
-          :itemsToShow="itemsToShow"
-          :catalog_items="filtered_items"
-        />
-      </div>
+      <CatalogItems
+        ref="catalog_items"
+        :itemsToShow="itemsToShow"
+        :catalog_items="filtered_items"
+      />
       <button
         class="button button--show-more"
         v-if="this.itemsToShow <= this.filtered_items.length"
@@ -33,13 +30,11 @@
 </template>
 
 <script>
-import Filters from "./Filters.vue";
 import CatalogItems from "../catalog/CatalogItems.vue";
 
 export default {
   name: "Products",
   components: {
-    Filters,
     CatalogItems
   },
   data() {
@@ -55,7 +50,6 @@ export default {
       if (this.itemsToShow > this.catalog_items.length) {
         return;
       }
-
       await this.addItems();
       this.$refs.catalog_items.resizeAllMasonryItems();
     },
@@ -75,10 +69,18 @@ export default {
   mounted() {
     setTimeout(() => {
       this.filtered_items = this.catalog_items;
-    }, 500);
+    }, 100);
     setTimeout(() => {
       this.$refs.catalog_items.resizeAllMasonryItems();
-    }, 501);
+    }, 101);
+  },
+  watch: {
+    // filtered_items() {
+    //   debugger;
+    //   if (this.filtered_items !== []) {
+    //     this.$refs.catalog_items.resizeAllMasonryItems();
+    //   }
+    // }
   },
   beforeDestroy() {},
 

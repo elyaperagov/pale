@@ -22,7 +22,6 @@ import HeaderMain from '../components/common/HeaderMain.vue'
 import FooterMain from '../components/common/FooterMain.vue'
 import Banners from '../components/home/Banners.vue'
 import Products from '../components/home/Products.vue'
-import Filters from '../components/home/Filters.vue'
 import NewsMain from '../components/home/NewsMain.vue'
 import SearchMain from '../components/common/SearchMain.vue'
 import SearchSuccess from '../components/home/SearchSuccess.vue'
@@ -193,7 +192,6 @@ new Vue({
     Banners,
     ProductSimple,
     Products,
-    Filters,
     ProductFull,
     NewsMain,
     SearchMain,
