@@ -35,13 +35,13 @@ import CatalogItems from "../catalog/CatalogItems.vue";
 export default {
   name: "Products",
   components: {
-    CatalogItems
+    CatalogItems,
   },
   data() {
     return {
       currency: "₽",
       itemsToShow: 9,
-      filtered_items: []
+      filtered_items: [],
     };
   },
 
@@ -58,21 +58,21 @@ export default {
     },
     async filterItems(filter) {
       this.filtered_items = [];
-      await this.catalog_items.filter(catalog_item => {
+      await this.catalog_items.filter((catalog_item) => {
         if (catalog_item.genre === filter.genre) {
           this.filtered_items.push(catalog_item);
         }
       });
       this.$refs.catalog_items.resizeAllMasonryItems();
-    }
+    },
   },
   mounted() {
     setTimeout(() => {
       this.filtered_items = this.catalog_items;
-    }, 100);
+    }, 300);
     setTimeout(() => {
       this.$refs.catalog_items.resizeAllMasonryItems();
-    }, 101);
+    }, 400);
   },
   watch: {
     // filtered_items() {
@@ -93,8 +93,8 @@ export default {
     },
     catalog_items() {
       return this.$store.state.blocks.catalog.products;
-    }
-  }
+    },
+  },
 };
 </script>
 

@@ -147,7 +147,7 @@ export default {
           case "email":
             if (
               (!form[key].value.includes("@") ||
-              !form[key].value.includes(".")) && form[key].value.length > 0
+                !form[key].value.includes(".")) && form[key].value.length > 0
             ) {
               error = "Вы указали неверный email";
             }
