@@ -17,10 +17,6 @@ mix
   .sass('src/sass/app.scss', 'public_html/css/')
   .setPublicPath('public_html')
   .extract(['vue'])
-  .sourceMaps(true, 'source-map')
-  // .babel(['public_html/js/manifest.js'], 'public_html/js/manifest.js')
-  // .babel(['public_html/js/vendor.js'], 'public_html/js/vendor.js')
-  // .babel(['public_html/js/app.js'], 'public_html/js/app.js')
   .copyDirectory('src/fonts', 'public_html/fonts')
   .copy('src/img/*.{jpg,JPG,jpeg,JPEG,png,PNG,svg}', 'public_html/img')
   .options({
@@ -32,49 +28,57 @@ mix
       require('autoprefixer')
     ],
   })
-  // .compressImages(
-  //   ['src/img\/**\/*.{jpg,JPG,jpeg,JPEG,png,PNG}'],
-  //   '', {
-  //     jpg: {
-  //       engine: 'mozjpeg',
-  //       command: ['-quality', '80']
-  //     },
-  //     png: {
-  //       engine: 'pngquant',
-  //       command: ['--quality=40-60']
-  //     },
-  //     svg: {
-  //       engine: false,
-  //       command: false
-  //     },
-  //     gif: {
-  //       engine: false,
-  //       command: false
-  //     }
-  //   }
-  // )
-  // his section override webpack config
-  .webpackConfig({
-    module: {
-      rules: [
-        // {
-        //   test: /\.svg$/,
-        //   use: ['babel-loader', 'vue-svg-loader'],
-        // },
-        // {
-        //   test: /\.m?js$/,
-        //   exclude: /node_modules/,
-        //   use: {
-        //     loader: 'babel-loader',
-        //     options: {
-        //       presets: ['@babel/preset-env'],
-        //       plugins: ['@babel/plugin-transform-runtime']
-        //     }
-        //   }
-        // }
-      ]
-    }
-  });
+// .compressImages(
+//   ['src/img\/**\/*.{jpg,JPG,jpeg,JPEG,png,PNG}'],
+//   '', {
+//     jpg: {
+//       engine: 'mozjpeg',
+//       command: ['-quality', '80']
+//     },
+//     png: {
+//       engine: 'pngquant',
+//       command: ['--quality=40-60']
+//     },
+//     svg: {
+//       engine: false,
+//       command: false
+//     },
+//     gif: {
+//       engine: false,
+//       command: false
+//     }
+//   }
+// )
+
+if (mix.inProduction()) {
+  mix
+    .babel(['public_html/js/app.js'], 'public_html/js/app.js')
+} else {
+  mix.sourceMaps(true, 'source-map')
+}
+
+// his section override webpack config
+mix.webpackConfig({
+  module: {
+    rules: [
+      // {
+      //   test: /\.svg$/,
+      //   use: ['babel-loader', 'vue-svg-loader'],
+      // },
+      // {
+      //   test: /\.m?js$/,
+      //   exclude: /node_modules/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env'],
+      //       plugins: ['@babel/plugin-transform-runtime']
+      //     }
+      //   }
+      // }
+    ]
+  }
+});
 
 // Full API
 // mix.js(src, output);

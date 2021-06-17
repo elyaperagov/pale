@@ -18,6 +18,7 @@
   border-bottom: 1px solid #E6E6E6;
   margin-bottom: 30px;
   position: relative;
+
   @media (max-width: $mobiles-max) {
     align-items: flex-start;
     padding-left: 10px;
@@ -33,9 +34,11 @@
     &:hover {
       stroke: $color-black;
     }
+
     @media (max-width: $tablets-max) {
       margin-right: 14px;
     }
+
     @media (max-width: $mobiles-max) {
       position: absolute;
       margin: 0;
@@ -46,12 +49,19 @@
 
   &-image {
     max-width: 159px;
+    max-height: 173px;
     display: flex;
     margin-right: 11.3%;
+
+    img {
+      object-fit: contain;
+    }
+
     @media (max-width: $tablets-max) {
       margin-right: 30px;
       flex-shrink: 0;
     }
+
     @media (max-width: $mobiles-max) {
       margin-right: 20px;
       max-width: 20%;
@@ -64,18 +74,22 @@
     align-items: center;
     flex-grow: 1;
     flex-shrink: 0;
+
     @media (max-width: $tablets-max) {
       flex-shrink: 1;
     }
+
     @media (max-width: $mobiles-max) {
       flex-direction: column;
       align-items: flex-start;
     }
   }
+
   &-name {
     @media (max-width: $tablets-max) {
       margin-right: 30px;
     }
+
     @media (max-width: $mobiles-max) {
       margin-right: 15px;
     }
@@ -88,6 +102,7 @@
   &-price {
     color: $color-gold;
     margin-bottom: 0;
+
     @media (max-width: $mobiles-max) {
       margin-top: 20px;
     }
@@ -99,6 +114,7 @@
   justify-content: flex-end;
   align-items: center;
   margin-top: 60px;
+
   @media (max-width: $mobiles-max) {
     margin-top: 40px;
     flex-direction: column;
@@ -107,6 +123,7 @@
   &-summa {
     margin-bottom: 0;
     margin-right: 40px;
+
     @media (max-width: $mobiles-max) {
       margin-bottom: 30px;
       margin-right: 0;

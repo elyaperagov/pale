@@ -1,10 +1,12 @@
 .product__inner {
   display: flex;
   padding: 120px 0;
+
   @media (max-width: $tablets-max) {
     flex-direction: column;
     padding: 90px 0;
   }
+
   @media (max-width: $mobiles-max) {
     padding: 60px 0;
   }
@@ -15,10 +17,12 @@
   margin-right: 11.3%;
   max-width: 629px;
   position: relative;
+
   @media (max-width: $tablets-max) {
     margin-right: 0;
     margin-bottom: 90px;
   }
+
   @media (max-width: $mobiles-max) {
     margin-bottom: 60px;
   }
@@ -36,9 +40,11 @@
     transform: rotate(180deg), matrix(-1, 0, 0, 1, 0, 0);
     background: rgba(242, 242, 242, 0.63);
     z-index: 1 !important;
+
     &::after {
       display: none;
     }
+
     @media (max-width: $tablets-max) {
       display: none;
     }
@@ -57,9 +63,11 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
     background: rgba(242, 242, 242, 0.63);
     z-index: 1 !important;
+
     &::after {
       display: none;
     }
+
     @media (max-width: $tablets-max) {
       display: none;
     }
@@ -81,11 +89,12 @@
 
   &--thumbs {
     margin-left: 0 !important;
-      max-width: 535px !important;
-      overflow: hidden;
-      @media (max-width: $tablets-max) {
-        max-width: 100% !important;
-      }
+    max-width: 535px !important;
+    overflow: hidden;
+
+    @media (max-width: $tablets-max) {
+      max-width: 100% !important;
+    }
 
     .swiper-wrapper {
       flex-wrap: nowrap;
@@ -117,8 +126,10 @@
 .product__item {
   &-image {
     display: flex;
+    height: -webkit-fill-available;
   }
 }
+
 .product__options {
   margin-bottom: 20px;
   color: $color-gray;
@@ -133,9 +144,11 @@
   color: $color-gold;
   margin-bottom: 30px;
   letter-spacing: 0.05em;
+
   @media (max-width: $tablets-max) {
     margin-top: 44px;
   }
+
   @media (max-width: $mobiles-max) {
     margin-top: 0;
   }
@@ -148,6 +161,7 @@
   padding-bottom: 2px;
   border-bottom: 1px solid $color-black;
   transition: $transition-settings;
+
   &:hover {
     color: $color-gold;
     border-bottom: 1px solid $color-gold;

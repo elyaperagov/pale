@@ -75,7 +75,7 @@ export default {
   name: "Banners",
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
   },
   data() {
     return {
@@ -86,22 +86,22 @@ export default {
         centeredSlides: true,
         pagination: {
           el: ".swiper-pagination",
-          clickable: true
+          clickable: true,
         },
         autoplay: {
-          delay: 5000
-        }
-      }
+          delay: 5000,
+        },
+      },
     };
   },
   computed: {
     data() {
       return this.$store.state.blocks.banners;
-    }
+    },
   },
   mounted() {},
   methods: {},
   mounted() {},
-  beforeDestroy() {}
+  beforeDestroy() {},
 };
 </script>

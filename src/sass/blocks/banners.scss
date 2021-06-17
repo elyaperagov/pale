@@ -1,13 +1,14 @@
 .banners {
   margin-top: 90px;
 
-  .swiper-container {
-    overflow-x: clip;
-    overflow-y: visible;
-  }
+  // .swiper-container {
+  //   overflow-x: clip;
+  //   overflow-y: visible;
+  // }
 
   .swiper-pagination-bullets {
-    bottom: -60px !important;
+    margin-top: 48px !important;
+    position: relative;
 
     @media (max-width: $tablets-max) {
       bottom: 14px !important;
@@ -15,7 +16,8 @@
 
     @media (max-width: $mobiles-max) {
       transform: translateX(37%);
-      bottom: 10px !important;
+      margin-top: 0 !important;
+      bottom: 32px !important;
     }
   }
 
@@ -30,7 +32,7 @@
     height: 14px;
     border: 1px solid $color-black;
     background-color: $color-default-white;
-    opacity: 1!important;
+    opacity: 1 !important;
 
     @media (max-width: $tablets-max) {
       border: 1px solid $color-default-white;
@@ -40,7 +42,7 @@
     @media (max-width: $mobiles-max) {
       width: 7px;
       height: 7px;
-      margin: 0 2px!important;
+      margin: 0 2px !important;
     }
 
     &-active {
@@ -109,6 +111,7 @@
   }
 }
 
+.banners__wrapper,
 .banners__image {
   height: 611px;
 
@@ -121,9 +124,9 @@
   }
 
   img {
+    // width: 100%;
     height: 100%;
     object-fit: cover;
-    width: 100%;
   }
 }
 

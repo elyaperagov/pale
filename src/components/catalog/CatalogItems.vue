@@ -1,16 +1,16 @@
 <template>
   <div class="products__content">
     <div class="products__masonry">
-      <template
-        v-for="(item, index) in catalog_items"
-        @mouseenter="$switchActiveReverse(index, catalog_items)"
-        @mouseleave="$switchActive(index, catalog_items)"
-      >
+      <template v-for="(item, index) in catalog_items">
         <div
           class="products__item"
           v-if="index < itemsToShow"
           :key="index"
-          @mouseenter="$switchActive(index, catalog_items)"
+          @mouseenter="
+            document.location.pathname === '/home.html'
+              ? $switchActive(index, catalog_items)
+              : $switchActiveReverse(index, catalog_items)
+          "
           @mouseleave="makeAllItemsActive(index, catalog_items)"
           :class="item.active ? '' : 'products__item--modified'"
         >
@@ -46,7 +46,8 @@ export default {
   name: "CatalogItems",
   data() {
     return {
-      currency: "₽"
+      currency: "₽",
+      document: document,
     };
   },
   methods: {
@@ -55,10 +56,9 @@ export default {
         arr[i].active = true;
       }
     },
-
     resizeMasonryItem(item) {
       /* Get the grid object, its row-gap, and the size of its implicit rows */
-      var grid = document.getElementsByClassName("products__masonry")[0],
+      let grid = document.getElementsByClassName("products__masonry")[0],
         rowGap = parseInt(
           window.getComputedStyle(grid).getPropertyValue("grid-row-gap")
         ),
@@ -75,7 +75,7 @@ export default {
        * Net height of the implicit row-track = T = G + R
        * S = H1 / T
        */
-      var rowSpan = Math.ceil(
+      let rowSpan = Math.ceil(
         (item.querySelector(".products__link").getBoundingClientRect().height +
           rowGap) /
           (rowHeight + rowGap)
@@ -86,33 +86,31 @@ export default {
     },
     resizeAllMasonryItems() {
       // Get all item class objects in one list
-      var allItems = document.getElementsByClassName("products__item");
+      let allItems = document.getElementsByClassName("products__item");
 
       /*
        * Loop through the above list and execute the spanning function to
        * each list-item (i.e. each masonry item)
        */
-      for (var i = 0; i < allItems.length; i++) {
+      for (let i = 0; i < allItems.length; i++) {
         this.resizeMasonryItem(allItems[i]);
       }
-    }
+    },
   },
 
   props: {
     catalog_items: Array,
     itemsToShow: Number,
-    data: Object
+    data: Object,
   },
   mounted() {
     let masonryEvents = ["load", "resize"];
     let that = this;
-    masonryEvents.forEach(function(event) {
+    masonryEvents.forEach(function (event) {
       window.addEventListener(event, that.resizeAllMasonryItems);
     });
 
     this.resizeAllMasonryItems();
-  }
+  },
 };
 </script>
-
-<style></style>

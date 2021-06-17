@@ -41,6 +41,7 @@
     margin-top: 30px;
     grid-template-columns: 1fr;
   }
+
   .button {
     margin: auto;
   }
@@ -61,16 +62,21 @@
     margin-bottom: 5px;
     line-height: 150%;
     position: relative;
-    &:before {
-      position: absolute;
-      content: '';
-      background-color: $color-light-brown;
-      width: 0;
-      height: 2px;
-      top: 12px;
-      left: 0px;
-      z-index: -1;
-      transition: $transition-settings;
+
+    span {
+      position: relative;
+
+      &:before {
+        position: absolute;
+        content: '';
+        background-color: $color-light-brown;
+        width: 0;
+        height: 2px;
+        top: 10px;
+        left: 0px;
+        z-index: -1;
+        transition: $transition-settings;
+      }
     }
   }
 
@@ -95,11 +101,15 @@
         transform: scale(1.1);
       }
     }
+
     .other__item-author {
-      &:before {
-        content: '';
-        background-color: $color-light-brown;
-        width: 100%;
+      span {
+
+        &:before {
+          content: '';
+          background-color: $color-light-brown;
+          width: calc(100% + 10px);
+        }
       }
     }
   }
@@ -107,6 +117,7 @@
 
 .other__swiper {
   padding-bottom: 60px !important;
+
   .swiper-button-next {
     width: 64px;
     height: 48px;
@@ -120,6 +131,7 @@
     transform: rotate(180deg), matrix(-1, 0, 0, 1, 0, 0);
     background: rgba(242, 242, 242, 0.63);
     z-index: 1 !important;
+
     &::after {
       display: none;
     }
@@ -138,6 +150,7 @@
     transform: matrix(-1, 0, 0, 1, 0, 0);
     background: rgba(242, 242, 242, 0.63);
     z-index: 1 !important;
+
     &::after {
       display: none;
     }
